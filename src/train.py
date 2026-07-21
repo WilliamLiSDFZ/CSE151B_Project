@@ -88,6 +88,12 @@ def run_training(model, tokenizer, train_ds, val_ds, args, device) -> dict:
     output_dir.mkdir(parents=True, exist_ok=True)
     last_path = output_dir / "last.pt"
 
+    results_path = None
+    if getattr(args, "results_dir", None):
+        results_dir = Path(args.results_dir)
+        results_dir.mkdir(parents=True, exist_ok=True)
+        results_path = results_dir / f"{args.run_name}.json"
+
     start_epoch, best_val_acc = 0, -1.0
     loss_curve: list[float] = []
     val_accs: list[float] = []
@@ -106,6 +112,35 @@ def run_training(model, tokenizer, train_ds, val_ds, args, device) -> dict:
         print(f"[train] resumed from {last_path} at epoch {start_epoch}")
 
     t0 = time.time()
+
+    def write_results(status: str) -> dict:
+        """Persist current metrics to results/<run_name>.json. Called after EVERY
+        epoch (status="running") so a killed/culled session never loses metrics,
+        and once at the end (status="completed")."""
+        record = {
+            "run_name": args.run_name,
+            "status": status,
+            "epochs_done": len(val_accs),
+            "config": {
+                "model_name": args.model_name, "subset": args.subset, "lr": args.lr,
+                "epochs": args.epochs, "batch_size": args.batch_size,
+                "grad_accum": args.grad_accum,
+                "effective_batch_size": args.batch_size * args.grad_accum,
+                "max_length": args.max_length, "weight_decay": args.weight_decay,
+                "warmup_ratio": args.warmup_ratio, "seed": args.seed, "fp16": fp16,
+                "device": device.type,
+            },
+            "n_train": len(train_ds), "n_val": len(val_ds),
+            "val_accs": val_accs, "best_val_acc": best_val_acc,
+            "loss_curve": loss_curve,
+            "epoch_times": epoch_times,
+            "wall_time_s": round(time.time() - t0, 1),
+            "updated_at": time.strftime("%Y-%m-%d %H:%M:%S"),
+        }
+        if results_path is not None:
+            results_path.write_text(json.dumps(record, indent=2))
+        return record
+
     for epoch in range(start_epoch, args.epochs):
         t_epoch = time.time()
         model.train()
@@ -164,25 +199,9 @@ def run_training(model, tokenizer, train_ds, val_ds, args, device) -> dict:
             "val_accs": val_accs,
             "epoch_times": epoch_times,
         }, last_path)
+        write_results("running")
 
-    results = {
-        "run_name": args.run_name,
-        "config": {
-            "model_name": args.model_name, "subset": args.subset, "lr": args.lr,
-            "epochs": args.epochs, "batch_size": args.batch_size,
-            "grad_accum": args.grad_accum,
-            "effective_batch_size": args.batch_size * args.grad_accum,
-            "max_length": args.max_length, "weight_decay": args.weight_decay,
-            "warmup_ratio": args.warmup_ratio, "seed": args.seed, "fp16": fp16,
-            "device": device.type,
-        },
-        "n_train": len(train_ds), "n_val": len(val_ds),
-        "val_accs": val_accs, "best_val_acc": best_val_acc,
-        "loss_curve": loss_curve,
-        "epoch_times": epoch_times,
-        "wall_time_s": round(time.time() - t0, 1),
-    }
-    return results
+    return write_results("completed")
 
 
 def main() -> None:
@@ -231,12 +250,8 @@ def main() -> None:
     print(f"[train] n_train={len(train_ds)} n_val={len(val_ds)}")
 
     results = run_training(model, tokenizer, train_ds, val_ds, args, device)
-
-    results_dir = Path(args.results_dir)
-    results_dir.mkdir(parents=True, exist_ok=True)
-    out_path = results_dir / f"{args.run_name}.json"
-    out_path.write_text(json.dumps(results, indent=2))
-    print(f"[train] best_val_acc={results['best_val_acc']:.4f}; wrote {out_path}")
+    print(f"[train] best_val_acc={results['best_val_acc']:.4f}; "
+          f"wrote {Path(args.results_dir) / (args.run_name + '.json')}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,19 @@
+{
+  "sweep_name": "final",
+  "model_name": "bert-base-uncased",
+  "subset": "combined",
+  "grid": {
+    "seed": [42, 43, 44]
+  },
+  "fixed": {
+    "lr": 3e-5,
+    "epochs": 3,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "max_length": 128,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1
+  },
+  "keep_champion_last_pt": true,
+  "keep_all_checkpoints": true
+}

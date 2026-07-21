@@ -17,6 +17,7 @@ run the online smoke test from README on Mac/DataHub to cover the download path.
 from __future__ import annotations
 
 import argparse
+import json
 import shutil
 import sys
 import tempfile
@@ -154,15 +155,18 @@ def main() -> None:
             batch_size=8, grad_accum=1, max_length=32, weight_decay=0.01,
             warmup_ratio=0.1, max_grad_norm=1.0, seed=0, num_workers=0,
             log_every=1000, output_dir=str(tmp / "ckpt"), run_name="smoke",
-            resume=False, no_fp16=True,
+            results_dir=str(tmp / "results"), resume=False, no_fp16=True,
         )
         results = run_training(model, tokenizer, ds, ds, args, device)
         assert results["best_val_acc"] >= 0.9, (
             f"tiny model failed to overfit (acc={results['best_val_acc']:.3f}) — "
             "gradients or masking are broken")
         assert results["loss_curve"][-1] < results["loss_curve"][0]
+        rec = json.loads((tmp / "results" / "smoke.json").read_text())
+        assert rec["status"] == "completed" and rec["epochs_done"] == args.epochs
         print(f"[3/5] run_training OK: overfit acc={results['best_val_acc']:.3f}, "
-              f"loss {results['loss_curve'][0]:.3f} -> {results['loss_curve'][-1]:.3f}")
+              f"loss {results['loss_curve'][0]:.3f} -> {results['loss_curve'][-1]:.3f}, "
+              "per-epoch results JSON persisted")
 
         # --- 4. checkpoint save/reload roundtrip ----------------------------
         from transformers import AutoModelForMultipleChoice, AutoTokenizer
@@ -186,7 +190,9 @@ def main() -> None:
         r2 = run_training(model2, tokenizer, ds, ds, args3, device)
         assert len(r1["val_accs"]) == 2 and len(r2["val_accs"]) == 4, (
             len(r1["val_accs"]), len(r2["val_accs"]))
-        print("[5/5] --resume OK: continued from epoch 2 to 4 with state restored")
+        rec = json.loads((tmp / "results" / "smoke.json").read_text())
+        assert rec["status"] == "completed" and rec["epochs_done"] == 4
+        print("[5/5] --resume OK: continued from epoch 2 to 4, results JSON updated")
 
         print("\nALL OFFLINE SMOKE TESTS PASSED")
     finally:

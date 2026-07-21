@@ -59,18 +59,29 @@ python src/train.py --subset combined
 # resume after a culled DataHub session (same args + --resume)
 python src/train.py --subset combined --resume
 
-# hyperparameter sweep (plan section 4.4)
-for lr in 1e-5 2e-5 3e-5 5e-5; do
-  for ep in 2 3 4; do
-    python src/train.py --subset combined --lr $lr --epochs $ep
-  done
-done
+# hyperparameter sweep from a config file (plan section 4.4)
+python main.py --config configs/sweep.json
 
-# final runs: best config, 3 seeds
-for seed in 42 43 44; do
-  python src/train.py --subset combined --lr <BEST_LR> --epochs <BEST_EP> --seed $seed
-done
+# final runs: after the sweep, edit configs/final.json (set lr/epochs to the
+# champion's values from results/sweep_summary.json), then
+python main.py --config configs/final.json
 ```
+
+`main.py` expands the `grid` in the config (cartesian product; any train.py
+argument can be an axis), runs one training subprocess per combination, and —
+to save server storage — **keeps only the best run's checkpoints**, deleting
+each run's `checkpoints/<run_name>/` as soon as it is beaten. Every run's
+metrics JSON is always kept in `results/` — train.py rewrites it after EVERY
+epoch (`status: running` → `completed`), so even a culled session leaves its
+metrics on disk for comparison. The ranked leaderboard lands in
+`results/<sweep_name>_summary.json`. An interrupted sweep resumes for free:
+completed combos are skipped, half-finished ones are resumed from `last.pt`
+(`--rerun` forces a full redo). Use `--dry_run` to preview
+the commands. Config knobs: `keep_champion_last_pt: false` also drops the
+champion's `last.pt` (~1.3GB, only needed for `--resume`);
+`keep_all_checkpoints: true` disables deletion entirely — that is why it is on
+in `configs/final.json`, where all 3 seed checkpoints are needed for test
+evaluation.
 
 Each run writes `results/<run_name>.json` (config, loss curve, per-epoch val
 accuracy, wall time) and saves the best-val checkpoint to
