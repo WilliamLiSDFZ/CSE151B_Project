@@ -1,0 +1,53 @@
+{
+  "run_name": "bert-base-uncased_easy_lr3e-05_e3_s42",
+  "config": {
+    "model_name": "bert-base-uncased",
+    "subset": "easy",
+    "lr": 3e-05,
+    "epochs": 3,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "effective_batch_size": 16,
+    "max_length": 128,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "seed": 42,
+    "fp16": false,
+    "device": "mps"
+  },
+  "n_train": 2251,
+  "n_dev": 570,
+  "dev_accs": [
+    0.26842,
+    0.26842,
+    0.25263
+  ],
+  "best_dev_acc": 0.26842105263157895,
+  "loss_curve": [
+    1.40724,
+    1.37537,
+    1.32446,
+    1.22837,
+    1.22936,
+    1.16816,
+    1.23607,
+    0.9165,
+    0.98656,
+    0.98353,
+    0.94093,
+    0.95721,
+    0.90841,
+    0.92094,
+    0.9226,
+    1.0587,
+    0.64745,
+    0.59407,
+    0.60758,
+    0.62917,
+    0.61225,
+    0.66387,
+    0.57783,
+    0.47524
+  ],
+  "wall_time_s": 361.9
+}
