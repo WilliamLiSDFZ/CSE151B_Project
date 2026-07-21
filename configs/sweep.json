@@ -4,8 +4,8 @@
   "subset": "combined",
   "seed": 42,
   "grid": {
-    "lr": [1e-5, 2e-5, 3e-5, 5e-5],
-    "epochs": [2, 3, 4]
+    "lr": [2e-5, 3e-5, 5e-5, 7e-5],
+    "epochs": [3, 4, 5]
   },
   "fixed": {
     "batch_size": 8,
