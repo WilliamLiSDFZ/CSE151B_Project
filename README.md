@@ -70,7 +70,8 @@ python main.py --config configs/final.json
 `main.py` expands the `grid` in the config (cartesian product; any train.py
 argument can be an axis), runs one training subprocess per combination, and —
 to save server storage — **keeps only the best run's checkpoints**, deleting
-each run's `checkpoints/<run_name>/` as soon as it is beaten. Every run's
+each run's `checkpoints/<run_name>_<YYYYmmdd_HHMMSS>/` (folder names carry the
+run's start timestamp) as soon as it is beaten. Every run's
 metrics JSON is always kept in `results/` — train.py rewrites it after EVERY
 epoch (`status: running` → `completed`), so even a culled session leaves its
 metrics on disk for comparison. The ranked leaderboard lands in
@@ -85,7 +86,8 @@ evaluation.
 
 Each run writes `results/<run_name>.json` (config, loss curve, per-epoch val
 accuracy, wall time) and saves the best-val checkpoint to
-`checkpoints/<run_name>/best`.
+`checkpoints/<run_name>_<YYYYmmdd_HHMMSS>/best` (the exact path is recorded in
+the summary's `champion.checkpoint` field).
 
 ## Evaluation (test sets: run ONCE, at the very end)
 

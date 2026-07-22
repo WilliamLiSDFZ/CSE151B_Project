@@ -31,6 +31,7 @@ from __future__ import annotations
 import argparse
 import itertools
 import json
+import re
 import shutil
 import subprocess
 import sys
@@ -51,6 +52,19 @@ def fmt(v) -> str:
     return f"{v:g}" if isinstance(v, float) else str(v)
 
 
+def find_ckpt_dir(ckpt_root: Path, run_name: str) -> Path | None:
+    """Newest existing checkpoint dir for run_name: timestamped
+    <run_name>_YYYYmmdd_HHMMSS preferred (max = newest), else legacy
+    exact <run_name>, else None."""
+    stamped = sorted(p for p in ckpt_root.glob(run_name + "_*")
+                     if p.is_dir()
+                     and re.fullmatch(re.escape(run_name) + r"_\d{8}_\d{6}", p.name))
+    if stamped:
+        return stamped[-1]
+    legacy = ckpt_root / run_name
+    return legacy if legacy.is_dir() else None
+
+
 def build_run(combo: dict, cfg: dict) -> tuple[str, list[str]]:
     """Return (run_name, command) for one grid combination."""
     merged = {k: cfg[k] for k in ("model_name", "subset", "seed") if k in cfg}
@@ -59,7 +73,6 @@ def build_run(combo: dict, cfg: dict) -> tuple[str, list[str]]:
     run_name = cfg["sweep_name"] + "_" + "_".join(f"{k}{fmt(v)}" for k, v in combo.items())
     cmd = [sys.executable, str(REPO / cfg.get("train_script", "src/train.py")),
            "--run_name", run_name,
-           "--output_dir", str(REPO / "checkpoints" / run_name),
            "--results_dir", str(REPO / "results")]
     for k, v in merged.items():
         if isinstance(v, bool):
@@ -86,11 +99,16 @@ def main() -> None:
     results_dir.mkdir(parents=True, exist_ok=True)
     print(f"[sweep] {cfg['sweep_name']}: {len(combos)} runs, config={args.config}")
 
-    champion: tuple[float, str] | None = None   # (best_val_acc, run_name)
+    champion: tuple[float, str, Path] | None = None   # (best_val_acc, run_name, ckpt_dir)
     summary: list[dict] = []
     t0 = time.time()
     for i, combo in enumerate(combos):
         run_name, cmd = build_run(combo, cfg)
+        # reuse an existing folder (resume/overwrite semantics, avoids orphans),
+        # otherwise mint a fresh timestamped one
+        run_dir = (find_ckpt_dir(ckpt_root, run_name)
+                   or ckpt_root / f"{run_name}_{time.strftime('%Y%m%d_%H%M%S')}")
+        cmd += ["--output_dir", str(run_dir)]
         res_path = results_dir / f"{run_name}.json"
         if args.dry_run:
             print("[dry]", " ".join(cmd))
@@ -103,7 +121,7 @@ def main() -> None:
                 print(f"[sweep] ({i + 1}/{len(combos)}) {run_name}: "
                       f"completed results exist, skipping run")
             else:
-                resume = (ckpt_root / run_name / "last.pt").exists()
+                resume = (run_dir / "last.pt").exists()
                 print(f"[sweep] ({i + 1}/{len(combos)}) {run_name}: incomplete results "
                       f"({prev.get('epochs_done', 0)} epochs done), "
                       f"{'resuming' if resume else 'restarting'}")
@@ -116,7 +134,7 @@ def main() -> None:
             if proc.returncode != 0:
                 print(f"[sweep] {run_name}: FAILED (exit {proc.returncode}), "
                       f"checkpoints removed, continuing with next combo")
-                shutil.rmtree(ckpt_root / run_name, ignore_errors=True)
+                shutil.rmtree(run_dir, ignore_errors=True)
                 summary.append({"run_name": run_name, **combo, "status": "failed"})
                 continue
         acc = json.loads(res_path.read_text())["best_val_acc"]
@@ -126,22 +144,22 @@ def main() -> None:
         if keep_all:
             print(f"[sweep] {run_name}: best_val_acc={acc:.4f} (keep_all_checkpoints on)")
             if champion is None or acc > champion[0]:
-                champion = (acc, run_name)
+                champion = (acc, run_name, run_dir)
             continue
 
         # keep only the champion's checkpoints
         if champion is None or acc > champion[0]:
             if champion is not None:
-                shutil.rmtree(ckpt_root / champion[1], ignore_errors=True)
+                shutil.rmtree(champion[2], ignore_errors=True)
                 print(f"[sweep] {run_name}: new champion ({acc:.4f}), "
                       f"deleted checkpoints of {champion[1]}")
             else:
                 print(f"[sweep] {run_name}: first champion ({acc:.4f})")
-            champion = (acc, run_name)
+            champion = (acc, run_name, run_dir)
             if not cfg.get("keep_champion_last_pt", True):
-                (ckpt_root / run_name / "last.pt").unlink(missing_ok=True)
+                (run_dir / "last.pt").unlink(missing_ok=True)
         else:
-            shutil.rmtree(ckpt_root / run_name, ignore_errors=True)
+            shutil.rmtree(run_dir, ignore_errors=True)
             print(f"[sweep] {run_name}: {acc:.4f} <= champion {champion[0]:.4f}, "
                   f"checkpoints deleted")
 
@@ -154,7 +172,7 @@ def main() -> None:
         "config": cfg,
         "n_runs": len(combos),
         "champion": ({"run_name": champion[1], "best_val_acc": champion[0],
-                      "checkpoint": str(ckpt_root / champion[1] / "best")}
+                      "checkpoint": str(champion[2] / "best")}
                      if champion else None),
         "runs": summary,
         "wall_time_s": round(time.time() - t0, 1),
@@ -167,7 +185,7 @@ def main() -> None:
         acc = f"{r['best_val_acc']:.4f}" if "best_val_acc" in r else "FAILED"
         print(f"    {acc}  {r['run_name']}")
     if champion:
-        champ_best = ckpt_root / champion[1] / "best"
+        champ_best = champion[2] / "best"
         print(f"[sweep] champion: {champion[1]} (best_val_acc={champion[0]:.4f})")
         print(f"[sweep] checkpoint kept at: {champ_best}")
         if not champ_best.exists():
