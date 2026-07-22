@@ -243,7 +243,9 @@ def main() -> None:
     print(f"[train] device = {device}, run = {args.run_name}")
 
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
-    model = AutoModelForMultipleChoice.from_pretrained(args.model_name).to(device)
+    # .float(): some checkpoints (e.g. deberta-v3) are stored in fp16 and load as
+    # fp16 params; GradScaler requires fp32 master weights (fp16 is for compute only).
+    model = AutoModelForMultipleChoice.from_pretrained(args.model_name).float().to(device)
 
     train_ds = load_arc(args.subset, "train", max_samples=args.max_train_samples)
     val_ds = load_arc(args.subset, "validation", max_samples=args.max_val_samples)

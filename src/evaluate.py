@@ -74,7 +74,7 @@ def main() -> None:
     device = pick_device()
     print(f"[evaluate] device = {device}")
     tokenizer = AutoTokenizer.from_pretrained(args.checkpoint)
-    model = AutoModelForMultipleChoice.from_pretrained(args.checkpoint).to(device)
+    model = AutoModelForMultipleChoice.from_pretrained(args.checkpoint).float().to(device)
 
     ds = load_arc(args.subset, args.split, max_samples=args.max_samples)
     loader = DataLoader(
