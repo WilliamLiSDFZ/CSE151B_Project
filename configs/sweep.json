@@ -1,10 +1,10 @@
 {
-  "sweep_name": "sweep",
-  "model_name": "bert-base-uncased",
-  "subset": "challenge",
+  "sweep_name": "sweep_deberta_easy",
+  "model_name": "microsoft/deberta-v3-base",
+  "subset": "easy",
   "seed": 77,
   "grid": {
-    "lr": [2e-5, 3e-5, 5e-5, 7e-5],
+    "lr": [1e-5, 1.5e-5, 2e-5, 3e-5],
     "epochs": [3, 4, 5]
   },
   "fixed": {
