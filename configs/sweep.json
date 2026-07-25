@@ -1,5 +1,5 @@
 {
-  "sweep_name": "sweep_deberta_easy",
+  "sweep_name": "sweep_deberta_challenge",
   "model_name": "microsoft/deberta-v3-base",
   "subset": "challenge",
   "seed": 77,
