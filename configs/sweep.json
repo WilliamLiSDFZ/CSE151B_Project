@@ -1,7 +1,7 @@
 {
   "sweep_name": "sweep_deberta_easy",
   "model_name": "microsoft/deberta-v3-base",
-  "subset": "easy",
+  "subset": "challenge",
   "seed": 77,
   "grid": {
     "lr": [1e-5, 1.5e-5, 2e-5, 3e-5],
