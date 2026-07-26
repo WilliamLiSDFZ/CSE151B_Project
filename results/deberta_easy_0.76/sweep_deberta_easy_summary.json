@@ -1,0 +1,124 @@
+{
+  "sweep_name": "sweep_deberta_easy",
+  "config": {
+    "sweep_name": "sweep_deberta_easy",
+    "model_name": "microsoft/deberta-v3-base",
+    "subset": "easy",
+    "seed": 77,
+    "grid": {
+      "lr": [
+        1e-05,
+        1.5e-05,
+        2e-05,
+        3e-05
+      ],
+      "epochs": [
+        3,
+        4,
+        5
+      ]
+    },
+    "fixed": {
+      "batch_size": 8,
+      "grad_accum": 2,
+      "max_length": 128,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1
+    },
+    "keep_champion_last_pt": true,
+    "keep_all_checkpoints": false
+  },
+  "n_runs": 12,
+  "champion": {
+    "run_name": "sweep_deberta_easy_lr3e-05_epochs5",
+    "best_val_acc": 0.7614035087719299,
+    "checkpoint": "/home/wil018/private/CSE151B_Project/checkpoints/sweep_deberta_easy_lr3e-05_epochs5_20260722_231526/best"
+  },
+  "runs": [
+    {
+      "run_name": "sweep_deberta_easy_lr3e-05_epochs5",
+      "lr": 3e-05,
+      "epochs": 5,
+      "best_val_acc": 0.7614035087719299,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr3e-05_epochs3",
+      "lr": 3e-05,
+      "epochs": 3,
+      "best_val_acc": 0.756140350877193,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr1.5e-05_epochs5",
+      "lr": 1.5e-05,
+      "epochs": 5,
+      "best_val_acc": 0.7543859649122807,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr2e-05_epochs5",
+      "lr": 2e-05,
+      "epochs": 5,
+      "best_val_acc": 0.7543859649122807,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr2e-05_epochs4",
+      "lr": 2e-05,
+      "epochs": 4,
+      "best_val_acc": 0.7508771929824561,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr3e-05_epochs4",
+      "lr": 3e-05,
+      "epochs": 4,
+      "best_val_acc": 0.7456140350877193,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr1.5e-05_epochs4",
+      "lr": 1.5e-05,
+      "epochs": 4,
+      "best_val_acc": 0.743859649122807,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr2e-05_epochs3",
+      "lr": 2e-05,
+      "epochs": 3,
+      "best_val_acc": 0.7421052631578947,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr1e-05_epochs4",
+      "lr": 1e-05,
+      "epochs": 4,
+      "best_val_acc": 0.7315789473684211,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr1e-05_epochs5",
+      "lr": 1e-05,
+      "epochs": 5,
+      "best_val_acc": 0.7315789473684211,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr1e-05_epochs3",
+      "lr": 1e-05,
+      "epochs": 3,
+      "best_val_acc": 0.7263157894736842,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_easy_lr1.5e-05_epochs3",
+      "lr": 1.5e-05,
+      "epochs": 3,
+      "best_val_acc": 0.724561403508772,
+      "status": "ok"
+    }
+  ],
+  "wall_time_s": 1653.7
+}

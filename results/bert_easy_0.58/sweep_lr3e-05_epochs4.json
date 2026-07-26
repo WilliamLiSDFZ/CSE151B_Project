@@ -1,0 +1,46 @@
+{
+  "run_name": "sweep_lr3e-05_epochs4",
+  "status": "running",
+  "epochs_done": 1,
+  "config": {
+    "model_name": "bert-base-uncased",
+    "subset": "easy",
+    "lr": 3e-05,
+    "epochs": 4,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "effective_batch_size": 16,
+    "max_length": 128,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "seed": 77,
+    "fp16": true,
+    "device": "cuda"
+  },
+  "n_train": 2251,
+  "n_val": 570,
+  "val_accs": [
+    0.53509
+  ],
+  "best_val_acc": 0.5350877192982456,
+  "loss_curve": [
+    1.39441,
+    1.37268,
+    1.32731,
+    1.29067,
+    1.24141,
+    1.20753,
+    1.25927,
+    1.27362
+  ],
+  "epoch_times": [
+    {
+      "epoch": 0,
+      "train_s": 15.4,
+      "eval_s": 2.5,
+      "total_s": 17.9
+    }
+  ],
+  "wall_time_s": 21.9,
+  "updated_at": "2026-07-21 05:18:50"
+}

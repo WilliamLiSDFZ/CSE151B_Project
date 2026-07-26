@@ -1,0 +1,124 @@
+{
+  "sweep_name": "sweep_deberta_combined",
+  "config": {
+    "sweep_name": "sweep_deberta_combined",
+    "model_name": "microsoft/deberta-v3-base",
+    "subset": "combined",
+    "seed": 77,
+    "grid": {
+      "lr": [
+        1e-05,
+        1.5e-05,
+        2e-05,
+        3e-05
+      ],
+      "epochs": [
+        3,
+        4,
+        5
+      ]
+    },
+    "fixed": {
+      "batch_size": 8,
+      "grad_accum": 2,
+      "max_length": 128,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1
+    },
+    "keep_champion_last_pt": true,
+    "keep_all_checkpoints": false
+  },
+  "n_runs": 12,
+  "champion": {
+    "run_name": "sweep_deberta_combined_lr2e-05_epochs5",
+    "best_val_acc": 0.6996547756041427,
+    "checkpoint": "/home/wil018/private/CSE151B_Project/checkpoints/sweep_deberta_combined_lr2e-05_epochs5_20260726_022137/best"
+  },
+  "runs": [
+    {
+      "run_name": "sweep_deberta_combined_lr2e-05_epochs5",
+      "lr": 2e-05,
+      "epochs": 5,
+      "best_val_acc": 0.6996547756041427,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr3e-05_epochs4",
+      "lr": 3e-05,
+      "epochs": 4,
+      "best_val_acc": 0.6973532796317606,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr3e-05_epochs5",
+      "lr": 3e-05,
+      "epochs": 5,
+      "best_val_acc": 0.6962025316455697,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr1.5e-05_epochs5",
+      "lr": 1.5e-05,
+      "epochs": 5,
+      "best_val_acc": 0.6915995397008056,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr2e-05_epochs4",
+      "lr": 2e-05,
+      "epochs": 4,
+      "best_val_acc": 0.6881472957422324,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr1e-05_epochs5",
+      "lr": 1e-05,
+      "epochs": 5,
+      "best_val_acc": 0.6812428078250863,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr1e-05_epochs4",
+      "lr": 1e-05,
+      "epochs": 4,
+      "best_val_acc": 0.6754890678941312,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr1.5e-05_epochs4",
+      "lr": 1.5e-05,
+      "epochs": 4,
+      "best_val_acc": 0.6754890678941312,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr2e-05_epochs3",
+      "lr": 2e-05,
+      "epochs": 3,
+      "best_val_acc": 0.6708860759493671,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr3e-05_epochs3",
+      "lr": 3e-05,
+      "epochs": 3,
+      "best_val_acc": 0.6685845799769851,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr1.5e-05_epochs3",
+      "lr": 1.5e-05,
+      "epochs": 3,
+      "best_val_acc": 0.663981588032221,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_combined_lr1e-05_epochs3",
+      "lr": 1e-05,
+      "epochs": 3,
+      "best_val_acc": 0.6616800920598389,
+      "status": "ok"
+    }
+  ],
+  "wall_time_s": 1817.1
+}

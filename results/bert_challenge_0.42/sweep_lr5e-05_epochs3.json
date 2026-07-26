@@ -1,0 +1,64 @@
+{
+  "run_name": "sweep_lr5e-05_epochs3",
+  "status": "completed",
+  "epochs_done": 3,
+  "config": {
+    "model_name": "bert-base-uncased",
+    "subset": "challenge",
+    "lr": 5e-05,
+    "epochs": 3,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "effective_batch_size": 16,
+    "max_length": 128,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "seed": 77,
+    "fp16": true,
+    "device": "cuda"
+  },
+  "n_train": 1119,
+  "n_val": 299,
+  "val_accs": [
+    0.29431,
+    0.30769,
+    0.29097
+  ],
+  "best_val_acc": 0.3076923076923077,
+  "loss_curve": [
+    1.40227,
+    1.39178,
+    1.40073,
+    1.39498,
+    1.37924,
+    1.37211,
+    1.38366,
+    1.36132,
+    1.26572,
+    1.18652,
+    1.1506,
+    1.19662
+  ],
+  "epoch_times": [
+    {
+      "epoch": 0,
+      "train_s": 6.4,
+      "eval_s": 2.1,
+      "total_s": 8.5
+    },
+    {
+      "epoch": 1,
+      "train_s": 5.9,
+      "eval_s": 2.1,
+      "total_s": 7.9
+    },
+    {
+      "epoch": 2,
+      "train_s": 5.9,
+      "eval_s": 2.1,
+      "total_s": 8.0
+    }
+  ],
+  "wall_time_s": 35.5,
+  "updated_at": "2026-07-22 06:41:43"
+}

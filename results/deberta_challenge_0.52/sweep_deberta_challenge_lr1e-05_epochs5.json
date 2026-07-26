@@ -1,0 +1,86 @@
+{
+  "run_name": "sweep_deberta_challenge_lr1e-05_epochs5",
+  "status": "completed",
+  "epochs_done": 5,
+  "config": {
+    "model_name": "microsoft/deberta-v3-base",
+    "subset": "challenge",
+    "lr": 1e-05,
+    "epochs": 5,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "effective_batch_size": 16,
+    "max_length": 128,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "seed": 77,
+    "fp16": true,
+    "device": "cuda"
+  },
+  "n_train": 1119,
+  "n_val": 299,
+  "val_accs": [
+    0.3913,
+    0.46823,
+    0.49164,
+    0.48161,
+    0.47492
+  ],
+  "best_val_acc": 0.4916387959866221,
+  "loss_curve": [
+    1.38686,
+    1.3859,
+    1.3868,
+    1.38478,
+    1.38654,
+    1.37467,
+    1.34399,
+    1.31841,
+    1.21595,
+    1.16465,
+    1.17758,
+    1.07263,
+    0.94209,
+    1.08912,
+    0.94758,
+    0.9685,
+    0.91504,
+    0.92109,
+    0.96,
+    0.84893
+  ],
+  "epoch_times": [
+    {
+      "epoch": 0,
+      "train_s": 9.5,
+      "eval_s": 1.0,
+      "total_s": 10.5
+    },
+    {
+      "epoch": 1,
+      "train_s": 8.6,
+      "eval_s": 0.8,
+      "total_s": 9.4
+    },
+    {
+      "epoch": 2,
+      "train_s": 8.6,
+      "eval_s": 0.8,
+      "total_s": 9.5
+    },
+    {
+      "epoch": 3,
+      "train_s": 8.3,
+      "eval_s": 0.8,
+      "total_s": 9.1
+    },
+    {
+      "epoch": 4,
+      "train_s": 8.0,
+      "eval_s": 0.8,
+      "total_s": 8.8
+    }
+  ],
+  "wall_time_s": 77.1,
+  "updated_at": "2026-07-26 01:32:56"
+}

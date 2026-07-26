@@ -1,0 +1,21 @@
+{
+  "subset": "challenge",
+  "split": "validation",
+  "n_examples": 299,
+  "choice_count_distribution": {
+    "4": 295,
+    "3": 3,
+    "5": 1
+  },
+  "random": {
+    "analytic_accuracy": 0.25066889632107026,
+    "empirical_accuracy_mean": 0.25121739130434784,
+    "empirical_accuracy_std": 0.024905724637950002,
+    "trials": 1000
+  },
+  "majority_position": {
+    "majority_position": 1,
+    "train_frequency": 0.2645218945487042,
+    "accuracy": 0.24414715719063546
+  }
+}

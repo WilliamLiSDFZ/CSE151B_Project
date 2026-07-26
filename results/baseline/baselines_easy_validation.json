@@ -1,0 +1,21 @@
+{
+  "subset": "easy",
+  "split": "validation",
+  "n_examples": 570,
+  "choice_count_distribution": {
+    "4": 567,
+    "5": 2,
+    "3": 1
+  },
+  "random": {
+    "analytic_accuracy": 0.24997076023391815,
+    "empirical_accuracy_mean": 0.25013508771929827,
+    "empirical_accuracy_std": 0.01720998720474729,
+    "trials": 1000
+  },
+  "majority_position": {
+    "majority_position": 1,
+    "train_frequency": 0.2612172367836517,
+    "accuracy": 0.26666666666666666
+  }
+}

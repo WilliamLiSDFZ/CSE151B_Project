@@ -1,0 +1,124 @@
+{
+  "sweep_name": "sweep_deberta_challenge",
+  "config": {
+    "sweep_name": "sweep_deberta_challenge",
+    "model_name": "microsoft/deberta-v3-base",
+    "subset": "challenge",
+    "seed": 77,
+    "grid": {
+      "lr": [
+        1e-05,
+        1.5e-05,
+        2e-05,
+        3e-05
+      ],
+      "epochs": [
+        3,
+        4,
+        5
+      ]
+    },
+    "fixed": {
+      "batch_size": 8,
+      "grad_accum": 2,
+      "max_length": 128,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1
+    },
+    "keep_champion_last_pt": true,
+    "keep_all_checkpoints": false
+  },
+  "n_runs": 12,
+  "champion": {
+    "run_name": "sweep_deberta_challenge_lr3e-05_epochs4",
+    "best_val_acc": 0.5217391304347826,
+    "checkpoint": "/home/wil018/private/CSE151B_Project/checkpoints/sweep_deberta_challenge_lr3e-05_epochs4_20260726_014138/best"
+  },
+  "runs": [
+    {
+      "run_name": "sweep_deberta_challenge_lr3e-05_epochs4",
+      "lr": 3e-05,
+      "epochs": 4,
+      "best_val_acc": 0.5217391304347826,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr2e-05_epochs5",
+      "lr": 2e-05,
+      "epochs": 5,
+      "best_val_acc": 0.5183946488294314,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr2e-05_epochs4",
+      "lr": 2e-05,
+      "epochs": 4,
+      "best_val_acc": 0.5150501672240803,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr3e-05_epochs5",
+      "lr": 3e-05,
+      "epochs": 5,
+      "best_val_acc": 0.5050167224080268,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr2e-05_epochs3",
+      "lr": 2e-05,
+      "epochs": 3,
+      "best_val_acc": 0.4983277591973244,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr1.5e-05_epochs4",
+      "lr": 1.5e-05,
+      "epochs": 4,
+      "best_val_acc": 0.49498327759197325,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr1e-05_epochs5",
+      "lr": 1e-05,
+      "epochs": 5,
+      "best_val_acc": 0.4916387959866221,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr3e-05_epochs3",
+      "lr": 3e-05,
+      "epochs": 3,
+      "best_val_acc": 0.4916387959866221,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr1e-05_epochs3",
+      "lr": 1e-05,
+      "epochs": 3,
+      "best_val_acc": 0.4882943143812709,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr1e-05_epochs4",
+      "lr": 1e-05,
+      "epochs": 4,
+      "best_val_acc": 0.48494983277591974,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr1.5e-05_epochs5",
+      "lr": 1.5e-05,
+      "epochs": 5,
+      "best_val_acc": 0.48494983277591974,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_deberta_challenge_lr1.5e-05_epochs3",
+      "lr": 1.5e-05,
+      "epochs": 3,
+      "best_val_acc": 0.47157190635451507,
+      "status": "ok"
+    }
+  ],
+  "wall_time_s": 929.6
+}

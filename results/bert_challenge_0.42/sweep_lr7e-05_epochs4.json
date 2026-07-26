@@ -1,0 +1,75 @@
+{
+  "run_name": "sweep_lr7e-05_epochs4",
+  "status": "completed",
+  "epochs_done": 4,
+  "config": {
+    "model_name": "bert-base-uncased",
+    "subset": "challenge",
+    "lr": 7e-05,
+    "epochs": 4,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "effective_batch_size": 16,
+    "max_length": 128,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.1,
+    "seed": 77,
+    "fp16": true,
+    "device": "cuda"
+  },
+  "n_train": 1119,
+  "n_val": 299,
+  "val_accs": [
+    0.30769,
+    0.34448,
+    0.33445,
+    0.35117
+  ],
+  "best_val_acc": 0.3511705685618729,
+  "loss_curve": [
+    1.40308,
+    1.39015,
+    1.38968,
+    1.39934,
+    1.37441,
+    1.3348,
+    1.33889,
+    1.34208,
+    1.22519,
+    1.10799,
+    1.06895,
+    1.13427,
+    0.86139,
+    0.87649,
+    0.86371,
+    0.81398
+  ],
+  "epoch_times": [
+    {
+      "epoch": 0,
+      "train_s": 6.3,
+      "eval_s": 2.1,
+      "total_s": 8.4
+    },
+    {
+      "epoch": 1,
+      "train_s": 5.9,
+      "eval_s": 2.1,
+      "total_s": 8.0
+    },
+    {
+      "epoch": 2,
+      "train_s": 5.9,
+      "eval_s": 2.1,
+      "total_s": 8.0
+    },
+    {
+      "epoch": 3,
+      "train_s": 5.9,
+      "eval_s": 2.1,
+      "total_s": 8.0
+    }
+  ],
+  "wall_time_s": 47.5,
+  "updated_at": "2026-07-22 06:45:32"
+}
