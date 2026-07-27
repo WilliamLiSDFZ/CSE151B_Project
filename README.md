@@ -70,8 +70,7 @@ python main.py --config configs/final.json
 `main.py` expands the `grid` in the config (cartesian product; any train.py
 argument can be an axis), runs one training subprocess per combination, and —
 to save server storage — **keeps only the best run's checkpoints**, deleting
-each run's `checkpoints/<run_name>_<YYYYmmdd_HHMMSS>/` (folder names carry the
-run's start timestamp) as soon as it is beaten. Every run's
+each run's `checkpoints/<run_name>/` as soon as it is beaten. Every run's
 metrics JSON is always kept in `results/` — train.py rewrites it after EVERY
 epoch (`status: running` → `completed`), so even a culled session leaves its
 metrics on disk for comparison. The ranked leaderboard lands in
@@ -86,8 +85,7 @@ evaluation.
 
 Each run writes `results/<run_name>.json` (config, loss curve, per-epoch val
 accuracy, wall time) and saves the best-val checkpoint to
-`checkpoints/<run_name>_<YYYYmmdd_HHMMSS>/best` (the exact path is recorded in
-the summary's `champion.checkpoint` field).
+`checkpoints/<run_name>/best`.
 
 ## Evaluation (test sets: run ONCE, at the very end)
 
@@ -100,3 +98,16 @@ python src/evaluate.py --checkpoint checkpoints/<run_name>/best \
 
 `--save_predictions` stores per-example records (id, pred, label, confidence)
 in the JSON for the paper's error analysis.
+
+## Analysis
+
+```bash
+python src/analyze.py     # reads results/ recursively -> results/analysis/
+```
+
+Classifies every JSON under `results/` by content (folder names don't matter),
+then writes the paper's Table 1 (with 95% CIs, in md/tex/csv), hyperparameter
+heatmaps, champion training-dynamics figures, a full run leaderboard, an
+efficiency table, and an auto-generated `analysis.md` report with significance
+tests and caveats. Re-run any time new results (final seeds, test evals) land.
+See `ANALYSIS_PLAN.md` for the full specification.
