@@ -1,0 +1,8213 @@
+{
+  "checkpoint": "checkpoints/sweep_deberta_combined_lr2e-05_epochs5_20260726_022137/best",
+  "subset": "challenge",
+  "split": "test",
+  "n_examples": 1172,
+  "accuracy": 0.560580204778157,
+  "predictions": [
+    {
+      "id": "Mercury_7175875",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9888336658477783
+    },
+    {
+      "id": "Mercury_SC_409171",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8664558529853821
+    },
+    {
+      "id": "Mercury_SC_408547",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5725559592247009
+    },
+    {
+      "id": "Mercury_407327",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4766225814819336
+    },
+    {
+      "id": "MCAS_2006_9_44",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.4650401473045349
+    },
+    {
+      "id": "Mercury_7270393",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.4622953534126282
+    },
+    {
+      "id": "MCAS_2014_5_7",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5008191466331482
+    },
+    {
+      "id": "Mercury_7086660",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5507919788360596
+    },
+    {
+      "id": "Mercury_7168805",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6080896854400635
+    },
+    {
+      "id": "MCAS_2003_8_11",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9926551580429077
+    },
+    {
+      "id": "Mercury_7250058",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7519413828849792
+    },
+    {
+      "id": "Mercury_7012740",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7413985729217529
+    },
+    {
+      "id": "Mercury_LBS10610",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5114662647247314
+    },
+    {
+      "id": "Mercury_SC_407400",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6332988142967224
+    },
+    {
+      "id": "Mercury_7212993",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9441866278648376
+    },
+    {
+      "id": "Mercury_SC_413240",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9992901086807251
+    },
+    {
+      "id": "Mercury_7186358",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9558795690536499
+    },
+    {
+      "id": "Mercury_7166425",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8443378210067749
+    },
+    {
+      "id": "MDSA_2007_8_3",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9200148582458496
+    },
+    {
+      "id": "Mercury_7094290",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7957279086112976
+    },
+    {
+      "id": "Mercury_7186568",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8945125341415405
+    },
+    {
+      "id": "Mercury_402216",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6152527928352356
+    },
+    {
+      "id": "Mercury_404894",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9545097947120667
+    },
+    {
+      "id": "MCAS_2002_8_11",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5653331279754639
+    },
+    {
+      "id": "Mercury_SC_405086",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9650177359580994
+    },
+    {
+      "id": "Mercury_SC_408324",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8901726007461548
+    },
+    {
+      "id": "Mercury_7218820",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9273372888565063
+    },
+    {
+      "id": "Mercury_412202",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6626448035240173
+    },
+    {
+      "id": "Mercury_SC_409139",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8664137125015259
+    },
+    {
+      "id": "Mercury_400687",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9980560541152954
+    },
+    {
+      "id": "Mercury_7171605",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9303192496299744
+    },
+    {
+      "id": "Mercury_7210245",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8780763149261475
+    },
+    {
+      "id": "AKDE&ED_2008_4_25",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9918860197067261
+    },
+    {
+      "id": "AKDE&ED_2008_4_19",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9969184398651123
+    },
+    {
+      "id": "Mercury_SC_400402",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6942917704582214
+    },
+    {
+      "id": "Mercury_7234308",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6162185072898865
+    },
+    {
+      "id": "ACTAAP_2014_5_8",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.32926303148269653
+    },
+    {
+      "id": "Mercury_400407",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.3351210355758667
+    },
+    {
+      "id": "Mercury_7116288",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5027228593826294
+    },
+    {
+      "id": "MCAS_2004_9_15-v1",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.2942028343677521
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_26",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6971607804298401
+    },
+    {
+      "id": "Mercury_SC_401620",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9371508955955505
+    },
+    {
+      "id": "Mercury_400877",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5160508155822754
+    },
+    {
+      "id": "Mercury_7174213",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9338226318359375
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_34",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7222668528556824
+    },
+    {
+      "id": "Mercury_7212398",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9829335808753967
+    },
+    {
+      "id": "Mercury_SC_401290",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9743971824645996
+    },
+    {
+      "id": "Mercury_SC_402120",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9572032690048218
+    },
+    {
+      "id": "Mercury_184975",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.3066822290420532
+    },
+    {
+      "id": "Mercury_SC_400578",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9719416499137878
+    },
+    {
+      "id": "MCAS_2001_8_4",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5275982022285461
+    },
+    {
+      "id": "MCAS_2003_5_33",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9680546522140503
+    },
+    {
+      "id": "Mercury_7068513",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7534853219985962
+    },
+    {
+      "id": "AKDE&ED_2008_4_26",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.497659832239151
+    },
+    {
+      "id": "Mercury_7235638",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9853711128234863
+    },
+    {
+      "id": "MDSA_2009_5_20",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.4704018831253052
+    },
+    {
+      "id": "Mercury_178325",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5947552919387817
+    },
+    {
+      "id": "Mercury_7212678",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.49701252579689026
+    },
+    {
+      "id": "TAKS_2009_8_32",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.36037296056747437
+    },
+    {
+      "id": "Mercury_412681",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7450640797615051
+    },
+    {
+      "id": "Mercury_400440",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4354313313961029
+    },
+    {
+      "id": "Mercury_SC_416529",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9984437823295593
+    },
+    {
+      "id": "MCAS_2006_8_1",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9995613694190979
+    },
+    {
+      "id": "TIMSS_2003_8_pg80",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6098533868789673
+    },
+    {
+      "id": "Mercury_416645",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.359627366065979
+    },
+    {
+      "id": "Mercury_406777",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8787416815757751
+    },
+    {
+      "id": "Mercury_LBS11018",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9923432469367981
+    },
+    {
+      "id": "Mercury_7139878",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5079586505889893
+    },
+    {
+      "id": "Mercury_417147",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.3465709984302521
+    },
+    {
+      "id": "Mercury_7016765",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9847797751426697
+    },
+    {
+      "id": "Mercury_415303",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6976079344749451
+    },
+    {
+      "id": "Mercury_7215845",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8606561422348022
+    },
+    {
+      "id": "Mercury_7136885",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7479294538497925
+    },
+    {
+      "id": "Mercury_SC_400059",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.44296425580978394
+    },
+    {
+      "id": "Mercury_7044328",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9973401427268982
+    },
+    {
+      "id": "MEA_2010_8_1",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8061856031417847
+    },
+    {
+      "id": "Mercury_414099",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9102963805198669
+    },
+    {
+      "id": "Mercury_410807",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5567613244056702
+    },
+    {
+      "id": "Mercury_403234",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8739239573478699
+    },
+    {
+      "id": "Mercury_7011323",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6982600092887878
+    },
+    {
+      "id": "Mercury_7109463",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.563438355922699
+    },
+    {
+      "id": "Mercury_SC_401277",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8990875482559204
+    },
+    {
+      "id": "MCAS_2005_5_25",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9469851851463318
+    },
+    {
+      "id": "Mercury_SC_401272",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.4142405390739441
+    },
+    {
+      "id": "Mercury_7103600",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8445960283279419
+    },
+    {
+      "id": "MDSA_2009_8_2",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5685018301010132
+    },
+    {
+      "id": "Mercury_7127943",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9071214199066162
+    },
+    {
+      "id": "ACTAAP_2009_7_8",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8514013290405273
+    },
+    {
+      "id": "MCAS_2006_9_43",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.3709616959095001
+    },
+    {
+      "id": "Mercury_7252088",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7561517357826233
+    },
+    {
+      "id": "Mercury_7084665",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9878283739089966
+    },
+    {
+      "id": "FCAT_2008_5_2",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.4533313810825348
+    },
+    {
+      "id": "Mercury_SC_414041",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.41526323556900024
+    },
+    {
+      "id": "MCAS_2014_8_20",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6168424487113953
+    },
+    {
+      "id": "Mercury_SC_401116",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9956159591674805
+    },
+    {
+      "id": "Mercury_7064680",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7264565825462341
+    },
+    {
+      "id": "Mercury_7211680",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9033234119415283
+    },
+    {
+      "id": "Mercury_180373",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9820510149002075
+    },
+    {
+      "id": "Mercury_7216248",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6817789077758789
+    },
+    {
+      "id": "Mercury_SC_417677",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9406951665878296
+    },
+    {
+      "id": "Mercury_7221655",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5625128746032715
+    },
+    {
+      "id": "MCAS_2006_9_12",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8583384156227112
+    },
+    {
+      "id": "MCAS_2004_9_2",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8738123178482056
+    },
+    {
+      "id": "Mercury_180005",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9921814203262329
+    },
+    {
+      "id": "Mercury_7071523",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9213985800743103
+    },
+    {
+      "id": "Mercury_7263375",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7080576419830322
+    },
+    {
+      "id": "TIMSS_2011_8_pg102",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.7806686162948608
+    },
+    {
+      "id": "Mercury_406550",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5677117705345154
+    },
+    {
+      "id": "Mercury_SC_400057",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9904438853263855
+    },
+    {
+      "id": "TAKS_2009_5_26",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6891713738441467
+    },
+    {
+      "id": "LEAP_2007_8_10417",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7141596078872681
+    },
+    {
+      "id": "Mercury_7027405",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9593438506126404
+    },
+    {
+      "id": "Mercury_7058415",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7248587012290955
+    },
+    {
+      "id": "Mercury_7215828",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.4057488441467285
+    },
+    {
+      "id": "Mercury_7064575",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6069735288619995
+    },
+    {
+      "id": "Mercury_7097493",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5126023888587952
+    },
+    {
+      "id": "AKDE&ED_2008_8_47",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5916950106620789
+    },
+    {
+      "id": "Mercury_405136",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7855667471885681
+    },
+    {
+      "id": "Mercury_415086",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.404007226228714
+    },
+    {
+      "id": "Mercury_7228725",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9759936928749084
+    },
+    {
+      "id": "Mercury_7201740",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9046751260757446
+    },
+    {
+      "id": "NYSEDREGENTS_2010_4_4",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8880302309989929
+    },
+    {
+      "id": "MEAP_2005_8_21",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8651513457298279
+    },
+    {
+      "id": "Mercury_7026355",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6844513416290283
+    },
+    {
+      "id": "Mercury_7249708",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7641753554344177
+    },
+    {
+      "id": "Mercury_7107170",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9978126287460327
+    },
+    {
+      "id": "Mercury_183820",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.31355422735214233
+    },
+    {
+      "id": "Mercury_SC_401357",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5157031416893005
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_11",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8077763319015503
+    },
+    {
+      "id": "Mercury_416650",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.3255956768989563
+    },
+    {
+      "id": "NCEOGA_2013_5_20",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.31064528226852417
+    },
+    {
+      "id": "Mercury_400500",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.47124364972114563
+    },
+    {
+      "id": "Mercury_SC_401366",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9350219964981079
+    },
+    {
+      "id": "Mercury_7141610",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6383727788925171
+    },
+    {
+      "id": "Mercury_7247013",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.45733195543289185
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_30",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7159708738327026
+    },
+    {
+      "id": "ACTAAP_2011_5_16",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5507891774177551
+    },
+    {
+      "id": "Mercury_7093153",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.944980263710022
+    },
+    {
+      "id": "Mercury_7013965",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9932574033737183
+    },
+    {
+      "id": "Mercury_7034843",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.43974772095680237
+    },
+    {
+      "id": "Mercury_SC_407610",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9830169081687927
+    },
+    {
+      "id": "Mercury_405947",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9968511462211609
+    },
+    {
+      "id": "AKDE&ED_2012_8_6",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7359528541564941
+    },
+    {
+      "id": "Mercury_7011130",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9011043906211853
+    },
+    {
+      "id": "Mercury_LBS11022",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8567309379577637
+    },
+    {
+      "id": "TIMSS_1995_8_J1",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.47385159134864807
+    },
+    {
+      "id": "Mercury_SC_408366",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.560416042804718
+    },
+    {
+      "id": "Mercury_7009993",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9383746981620789
+    },
+    {
+      "id": "Mercury_401699",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6536301970481873
+    },
+    {
+      "id": "Mercury_7056858",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8490027189254761
+    },
+    {
+      "id": "Mercury_7027160",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.36003994941711426
+    },
+    {
+      "id": "Mercury_400811",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6901717782020569
+    },
+    {
+      "id": "Mercury_SC_400062",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9885278940200806
+    },
+    {
+      "id": "Mercury_400699",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8567948937416077
+    },
+    {
+      "id": "Mercury_7029803",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6688940525054932
+    },
+    {
+      "id": "Mercury_SC_401372",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.34820905327796936
+    },
+    {
+      "id": "Mercury_7271128",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7198350429534912
+    },
+    {
+      "id": "Mercury_407260",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7103655934333801
+    },
+    {
+      "id": "Mercury_SC_416155",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5717748999595642
+    },
+    {
+      "id": "Mercury_402145",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9994237422943115
+    },
+    {
+      "id": "AIMS_2009_4_5",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3409491181373596
+    },
+    {
+      "id": "TIMSS_2003_4_pg7",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6159390211105347
+    },
+    {
+      "id": "Mercury_7142415",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.3343205153942108
+    },
+    {
+      "id": "Mercury_7212818",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.443783700466156
+    },
+    {
+      "id": "Mercury_SC_413299",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6070848703384399
+    },
+    {
+      "id": "Mercury_7132020",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9956969022750854
+    },
+    {
+      "id": "MEA_2014_8_10",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7191795110702515
+    },
+    {
+      "id": "TIMSS_1995_8_N2",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9782230257987976
+    },
+    {
+      "id": "Mercury_7024465",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9253420829772949
+    },
+    {
+      "id": "Mercury_SC_415762",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.47054094076156616
+    },
+    {
+      "id": "Mercury_415093",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.29931825399398804
+    },
+    {
+      "id": "LEAP_2005_8_10404",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5007217526435852
+    },
+    {
+      "id": "AIMS_2008_8_6",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.47913163900375366
+    },
+    {
+      "id": "Mercury_7057173",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8916266560554504
+    },
+    {
+      "id": "TIMSS_2007_8_pg60",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5962299108505249
+    },
+    {
+      "id": "AIMS_2009_8_14",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8936403393745422
+    },
+    {
+      "id": "Mercury_185010",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.3324733078479767
+    },
+    {
+      "id": "Mercury_7206938",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8936790823936462
+    },
+    {
+      "id": "Mercury_402501",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.46267297863960266
+    },
+    {
+      "id": "MCAS_2011_8_15365",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.45532721281051636
+    },
+    {
+      "id": "Mercury_SC_401766",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.29891830682754517
+    },
+    {
+      "id": "Mercury_7162400",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9657410979270935
+    },
+    {
+      "id": "Mercury_7086695",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9231342077255249
+    },
+    {
+      "id": "Mercury_SC_402994",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7632747888565063
+    },
+    {
+      "id": "Mercury_7056298",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9877465963363647
+    },
+    {
+      "id": "Mercury_409115",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.3318566083908081
+    },
+    {
+      "id": "Mercury_409647",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4361729025840759
+    },
+    {
+      "id": "Mercury_414352",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7369173765182495
+    },
+    {
+      "id": "Mercury_185325",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8880231976509094
+    },
+    {
+      "id": "Mercury_SC_412374",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3564823865890503
+    },
+    {
+      "id": "Mercury_SC_401818",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9658199548721313
+    },
+    {
+      "id": "Mercury_SC_413549",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5734441876411438
+    },
+    {
+      "id": "Mercury_7093958",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9954336285591125
+    },
+    {
+      "id": "Mercury_7102323",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.992727518081665
+    },
+    {
+      "id": "Mercury_7222793",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7399210333824158
+    },
+    {
+      "id": "Mercury_SC_400701",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6228799223899841
+    },
+    {
+      "id": "Mercury_409301",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8178095817565918
+    },
+    {
+      "id": "Mercury_SC_400383",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9145079851150513
+    },
+    {
+      "id": "CSZ_2005_5_CSZ10021",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9664416313171387
+    },
+    {
+      "id": "Mercury_SC_407070",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9685685038566589
+    },
+    {
+      "id": "Mercury_SC_400708",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.42871737480163574
+    },
+    {
+      "id": "Mercury_7075040",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.889814019203186
+    },
+    {
+      "id": "Mercury_7137165",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9897408485412598
+    },
+    {
+      "id": "Mercury_SC_400046",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.3684227168560028
+    },
+    {
+      "id": "Mercury_7099330",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9974913597106934
+    },
+    {
+      "id": "MDSA_2007_5_2",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5343596935272217
+    },
+    {
+      "id": "Mercury_7271758",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6354073286056519
+    },
+    {
+      "id": "MCAS_2003_8_31",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5770561695098877
+    },
+    {
+      "id": "AKDE&ED_2008_8_53",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5789877772331238
+    },
+    {
+      "id": "TIMSS_2007_8_pg109",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.44666770100593567
+    },
+    {
+      "id": "Mercury_175385",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5137274265289307
+    },
+    {
+      "id": "Mercury_410669",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.4094487428665161
+    },
+    {
+      "id": "MEAP_2005_8_39",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9456793665885925
+    },
+    {
+      "id": "Mercury_SC_408568",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.665984034538269
+    },
+    {
+      "id": "AKDE&ED_2008_8_7",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.659394383430481
+    },
+    {
+      "id": "Mercury_7082845",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9772905707359314
+    },
+    {
+      "id": "Mercury_SC_405726",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9981972575187683
+    },
+    {
+      "id": "Mercury_SC_415407",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.49384015798568726
+    },
+    {
+      "id": "Mercury_SC_401792",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9996387958526611
+    },
+    {
+      "id": "LEAP_2000_8_4",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5654246807098389
+    },
+    {
+      "id": "Mercury_SC_413439",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7253504991531372
+    },
+    {
+      "id": "ACTAAP_2014_7_13",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9733209013938904
+    },
+    {
+      "id": "Mercury_SC_402638",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9842819571495056
+    },
+    {
+      "id": "Mercury_SC_406725",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5212811231613159
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_29",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6151810884475708
+    },
+    {
+      "id": "Mercury_406136",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7499641180038452
+    },
+    {
+      "id": "MSA_2012_5_23",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6854737401008606
+    },
+    {
+      "id": "Mercury_405873",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5155389904975891
+    },
+    {
+      "id": "Mercury_7043820",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6154662370681763
+    },
+    {
+      "id": "MCAS_2005_5_34",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9645302295684814
+    },
+    {
+      "id": "Mercury_7182245",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5691319108009338
+    },
+    {
+      "id": "MSA_2012_8_30",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.2944512367248535
+    },
+    {
+      "id": "Mercury_7252753",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7005642056465149
+    },
+    {
+      "id": "TAKS_2009_8_36",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.40506988763809204
+    },
+    {
+      "id": "Mercury_SC_415473",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.46748048067092896
+    },
+    {
+      "id": "Mercury_SC_413624",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9823732376098633
+    },
+    {
+      "id": "Mercury_7016800",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5204988121986389
+    },
+    {
+      "id": "Mercury_SC_407228",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.514707088470459
+    },
+    {
+      "id": "Mercury_414504",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6789612770080566
+    },
+    {
+      "id": "TIMSS_2011_4_pg27",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6625611782073975
+    },
+    {
+      "id": "Mercury_SC_402029",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9755784869194031
+    },
+    {
+      "id": "Mercury_7131845",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5334087610244751
+    },
+    {
+      "id": "Mercury_SC_405533",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5058345198631287
+    },
+    {
+      "id": "Mercury_7086748",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9891563653945923
+    },
+    {
+      "id": "MDSA_2007_8_17",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5130301713943481
+    },
+    {
+      "id": "Mercury_7210473",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9917367100715637
+    },
+    {
+      "id": "Mercury_7214340",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6622251868247986
+    },
+    {
+      "id": "MCAS_2005_9_17",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7938513159751892
+    },
+    {
+      "id": "MEA_2016_8_12",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5562212467193604
+    },
+    {
+      "id": "Mercury_SC_401278",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.595636785030365
+    },
+    {
+      "id": "Mercury_SC_407689",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.31828153133392334
+    },
+    {
+      "id": "Mercury_7230405",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5752649307250977
+    },
+    {
+      "id": "Mercury_SC_405640",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9938787817955017
+    },
+    {
+      "id": "Mercury_7201775",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8442860841751099
+    },
+    {
+      "id": "Mercury_7177398",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8819219470024109
+    },
+    {
+      "id": "Mercury_7041423",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.38794946670532227
+    },
+    {
+      "id": "Mercury_7004743",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9892684817314148
+    },
+    {
+      "id": "Mercury_7198468",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8383875489234924
+    },
+    {
+      "id": "MEA_2014_5_11",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8126986622810364
+    },
+    {
+      "id": "Mercury_410602",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.382536381483078
+    },
+    {
+      "id": "Mercury_7108868",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9218195080757141
+    },
+    {
+      "id": "Mercury_7033828",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9981808662414551
+    },
+    {
+      "id": "TIMSS_2007_4_pg19",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9959461092948914
+    },
+    {
+      "id": "Mercury_400828",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8697196841239929
+    },
+    {
+      "id": "VASoL_2008_3_16",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8564671874046326
+    },
+    {
+      "id": "LEAP__5_10315",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9277245402336121
+    },
+    {
+      "id": "Mercury_SC_415471",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7112225890159607
+    },
+    {
+      "id": "Mercury_7247065",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5827678442001343
+    },
+    {
+      "id": "MDSA_2011_5_3",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9539149403572083
+    },
+    {
+      "id": "MDSA_2009_5_39",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7636133432388306
+    },
+    {
+      "id": "Mercury_187198",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6214389204978943
+    },
+    {
+      "id": "MCAS_2000_4_36",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.4840967655181885
+    },
+    {
+      "id": "Mercury_184100",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7746877074241638
+    },
+    {
+      "id": "Mercury_LBS10814",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9470394253730774
+    },
+    {
+      "id": "Mercury_SC_408384",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7381669282913208
+    },
+    {
+      "id": "Mercury_7043068",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5297085046768188
+    },
+    {
+      "id": "Mercury_411071",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8717583417892456
+    },
+    {
+      "id": "NYSEDREGENTS_2010_4_24",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6396740674972534
+    },
+    {
+      "id": "Mercury_SC_409673",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8975216746330261
+    },
+    {
+      "id": "Mercury_SC_400374",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8389615416526794
+    },
+    {
+      "id": "CSZ_2009_8_CSZ20740",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.4602654278278351
+    },
+    {
+      "id": "Mercury_SC_406482",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8446912169456482
+    },
+    {
+      "id": "OHAT_2007_8_24",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8500707745552063
+    },
+    {
+      "id": "Mercury_188335",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9689558148384094
+    },
+    {
+      "id": "Mercury_7128555",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8665291666984558
+    },
+    {
+      "id": "Mercury_407517",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6084932088851929
+    },
+    {
+      "id": "Mercury_405950",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9935072660446167
+    },
+    {
+      "id": "MCAS_2004_9_5",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.976373553276062
+    },
+    {
+      "id": "NCEOGA_2013_8_28",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9977684020996094
+    },
+    {
+      "id": "Mercury_SC_406451",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.38406428694725037
+    },
+    {
+      "id": "Mercury_7109323",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.942910373210907
+    },
+    {
+      "id": "Mercury_404132",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.3271925449371338
+    },
+    {
+      "id": "Mercury_7210210",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7013682723045349
+    },
+    {
+      "id": "Mercury_SC_408042",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9499372243881226
+    },
+    {
+      "id": "MCAS_2004_8_14",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5676798224449158
+    },
+    {
+      "id": "TIMSS_2011_4_pg5",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8978174328804016
+    },
+    {
+      "id": "Mercury_SC_406833",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5173170566558838
+    },
+    {
+      "id": "Mercury_7029558",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.528986930847168
+    },
+    {
+      "id": "Mercury_7138390",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5318548679351807
+    },
+    {
+      "id": "MEAP_2005_5_12",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.613456130027771
+    },
+    {
+      "id": "MCAS_2000_4_30",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.36901921033859253
+    },
+    {
+      "id": "MCAS_1998_4_12",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7798426747322083
+    },
+    {
+      "id": "Mercury_175840",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9910412430763245
+    },
+    {
+      "id": "Mercury_7099190",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.799433171749115
+    },
+    {
+      "id": "Mercury_SC_401605",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7658554911613464
+    },
+    {
+      "id": "TAKS_2009_5_36",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9982074499130249
+    },
+    {
+      "id": "Mercury_7171570",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9144591093063354
+    },
+    {
+      "id": "Mercury_SC_402057",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.40737202763557434
+    },
+    {
+      "id": "Mercury_SC_413628",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6469762921333313
+    },
+    {
+      "id": "Mercury_LBS10131",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9972875118255615
+    },
+    {
+      "id": "Mercury_7032428",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.4897913336753845
+    },
+    {
+      "id": "Mercury_7025008",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9075323343276978
+    },
+    {
+      "id": "MEA_2011_8_19",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8059197068214417
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_27",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5925666093826294
+    },
+    {
+      "id": "VASoL_2007_5_22",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.3784056305885315
+    },
+    {
+      "id": "NCEOGA_2013_5_19",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8277075290679932
+    },
+    {
+      "id": "Mercury_7037555",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.460460364818573
+    },
+    {
+      "id": "Mercury_402132",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5135559439659119
+    },
+    {
+      "id": "MCAS_2006_8_24",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.49954110383987427
+    },
+    {
+      "id": "Mercury_7128923",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7924920320510864
+    },
+    {
+      "id": "Mercury_416379",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8855704665184021
+    },
+    {
+      "id": "Mercury_7168053",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6810763478279114
+    },
+    {
+      "id": "AKDE&ED_2008_8_1",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.4090276062488556
+    },
+    {
+      "id": "Mercury_SC_415476",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8259580731391907
+    },
+    {
+      "id": "Mercury_7106960",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.998563826084137
+    },
+    {
+      "id": "Mercury_7160563",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9709084033966064
+    },
+    {
+      "id": "Mercury_7068583",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7065131068229675
+    },
+    {
+      "id": "Mercury_404638",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5444260239601135
+    },
+    {
+      "id": "Mercury_SC_407138",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.770024299621582
+    },
+    {
+      "id": "MCAS_2000_4_10",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7978615164756775
+    },
+    {
+      "id": "Mercury_177748",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8699721097946167
+    },
+    {
+      "id": "MCAS_2004_9_21-v1",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8267943859100342
+    },
+    {
+      "id": "MDSA_2007_5_16",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.3085576593875885
+    },
+    {
+      "id": "Mercury_401763",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.3626636266708374
+    },
+    {
+      "id": "Mercury_7268118",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9531917572021484
+    },
+    {
+      "id": "Mercury_403232",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7156673073768616
+    },
+    {
+      "id": "Mercury_415081",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.563366711139679
+    },
+    {
+      "id": "Mercury_7206378",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9969118237495422
+    },
+    {
+      "id": "CSZ30169",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8513397574424744
+    },
+    {
+      "id": "Mercury_7013948",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4504106342792511
+    },
+    {
+      "id": "Mercury_SC_402164",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6817753314971924
+    },
+    {
+      "id": "Mercury_400880",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.32308229804039
+    },
+    {
+      "id": "Mercury_7040793",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.37913525104522705
+    },
+    {
+      "id": "MDSA_2010_5_29",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.940181314945221
+    },
+    {
+      "id": "LEAP__8_10365",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.38903552293777466
+    },
+    {
+      "id": "Mercury_SC_401295",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9301431775093079
+    },
+    {
+      "id": "MCAS_2012_5_23625",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.45307403802871704
+    },
+    {
+      "id": "Mercury_7268048",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8901322484016418
+    },
+    {
+      "id": "Mercury_SC_402629",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9921032786369324
+    },
+    {
+      "id": "NCEOGA_2013_8_42",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8656315207481384
+    },
+    {
+      "id": "Mercury_412463",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5171014666557312
+    },
+    {
+      "id": "Mercury_409295",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9200476408004761
+    },
+    {
+      "id": "Mercury_404609",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9993730187416077
+    },
+    {
+      "id": "Mercury_7230090",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9746370911598206
+    },
+    {
+      "id": "Mercury_7057488",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9390447735786438
+    },
+    {
+      "id": "MDSA_2009_4_1",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9376041293144226
+    },
+    {
+      "id": "Mercury_7150728",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9619032144546509
+    },
+    {
+      "id": "Mercury_402207",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.28048133850097656
+    },
+    {
+      "id": "Mercury_411732",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5146215558052063
+    },
+    {
+      "id": "Mercury_7270113",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7823559045791626
+    },
+    {
+      "id": "AKDE&ED_2008_8_3",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.883979082107544
+    },
+    {
+      "id": "MCAS_1999_8_1",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.47553983330726624
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_24",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8315536975860596
+    },
+    {
+      "id": "Mercury_7122640",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.75523841381073
+    },
+    {
+      "id": "Mercury_402547",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.45487356185913086
+    },
+    {
+      "id": "Mercury_7133945",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8752160668373108
+    },
+    {
+      "id": "Mercury_7199028",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.34009137749671936
+    },
+    {
+      "id": "Mercury_7217298",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7488311529159546
+    },
+    {
+      "id": "Mercury_7057680",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9488540291786194
+    },
+    {
+      "id": "Mercury_SC_400404",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8978735208511353
+    },
+    {
+      "id": "Mercury_SC_408030",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5210635662078857
+    },
+    {
+      "id": "Mercury_415083",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5760675668716431
+    },
+    {
+      "id": "Mercury_409114",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5301691889762878
+    },
+    {
+      "id": "Mercury_SC_415006",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.4761942923069
+    },
+    {
+      "id": "MSA_2012_5_15",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9319903254508972
+    },
+    {
+      "id": "Mercury_SC_402612",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8361378908157349
+    },
+    {
+      "id": "Mercury_SC_405937",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9202558398246765
+    },
+    {
+      "id": "Mercury_SC_416459",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.33416807651519775
+    },
+    {
+      "id": "NAEP_2000_8_S21+4",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5794088244438171
+    },
+    {
+      "id": "Mercury_7072380",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5326271653175354
+    },
+    {
+      "id": "Mercury_SC_401373",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.980158269405365
+    },
+    {
+      "id": "Mercury_SC_400579",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9697927236557007
+    },
+    {
+      "id": "MCAS_2003_5_14",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9873552918434143
+    },
+    {
+      "id": "MSA_2015_8_30",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8180180191993713
+    },
+    {
+      "id": "Mercury_SC_415416",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.4231143593788147
+    },
+    {
+      "id": "NYSEDREGENTS_2012_8_42",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.995465099811554
+    },
+    {
+      "id": "NCEOGA_2013_5_9",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.989628791809082
+    },
+    {
+      "id": "MEAP_2005_8_45",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6181085109710693
+    },
+    {
+      "id": "Mercury_SC_400594",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8989052176475525
+    },
+    {
+      "id": "NCEOGA_2013_8_43",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.685064435005188
+    },
+    {
+      "id": "MCAS_2006_8_13",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6122610569000244
+    },
+    {
+      "id": "Mercury_7168823",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4832767844200134
+    },
+    {
+      "id": "Mercury_7158935",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.4356171488761902
+    },
+    {
+      "id": "Mercury_7172708",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8517404198646545
+    },
+    {
+      "id": "ACTAAP_2010_5_1",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8427010774612427
+    },
+    {
+      "id": "Mercury_7093048",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9960139989852905
+    },
+    {
+      "id": "Mercury_7081603",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.44919225573539734
+    },
+    {
+      "id": "Mercury_SC_LBS11003",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8056454658508301
+    },
+    {
+      "id": "MCAS_2005_8_2",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8909052610397339
+    },
+    {
+      "id": "ACTAAP_2010_7_14",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.30853015184402466
+    },
+    {
+      "id": "NYSEDREGENTS_2008_4_15",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9695630073547363
+    },
+    {
+      "id": "Mercury_7107240",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9928802847862244
+    },
+    {
+      "id": "Mercury_7218628",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5081906318664551
+    },
+    {
+      "id": "MSA_2013_5_23",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9912601113319397
+    },
+    {
+      "id": "Mercury_7081725",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5197631120681763
+    },
+    {
+      "id": "Mercury_SC_413542",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.3238884210586548
+    },
+    {
+      "id": "Mercury_SC_407302",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5978443622589111
+    },
+    {
+      "id": "Mercury_175053",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.866775393486023
+    },
+    {
+      "id": "Mercury_7161315",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8683362007141113
+    },
+    {
+      "id": "Mercury_189070",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9423319697380066
+    },
+    {
+      "id": "Mercury_7189123",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.3429482877254486
+    },
+    {
+      "id": "Mercury_SC_402171",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.789054274559021
+    },
+    {
+      "id": "Mercury_7217368",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.75889652967453
+    },
+    {
+      "id": "Mercury_LBS10933",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.2895195186138153
+    },
+    {
+      "id": "Mercury_7223160",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.46891018748283386
+    },
+    {
+      "id": "Mercury_SC_401324",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5236976146697998
+    },
+    {
+      "id": "LEAP_2001_8_10379",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.331659197807312
+    },
+    {
+      "id": "VASoL_2009_5_30",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.3691369891166687
+    },
+    {
+      "id": "Mercury_416404",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9086502194404602
+    },
+    {
+      "id": "Mercury_7103530",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3799208402633667
+    },
+    {
+      "id": "Mercury_7030870",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7284760475158691
+    },
+    {
+      "id": "LEAP__7_10348",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5132586359977722
+    },
+    {
+      "id": "Mercury_SC_406835",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9747214913368225
+    },
+    {
+      "id": "Mercury_178255",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7264853119850159
+    },
+    {
+      "id": "MDSA_2012_8_16",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8337788581848145
+    },
+    {
+      "id": "Mercury_409645",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9388254284858704
+    },
+    {
+      "id": "TIMSS_2003_8_pg47",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5163431763648987
+    },
+    {
+      "id": "NYSEDREGENTS_2010_8_16",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5253247618675232
+    },
+    {
+      "id": "Mercury_7159810",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.66366046667099
+    },
+    {
+      "id": "Mercury_7267523",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8480055332183838
+    },
+    {
+      "id": "Mercury_SC_401006",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9986891150474548
+    },
+    {
+      "id": "ACTAAP_2010_7_12",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.541962742805481
+    },
+    {
+      "id": "MEAP_2005_8_13",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9486750364303589
+    },
+    {
+      "id": "Mercury_7164623",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.866355836391449
+    },
+    {
+      "id": "Mercury_417127",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8772420883178711
+    },
+    {
+      "id": "Mercury_411224",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.510538637638092
+    },
+    {
+      "id": "TIMSS_2011_8_pg15",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5080314874649048
+    },
+    {
+      "id": "NYSEDREGENTS_2012_8_19",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8793414831161499
+    },
+    {
+      "id": "Mercury_7222460",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.521485447883606
+    },
+    {
+      "id": "Mercury_7007420",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.4836353063583374
+    },
+    {
+      "id": "Mercury_SC_405710",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.999407172203064
+    },
+    {
+      "id": "Mercury_SC_401375",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9012840986251831
+    },
+    {
+      "id": "VASoL_2010_3_22",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5044330358505249
+    },
+    {
+      "id": "Mercury_SC_408358",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6676483750343323
+    },
+    {
+      "id": "NYSEDREGENTS_2013_8_42",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5039548277854919
+    },
+    {
+      "id": "Mercury_SC_400661",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9546191692352295
+    },
+    {
+      "id": "Mercury_SC_415422",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.974279522895813
+    },
+    {
+      "id": "Mercury_SC_400162",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5003399848937988
+    },
+    {
+      "id": "Mercury_7212328",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8155949115753174
+    },
+    {
+      "id": "NCEOGA_2013_8_26",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8777945041656494
+    },
+    {
+      "id": "Mercury_SC_407696",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9680679440498352
+    },
+    {
+      "id": "Mercury_SC_400052",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9158796668052673
+    },
+    {
+      "id": "Mercury_7212870",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.49831584095954895
+    },
+    {
+      "id": "NYSEDREGENTS_2010_8_35",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9591968655586243
+    },
+    {
+      "id": "MCAS_2010_8_12005",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7845281362533569
+    },
+    {
+      "id": "Mercury_7218505",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8178813457489014
+    },
+    {
+      "id": "Mercury_SC_400853",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5956977009773254
+    },
+    {
+      "id": "Mercury_7210455",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9573992490768433
+    },
+    {
+      "id": "Mercury_7174738",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8460755348205566
+    },
+    {
+      "id": "MCAS_2001_5_2",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.994149923324585
+    },
+    {
+      "id": "NYSEDREGENTS_2012_4_9",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.4869183599948883
+    },
+    {
+      "id": "Mercury_416593",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.951443076133728
+    },
+    {
+      "id": "Mercury_7205870",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7809761166572571
+    },
+    {
+      "id": "Mercury_SC_401798",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9388865828514099
+    },
+    {
+      "id": "Mercury_7084228",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9993546605110168
+    },
+    {
+      "id": "Mercury_417460",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6054260730743408
+    },
+    {
+      "id": "Mercury_402539",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9818350076675415
+    },
+    {
+      "id": "Mercury_406800",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7560579776763916
+    },
+    {
+      "id": "Mercury_SC_408321",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9818941950798035
+    },
+    {
+      "id": "Mercury_SC_406836",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7759784460067749
+    },
+    {
+      "id": "Mercury_SC_410963",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4032609164714813
+    },
+    {
+      "id": "Mercury_7132405",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9974716901779175
+    },
+    {
+      "id": "Mercury_SC_408872",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9553658366203308
+    },
+    {
+      "id": "VASoL_2008_3_25",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9441938400268555
+    },
+    {
+      "id": "WASL_2005_8_12",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.607982873916626
+    },
+    {
+      "id": "AKDE&ED_2012_8_20",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9924594759941101
+    },
+    {
+      "id": "Mercury_7056823",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9979504942893982
+    },
+    {
+      "id": "Mercury_7205800",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5736498832702637
+    },
+    {
+      "id": "Mercury_SC_402282",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8134835362434387
+    },
+    {
+      "id": "MCAS_1998_8_26",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9131510257720947
+    },
+    {
+      "id": "Mercury_7230318",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8523944616317749
+    },
+    {
+      "id": "Mercury_SC_416167",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.37891456484794617
+    },
+    {
+      "id": "Mercury_7027720",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5233469009399414
+    },
+    {
+      "id": "LEAP__5_10312",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8215234279632568
+    },
+    {
+      "id": "Mercury_405161",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.3365359902381897
+    },
+    {
+      "id": "Mercury_SC_409245",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8488261699676514
+    },
+    {
+      "id": "ACTAAP_2011_5_8",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6897239685058594
+    },
+    {
+      "id": "Mercury_7223370",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9579668045043945
+    },
+    {
+      "id": "Mercury_SC_400697",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9789144992828369
+    },
+    {
+      "id": "Mercury_SC_401262",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9751073718070984
+    },
+    {
+      "id": "Mercury_7136063",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9899156093597412
+    },
+    {
+      "id": "Mercury_405876",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8424685001373291
+    },
+    {
+      "id": "Mercury_7057890",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9406716823577881
+    },
+    {
+      "id": "LEAP_2002_4_10247",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9618912935256958
+    },
+    {
+      "id": "Mercury_SC_405481",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7623084783554077
+    },
+    {
+      "id": "Mercury_SC_400401",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6400504112243652
+    },
+    {
+      "id": "Mercury_7064260",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9697469472885132
+    },
+    {
+      "id": "Mercury_7015995",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6654688715934753
+    },
+    {
+      "id": "Mercury_400887",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.2872999906539917
+    },
+    {
+      "id": "Mercury_7247678",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7863829731941223
+    },
+    {
+      "id": "MDSA_2007_8_24",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5516756772994995
+    },
+    {
+      "id": "AKDE&ED_2008_8_48",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9556604623794556
+    },
+    {
+      "id": "Mercury_401014",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.40232181549072266
+    },
+    {
+      "id": "Mercury_7106698",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8746818900108337
+    },
+    {
+      "id": "Mercury_7143308",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6958171725273132
+    },
+    {
+      "id": "MCAS_2005_9_21",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.38741254806518555
+    },
+    {
+      "id": "Mercury_400443",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.34023550152778625
+    },
+    {
+      "id": "Mercury_7283430",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8301258683204651
+    },
+    {
+      "id": "Mercury_7159250",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6245610117912292
+    },
+    {
+      "id": "Mercury_401912",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.49457982182502747
+    },
+    {
+      "id": "Mercury_7219328",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8226073980331421
+    },
+    {
+      "id": "Mercury_7214498",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.43560606241226196
+    },
+    {
+      "id": "TAKS_2009_5_14",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9862167835235596
+    },
+    {
+      "id": "NYSEDREGENTS_2013_4_17",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5639165043830872
+    },
+    {
+      "id": "Mercury_403907",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9699280261993408
+    },
+    {
+      "id": "Mercury_7081480",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9487972855567932
+    },
+    {
+      "id": "Mercury_416505",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7151705026626587
+    },
+    {
+      "id": "Mercury_7041668",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9717814326286316
+    },
+    {
+      "id": "Mercury_SC_401309",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9632256627082825
+    },
+    {
+      "id": "NYSEDREGENTS_2010_4_1",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9995847344398499
+    },
+    {
+      "id": "ACTAAP_2007_7_36",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9811774492263794
+    },
+    {
+      "id": "VASoL_2009_3_12",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5131974220275879
+    },
+    {
+      "id": "Mercury_7085295",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.4492485523223877
+    },
+    {
+      "id": "Mercury_7201968",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9239211082458496
+    },
+    {
+      "id": "Mercury_7214008",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9061580896377563
+    },
+    {
+      "id": "Mercury_176855",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6714280843734741
+    },
+    {
+      "id": "Mercury_SC_401678",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.3364928066730499
+    },
+    {
+      "id": "Mercury_417143",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3469999134540558
+    },
+    {
+      "id": "NYSEDREGENTS_2013_4_21",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6662166714668274
+    },
+    {
+      "id": "Mercury_7032620",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5424774289131165
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_9",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9990930557250977
+    },
+    {
+      "id": "TAKS_2009_8_27",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9080447554588318
+    },
+    {
+      "id": "NCEOGA_2013_8_57",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8750258088111877
+    },
+    {
+      "id": "Mercury_SC_413143",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5100569725036621
+    },
+    {
+      "id": "Mercury_401195",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6828058958053589
+    },
+    {
+      "id": "CSZ10358",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.42256635427474976
+    },
+    {
+      "id": "MCAS_1999_4_26",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.994070827960968
+    },
+    {
+      "id": "AKDE&ED_2008_8_36",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7616283297538757
+    },
+    {
+      "id": "Mercury_7017938",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9678916931152344
+    },
+    {
+      "id": "MDSA_2013_8_32",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9966664910316467
+    },
+    {
+      "id": "Mercury_7038028",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9943227767944336
+    },
+    {
+      "id": "Mercury_7057103",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9801320433616638
+    },
+    {
+      "id": "NYSEDREGENTS_2008_4_26",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.967877984046936
+    },
+    {
+      "id": "Mercury_417117",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6941189765930176
+    },
+    {
+      "id": "MCAS_2016_8_15",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.3661116063594818
+    },
+    {
+      "id": "Mercury_400780",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5578234195709229
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_32",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.981090247631073
+    },
+    {
+      "id": "Mercury_SC_416104",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8294521570205688
+    },
+    {
+      "id": "Mercury_416646",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5799446105957031
+    },
+    {
+      "id": "Mercury_SC_405296",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9110352993011475
+    },
+    {
+      "id": "MCAS_2006_8_31",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8408230543136597
+    },
+    {
+      "id": "MCAS_2015_5_14",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9941195249557495
+    },
+    {
+      "id": "Mercury_417465",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5302148461341858
+    },
+    {
+      "id": "MCAS_1998_4_19",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9970574378967285
+    },
+    {
+      "id": "Mercury_7214778",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6079302430152893
+    },
+    {
+      "id": "Mercury_7123393",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9931305050849915
+    },
+    {
+      "id": "Mercury_7207550",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.3748783469200134
+    },
+    {
+      "id": "Mercury_SC_405827",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7287797927856445
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_11",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.649101197719574
+    },
+    {
+      "id": "Mercury_404097",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9938495755195618
+    },
+    {
+      "id": "AIMS_2009_4_4",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5504908561706543
+    },
+    {
+      "id": "NCEOGA_2013_8_18",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9479585289955139
+    },
+    {
+      "id": "Mercury_400884",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.45184504985809326
+    },
+    {
+      "id": "Mercury_7219678",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6969688534736633
+    },
+    {
+      "id": "ACTAAP_2010_5_7",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6018085479736328
+    },
+    {
+      "id": "ACTAAP_2012_7_9",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9319852590560913
+    },
+    {
+      "id": "MCAS_2005_8_6",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7229678630828857
+    },
+    {
+      "id": "Mercury_SC_401162",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9776695370674133
+    },
+    {
+      "id": "Mercury_SC_407710",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5167207717895508
+    },
+    {
+      "id": "VASoL_2009_3_23",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9992204904556274
+    },
+    {
+      "id": "Mercury_SC_402276",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.516010582447052
+    },
+    {
+      "id": "Mercury_400744",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9364322423934937
+    },
+    {
+      "id": "Mercury_SC_LBS10902",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5998256802558899
+    },
+    {
+      "id": "Mercury_7133245",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9097350835800171
+    },
+    {
+      "id": "Mercury_7131530",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7967644929885864
+    },
+    {
+      "id": "Mercury_7041143",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9405487179756165
+    },
+    {
+      "id": "MCAS_2010_5_11984",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8229884505271912
+    },
+    {
+      "id": "Mercury_7159285",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9955472946166992
+    },
+    {
+      "id": "AIMS_2008_8_13",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6540557146072388
+    },
+    {
+      "id": "MDSA_2013_8_20",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.57757568359375
+    },
+    {
+      "id": "Mercury_7114100",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8911097049713135
+    },
+    {
+      "id": "Mercury_7213343",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9642882943153381
+    },
+    {
+      "id": "Mercury_SC_LBS10597",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7937517762184143
+    },
+    {
+      "id": "Mercury_7126263",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9637449979782104
+    },
+    {
+      "id": "Mercury_7133613",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3843555748462677
+    },
+    {
+      "id": "Mercury_7234605",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6915699243545532
+    },
+    {
+      "id": "Mercury_SC_400839",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8273200988769531
+    },
+    {
+      "id": "Mercury_SC_402984",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9494568705558777
+    },
+    {
+      "id": "NYSEDREGENTS_2012_4_29",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.4473557770252228
+    },
+    {
+      "id": "VASoL_2009_3_22",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.4463936388492584
+    },
+    {
+      "id": "Mercury_409349",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.48942652344703674
+    },
+    {
+      "id": "Mercury_SC_407417",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9931108951568604
+    },
+    {
+      "id": "VASoL_2007_5_21",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.27505916357040405
+    },
+    {
+      "id": "MCAS_2012_8_23651",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8631198406219482
+    },
+    {
+      "id": "MCAS_2000_4_26",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8825176954269409
+    },
+    {
+      "id": "Mercury_SC_410971",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9981762170791626
+    },
+    {
+      "id": "Mercury_404841",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.2743961811065674
+    },
+    {
+      "id": "Mercury_416651",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5809521675109863
+    },
+    {
+      "id": "Mercury_416576",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6704099178314209
+    },
+    {
+      "id": "MCAS_1998_8_24",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.894576907157898
+    },
+    {
+      "id": "Mercury_SC_408367",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8743552565574646
+    },
+    {
+      "id": "Mercury_405804",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8589964509010315
+    },
+    {
+      "id": "Mercury_7216318",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9986656904220581
+    },
+    {
+      "id": "Mercury_401312",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3651265799999237
+    },
+    {
+      "id": "MDSA_2013_8_23",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5665480494499207
+    },
+    {
+      "id": "Mercury_SC_405880",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7031546235084534
+    },
+    {
+      "id": "ACTAAP_2009_5_12",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9678327441215515
+    },
+    {
+      "id": "CSZ20754",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9306156635284424
+    },
+    {
+      "id": "Mercury_184363",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6795011758804321
+    },
+    {
+      "id": "Mercury_7188195",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9970712661743164
+    },
+    {
+      "id": "Mercury_7221043",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5404651165008545
+    },
+    {
+      "id": "Mercury_7107328",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.877557098865509
+    },
+    {
+      "id": "Mercury_415084",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7668666839599609
+    },
+    {
+      "id": "Mercury_415082",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.42667993903160095
+    },
+    {
+      "id": "Mercury_SC_416169",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.29065704345703125
+    },
+    {
+      "id": "MEA_2011_8_13",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8333979845046997
+    },
+    {
+      "id": "TIMSS_2003_4_pg82",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.940021812915802
+    },
+    {
+      "id": "CSZ30338",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6553011536598206
+    },
+    {
+      "id": "TIMSS_2003_8_pg85",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9972825050354004
+    },
+    {
+      "id": "Mercury_7221988",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7720590233802795
+    },
+    {
+      "id": "NCEOGA_2013_5_11",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7855234146118164
+    },
+    {
+      "id": "MCAS_2013_8_29416",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5715429186820984
+    },
+    {
+      "id": "Mercury_SC_401142",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9948103427886963
+    },
+    {
+      "id": "Mercury_7206395",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7140559554100037
+    },
+    {
+      "id": "Mercury_179025",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.46368685364723206
+    },
+    {
+      "id": "Mercury_7130620",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9317209720611572
+    },
+    {
+      "id": "Mercury_177870",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.666211724281311
+    },
+    {
+      "id": "Mercury_7282083",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7753801941871643
+    },
+    {
+      "id": "Mercury_SC_400233",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9996703863143921
+    },
+    {
+      "id": "Mercury_7082443",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5702342987060547
+    },
+    {
+      "id": "NCEOGA_2013_8_15",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9590327739715576
+    },
+    {
+      "id": "Mercury_7210140",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5507020354270935
+    },
+    {
+      "id": "Mercury_7106593",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5567165017127991
+    },
+    {
+      "id": "Mercury_416536",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9714440703392029
+    },
+    {
+      "id": "Mercury_410026",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9859721660614014
+    },
+    {
+      "id": "ACTAAP_2011_5_1",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8433865904808044
+    },
+    {
+      "id": "Mercury_417138",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.4442031681537628
+    },
+    {
+      "id": "Mercury_7138915",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6049237251281738
+    },
+    {
+      "id": "NYSEDREGENTS_2008_4_11",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6026697754859924
+    },
+    {
+      "id": "Mercury_404435",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6382334232330322
+    },
+    {
+      "id": "MDSA_2009_5_25",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5325111746788025
+    },
+    {
+      "id": "OHAT_2007_8_12",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.4280959665775299
+    },
+    {
+      "id": "Mercury_LBS10302",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7691057324409485
+    },
+    {
+      "id": "Mercury_7027248",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.3240584433078766
+    },
+    {
+      "id": "Mercury_SC_401360",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9592737555503845
+    },
+    {
+      "id": "ACTAAP_2013_5_17",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9722302556037903
+    },
+    {
+      "id": "Mercury_407125",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9032012224197388
+    },
+    {
+      "id": "Mercury_404820",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5370824933052063
+    },
+    {
+      "id": "Mercury_SC_416168",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5535044074058533
+    },
+    {
+      "id": "TIMSS_1995_8_K18",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7579615116119385
+    },
+    {
+      "id": "Mercury_SC_405130",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3270716071128845
+    },
+    {
+      "id": "Mercury_SC_408631",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.76139235496521
+    },
+    {
+      "id": "Mercury_SC_408763",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.3507137894630432
+    },
+    {
+      "id": "MCAS_8_2015_18",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6365072727203369
+    },
+    {
+      "id": "Mercury_411729",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5490139126777649
+    },
+    {
+      "id": "MDSA_2012_8_6",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.47174111008644104
+    },
+    {
+      "id": "MCAS_1999_8_5",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9992561936378479
+    },
+    {
+      "id": "WASL_2004_8_17",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.4632079005241394
+    },
+    {
+      "id": "Mercury_414365",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9268092513084412
+    },
+    {
+      "id": "Mercury_SC_415406",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9101693034172058
+    },
+    {
+      "id": "MCAS_2000_8_29",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6546576023101807
+    },
+    {
+      "id": "Mercury_416230",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.32135528326034546
+    },
+    {
+      "id": "Mercury_7001295",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9566402435302734
+    },
+    {
+      "id": "MSA_2012_5_2",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9966160655021667
+    },
+    {
+      "id": "MCAS_2005_8_7",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9211146831512451
+    },
+    {
+      "id": "Mercury_7206553",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6838497519493103
+    },
+    {
+      "id": "VASoL_2010_3_39",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9715477824211121
+    },
+    {
+      "id": "Mercury_416380",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8868283629417419
+    },
+    {
+      "id": "OHAT_2008_5_34",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9990347623825073
+    },
+    {
+      "id": "Mercury_7268328",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9259884357452393
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_36",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9987926483154297
+    },
+    {
+      "id": "Mercury_SC_414156",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9846387505531311
+    },
+    {
+      "id": "Mercury_7094133",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8779119849205017
+    },
+    {
+      "id": "MEA_2013_5_15",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6386846303939819
+    },
+    {
+      "id": "OHAT_2010_8_35",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9766873121261597
+    },
+    {
+      "id": "Mercury_SC_416174",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.995881199836731
+    },
+    {
+      "id": "TIMSS_1995_8_J6",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9420732259750366
+    },
+    {
+      "id": "Mercury_SC_401587",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6899581551551819
+    },
+    {
+      "id": "MDSA_2011_5_23",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5638118982315063
+    },
+    {
+      "id": "AIMS_2008_8_11",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9629828333854675
+    },
+    {
+      "id": "Mercury_7159215",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5179528594017029
+    },
+    {
+      "id": "MCAS_2006_9_30",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9951115250587463
+    },
+    {
+      "id": "MCAS_1999_4_27",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7721847295761108
+    },
+    {
+      "id": "Mercury_7016538",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9865865707397461
+    },
+    {
+      "id": "Mercury_SC_409266",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9992432594299316
+    },
+    {
+      "id": "OHAT_2007_5_15",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.3874531090259552
+    },
+    {
+      "id": "Mercury_7230073",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5872994065284729
+    },
+    {
+      "id": "Mercury_7245840",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9909471273422241
+    },
+    {
+      "id": "Mercury_SC_401788",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9529042840003967
+    },
+    {
+      "id": "ACTAAP_2014_7_5",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9381009936332703
+    },
+    {
+      "id": "MCAS_2004_5_11",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9914496541023254
+    },
+    {
+      "id": "NCEOGA_2013_8_7",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.4535139799118042
+    },
+    {
+      "id": "LEAP__7_10339",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.4209446609020233
+    },
+    {
+      "id": "Mercury_7018270",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.47292762994766235
+    },
+    {
+      "id": "Mercury_7034808",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9522537589073181
+    },
+    {
+      "id": "Mercury_7216300",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.4831785559654236
+    },
+    {
+      "id": "Mercury_SC_400985",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.46468138694763184
+    },
+    {
+      "id": "Mercury_7188528",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9207381010055542
+    },
+    {
+      "id": "TIMSS_1995_8_R2",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6456440687179565
+    },
+    {
+      "id": "Mercury_SC_400032",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5054775476455688
+    },
+    {
+      "id": "Mercury_7252245",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3541739881038666
+    },
+    {
+      "id": "MCAS_2002_8_17",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.993323028087616
+    },
+    {
+      "id": "MDSA_2007_8_30",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9138678908348083
+    },
+    {
+      "id": "NCEOGA_2013_5_35",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9993603825569153
+    },
+    {
+      "id": "Mercury_7082758",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9979161620140076
+    },
+    {
+      "id": "Mercury_7094308",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8320662379264832
+    },
+    {
+      "id": "Mercury_7136028",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.4936493933200836
+    },
+    {
+      "id": "Mercury_7159075",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.957133948802948
+    },
+    {
+      "id": "MCAS_2015_5_19",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6385286450386047
+    },
+    {
+      "id": "MSA_2012_5_12",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6209819316864014
+    },
+    {
+      "id": "MCAS_2014_5_13",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5314828753471375
+    },
+    {
+      "id": "Mercury_SC_400392",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7218570709228516
+    },
+    {
+      "id": "Mercury_7159320",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9325762391090393
+    },
+    {
+      "id": "Mercury_7218365",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6821538209915161
+    },
+    {
+      "id": "MCAS_2004_9_10-v1",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.3702567517757416
+    },
+    {
+      "id": "AIMS_2009_4_12",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9920408129692078
+    },
+    {
+      "id": "Mercury_SC_414274",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9984591007232666
+    },
+    {
+      "id": "MCAS_2005_9_6",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5958454012870789
+    },
+    {
+      "id": "MCAS_1998_4_23",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.48619842529296875
+    },
+    {
+      "id": "Mercury_7075023",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.27621522545814514
+    },
+    {
+      "id": "Mercury_SC_400182",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8919541835784912
+    },
+    {
+      "id": "Mercury_SC_400133",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9828800559043884
+    },
+    {
+      "id": "MSA_2013_5_11",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.43684715032577515
+    },
+    {
+      "id": "Mercury_SC_408706",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.547979474067688
+    },
+    {
+      "id": "Mercury_7213325",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6234877705574036
+    },
+    {
+      "id": "Mercury_SC_LBS10932",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9912713766098022
+    },
+    {
+      "id": "Mercury_192220",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5622529983520508
+    },
+    {
+      "id": "Mercury_SC_407247",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6345506310462952
+    },
+    {
+      "id": "Mercury_7024798",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3643472194671631
+    },
+    {
+      "id": "Mercury_7180810",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.638412356376648
+    },
+    {
+      "id": "Mercury_412780",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6526069045066833
+    },
+    {
+      "id": "LEAP_2011_8_10434",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9434648156166077
+    },
+    {
+      "id": "Mercury_7200340",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9483786225318909
+    },
+    {
+      "id": "Mercury_7056525",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7029029130935669
+    },
+    {
+      "id": "Mercury_7085278",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9971572160720825
+    },
+    {
+      "id": "AKDE&ED_2008_4_35",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9349219799041748
+    },
+    {
+      "id": "MCAS_1999_8_16",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6483650803565979
+    },
+    {
+      "id": "Mercury_SC_400063",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.49243229627609253
+    },
+    {
+      "id": "Mercury_SC_401666",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.30184441804885864
+    },
+    {
+      "id": "TIMSS_2011_8_pg31",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.3670341372489929
+    },
+    {
+      "id": "Mercury_412673",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9824124574661255
+    },
+    {
+      "id": "Mercury_7130655",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9476100206375122
+    },
+    {
+      "id": "MCAS_2004_5_7",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.451122909784317
+    },
+    {
+      "id": "Mercury_7187373",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9651058316230774
+    },
+    {
+      "id": "Mercury_SC_401361",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6987332105636597
+    },
+    {
+      "id": "MCAS_2006_8_12",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.343727171421051
+    },
+    {
+      "id": "Mercury_7233765",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5172556638717651
+    },
+    {
+      "id": "Mercury_SC_407613",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.765687882900238
+    },
+    {
+      "id": "MCAS_2005_5_24",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8647384643554688
+    },
+    {
+      "id": "Mercury_405778",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8874169588088989
+    },
+    {
+      "id": "Mercury_7263060",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.34272345900535583
+    },
+    {
+      "id": "Mercury_SC_401668",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.41596829891204834
+    },
+    {
+      "id": "Mercury_7230388",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9594002366065979
+    },
+    {
+      "id": "Mercury_7041650",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.654283344745636
+    },
+    {
+      "id": "Mercury_SC_409009",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9412413239479065
+    },
+    {
+      "id": "Mercury_7223143",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.58951336145401
+    },
+    {
+      "id": "ACTAAP_2007_7_3",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9552076458930969
+    },
+    {
+      "id": "Mercury_7215670",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6391901969909668
+    },
+    {
+      "id": "MEA_2010_8_15",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9859403371810913
+    },
+    {
+      "id": "Mercury_7270515",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.43094539642333984
+    },
+    {
+      "id": "Mercury_7006160",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.464405357837677
+    },
+    {
+      "id": "Mercury_SC_410630",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6125492453575134
+    },
+    {
+      "id": "Mercury_7082320",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9650649428367615
+    },
+    {
+      "id": "MEA_2013_8_1",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9943704009056091
+    },
+    {
+      "id": "Mercury_7033845",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8945506811141968
+    },
+    {
+      "id": "Mercury_7221620",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5330857038497925
+    },
+    {
+      "id": "LEAP__7_10352",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9939491748809814
+    },
+    {
+      "id": "Mercury_412605",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8127902150154114
+    },
+    {
+      "id": "Mercury_416638",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8942824602127075
+    },
+    {
+      "id": "MCAS_2011_8_17694",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9223474264144897
+    },
+    {
+      "id": "Mercury_SC_400012",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5255482792854309
+    },
+    {
+      "id": "Mercury_SC_413458",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9964057207107544
+    },
+    {
+      "id": "Mercury_7139545",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7374833226203918
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_5",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9996121525764465
+    },
+    {
+      "id": "TIMSS_2003_8_pg16",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.969816267490387
+    },
+    {
+      "id": "Mercury_SC_415073",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.460770845413208
+    },
+    {
+      "id": "Mercury_7012880",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9867720007896423
+    },
+    {
+      "id": "Mercury_191625",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7260541915893555
+    },
+    {
+      "id": "Mercury_SC_402985",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9994319081306458
+    },
+    {
+      "id": "Mercury_7005425",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8673063516616821
+    },
+    {
+      "id": "MDSA_2013_8_40",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5125644207000732
+    },
+    {
+      "id": "Mercury_401684",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.7230240702629089
+    },
+    {
+      "id": "NCEOGA_2013_5_17",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9858617782592773
+    },
+    {
+      "id": "Mercury_7116183",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9281356930732727
+    },
+    {
+      "id": "Mercury_7106628",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6297997832298279
+    },
+    {
+      "id": "Mercury_7203473",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8336856365203857
+    },
+    {
+      "id": "Mercury_SC_416108",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6641433835029602
+    },
+    {
+      "id": "LEAP_2007_8_10418",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7164615392684937
+    },
+    {
+      "id": "Mercury_7111178",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6710891723632812
+    },
+    {
+      "id": "Mercury_7203560",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9533677101135254
+    },
+    {
+      "id": "ACTAAP_2013_7_2",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.811984658241272
+    },
+    {
+      "id": "MCAS_2012_8_23640",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6236410140991211
+    },
+    {
+      "id": "Mercury_404272",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9096196293830872
+    },
+    {
+      "id": "MCAS_2009_8_17",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5475510358810425
+    },
+    {
+      "id": "AIMS_2008_4_5",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3689066469669342
+    },
+    {
+      "id": "Mercury_7236513",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7624167203903198
+    },
+    {
+      "id": "Mercury_SC_LBS10027",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9942668080329895
+    },
+    {
+      "id": "Mercury_189053",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9750846028327942
+    },
+    {
+      "id": "Mercury_SC_414271",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.791676938533783
+    },
+    {
+      "id": "Mercury_408922",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7197728753089905
+    },
+    {
+      "id": "Mercury_7264093",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.34082162380218506
+    },
+    {
+      "id": "Mercury_SC_LBS11009",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5441316962242126
+    },
+    {
+      "id": "Mercury_7191433",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9385079145431519
+    },
+    {
+      "id": "MEAP_2005_5_14",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8074719309806824
+    },
+    {
+      "id": "Mercury_416683",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8930548429489136
+    },
+    {
+      "id": "Mercury_7040775",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5297018885612488
+    },
+    {
+      "id": "Mercury_7222600",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.516376793384552
+    },
+    {
+      "id": "MCAS_2001_5_3",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.4331461787223816
+    },
+    {
+      "id": "MCAS_2004_8_7",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6157857775688171
+    },
+    {
+      "id": "Mercury_415268",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5145974159240723
+    },
+    {
+      "id": "Mercury_7017710",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9121221899986267
+    },
+    {
+      "id": "Mercury_7210123",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6903085708618164
+    },
+    {
+      "id": "MCAS_2009_5_6519",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9991068243980408
+    },
+    {
+      "id": "Mercury_401502",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.37762489914894104
+    },
+    {
+      "id": "Mercury_7109498",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5598648190498352
+    },
+    {
+      "id": "VASoL_2008_5_10",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.2810097932815552
+    },
+    {
+      "id": "MCAS_2006_9_4",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5127210021018982
+    },
+    {
+      "id": "Mercury_402341",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3967488706111908
+    },
+    {
+      "id": "MCAS_2006_9_34",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.40546733140945435
+    },
+    {
+      "id": "Mercury_7267715",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.49893689155578613
+    },
+    {
+      "id": "Mercury_SC_413089",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6506904363632202
+    },
+    {
+      "id": "Mercury_SC_401656",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.375674843788147
+    },
+    {
+      "id": "Mercury_407019",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.978032112121582
+    },
+    {
+      "id": "Mercury_417128",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9584730863571167
+    },
+    {
+      "id": "Mercury_7081305",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6746690273284912
+    },
+    {
+      "id": "NYSEDREGENTS_2015_8_3",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5911163091659546
+    },
+    {
+      "id": "MEA_2016_8_15",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7520167231559753
+    },
+    {
+      "id": "ACTAAP_2015_7_9",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5762880444526672
+    },
+    {
+      "id": "Mercury_7216423",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9389467835426331
+    },
+    {
+      "id": "Mercury_416633",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.872969925403595
+    },
+    {
+      "id": "Mercury_7038518",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7930358052253723
+    },
+    {
+      "id": "Mercury_7085225",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6154624819755554
+    },
+    {
+      "id": "LEAP__4_10225",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9737920761108398
+    },
+    {
+      "id": "Mercury_SC_401661",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9686864614486694
+    },
+    {
+      "id": "TIMSS_1995_8_Q15",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5440289974212646
+    },
+    {
+      "id": "MCAS_1999_4_23",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9716067910194397
+    },
+    {
+      "id": "TIMSS_1995_8_J7",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.662219762802124
+    },
+    {
+      "id": "Mercury_SC_LBS10018",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8266331553459167
+    },
+    {
+      "id": "Mercury_SC_406855",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6451401710510254
+    },
+    {
+      "id": "Mercury_SC_415457",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.3796212077140808
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_25",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9809812307357788
+    },
+    {
+      "id": "Mercury_7058135",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6358504891395569
+    },
+    {
+      "id": "MDSA_2008_4_19",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5786420702934265
+    },
+    {
+      "id": "AKDE&ED_2008_8_45",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9100866317749023
+    },
+    {
+      "id": "Mercury_7131758",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5287426114082336
+    },
+    {
+      "id": "NYSEDREGENTS_2013_8_10",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9994169473648071
+    },
+    {
+      "id": "Mercury_SC_401783",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9954020977020264
+    },
+    {
+      "id": "Mercury_7190120",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9937441945075989
+    },
+    {
+      "id": "Mercury_409317",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.46405765414237976
+    },
+    {
+      "id": "Mercury_7268240",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9336866736412048
+    },
+    {
+      "id": "Mercury_7228358",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9513856768608093
+    },
+    {
+      "id": "MCAS_2004_5_33",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9503923654556274
+    },
+    {
+      "id": "Mercury_7008855",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7537252902984619
+    },
+    {
+      "id": "Mercury_7057085",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6729341745376587
+    },
+    {
+      "id": "Mercury_7171728",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9819695949554443
+    },
+    {
+      "id": "NAEP_2005_4_S14+3",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.38070955872535706
+    },
+    {
+      "id": "Mercury_7024395",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3739881217479706
+    },
+    {
+      "id": "NYSEDREGENTS_2012_8_28",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.3825390636920929
+    },
+    {
+      "id": "Mercury_7090790",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9994403719902039
+    },
+    {
+      "id": "TIMSS_2003_8_pg87",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.534332811832428
+    },
+    {
+      "id": "Mercury_SC_407382",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9872320890426636
+    },
+    {
+      "id": "MDSA_2010_4_20",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7369378209114075
+    },
+    {
+      "id": "Mercury_SC_405019",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.7741190791130066
+    },
+    {
+      "id": "Mercury_7123078",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6615573763847351
+    },
+    {
+      "id": "Mercury_400084",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.3109258711338043
+    },
+    {
+      "id": "Mercury_7139650",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8328237533569336
+    },
+    {
+      "id": "Mercury_417150",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9822760224342346
+    },
+    {
+      "id": "Mercury_SC_402256",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9964407086372375
+    },
+    {
+      "id": "TIMSS_2007_8_pg53",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7838542461395264
+    },
+    {
+      "id": "MCAS_2006_9_17-v1",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5057195425033569
+    },
+    {
+      "id": "Mercury_401728",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.510796844959259
+    },
+    {
+      "id": "Mercury_7192798",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6546736359596252
+    },
+    {
+      "id": "Mercury_7221078",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9957700371742249
+    },
+    {
+      "id": "Mercury_7004953",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.4196835458278656
+    },
+    {
+      "id": "TIMSS_2003_8_pg94",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5376372933387756
+    },
+    {
+      "id": "Mercury_7095060",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9022637009620667
+    },
+    {
+      "id": "Mercury_7123358",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9466042518615723
+    },
+    {
+      "id": "Mercury_7069020",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.611625611782074
+    },
+    {
+      "id": "TIMSS_2003_8_pg117",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9793549180030823
+    },
+    {
+      "id": "VASoL_2008_3_32",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9976551532745361
+    },
+    {
+      "id": "Mercury_SC_400142",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7686977386474609
+    },
+    {
+      "id": "Mercury_7163818",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.995743453502655
+    },
+    {
+      "id": "Mercury_402502",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3423922657966614
+    },
+    {
+      "id": "Mercury_7130778",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5330823063850403
+    },
+    {
+      "id": "MEA_2010_8_18",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9794831275939941
+    },
+    {
+      "id": "Mercury_7211033",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7250121235847473
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_17",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9789053201675415
+    },
+    {
+      "id": "NAEP_2005_8_S11+1",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9804272651672363
+    },
+    {
+      "id": "Mercury_412774",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.41293859481811523
+    },
+    {
+      "id": "MEA_2013_5_12",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.49367037415504456
+    },
+    {
+      "id": "Mercury_7098473",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7853571176528931
+    },
+    {
+      "id": "Mercury_417593",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5036211609840393
+    },
+    {
+      "id": "Mercury_7081743",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6921544075012207
+    },
+    {
+      "id": "Mercury_7018410",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9903690218925476
+    },
+    {
+      "id": "Mercury_402563",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5034310221672058
+    },
+    {
+      "id": "Mercury_416407",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6410597562789917
+    },
+    {
+      "id": "Mercury_SC_400400",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6119469404220581
+    },
+    {
+      "id": "MCAS_2000_8_22",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9087777733802795
+    },
+    {
+      "id": "MCAS_8_2014_8",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.998958945274353
+    },
+    {
+      "id": "Mercury_7206430",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9739412665367126
+    },
+    {
+      "id": "Mercury_7185343",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.635223388671875
+    },
+    {
+      "id": "OHAT_2010_8_8",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9738761782646179
+    },
+    {
+      "id": "Mercury_405462",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6449028253555298
+    },
+    {
+      "id": "Mercury_SC_LBS10337",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8860138654708862
+    },
+    {
+      "id": "Mercury_7142520",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9089263081550598
+    },
+    {
+      "id": "Mercury_SC_405501",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9922633171081543
+    },
+    {
+      "id": "Mercury_7009555",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6705979704856873
+    },
+    {
+      "id": "Mercury_409085",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.41251662373542786
+    },
+    {
+      "id": "NYSEDREGENTS_2012_4_2",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6758408546447754
+    },
+    {
+      "id": "Mercury_407539",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6959126591682434
+    },
+    {
+      "id": "ACTAAP_2013_7_16",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.30020397901535034
+    },
+    {
+      "id": "AKDE&ED_2008_8_34",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5232176780700684
+    },
+    {
+      "id": "MCAS_2004_8_3",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.900693953037262
+    },
+    {
+      "id": "Mercury_415272",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5959729552268982
+    },
+    {
+      "id": "Mercury_405387",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.38061484694480896
+    },
+    {
+      "id": "Mercury_7116323",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5284121632575989
+    },
+    {
+      "id": "Mercury_7213430",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7849962711334229
+    },
+    {
+      "id": "Mercury_7234360",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9875152111053467
+    },
+    {
+      "id": "Mercury_405685",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8512057662010193
+    },
+    {
+      "id": "Mercury_7236740",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.3953009843826294
+    },
+    {
+      "id": "Mercury_7116235",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5116430521011353
+    },
+    {
+      "id": "Mercury_SC_405357",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5784926414489746
+    },
+    {
+      "id": "Mercury_7042945",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9837146401405334
+    },
+    {
+      "id": "Mercury_7106750",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5033064484596252
+    },
+    {
+      "id": "MDSA_2009_4_34",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.7438048720359802
+    },
+    {
+      "id": "Mercury_7016310",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.4681805372238159
+    },
+    {
+      "id": "VASoL_2007_3_1",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9687060713768005
+    },
+    {
+      "id": "Mercury_7030468",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5597760081291199
+    },
+    {
+      "id": "Mercury_SC_402616",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9992089867591858
+    },
+    {
+      "id": "Mercury_405464",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6364923715591431
+    },
+    {
+      "id": "Mercury_7205608",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5435526967048645
+    },
+    {
+      "id": "Mercury_7015208",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8501777648925781
+    },
+    {
+      "id": "Mercury_SC_409666",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9815276265144348
+    },
+    {
+      "id": "Mercury_7230353",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3583565652370453
+    },
+    {
+      "id": "Mercury_7150343",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7550362348556519
+    },
+    {
+      "id": "Mercury_7026723",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.919002115726471
+    },
+    {
+      "id": "Mercury_7024273",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6191633343696594
+    },
+    {
+      "id": "AKDE&ED_2008_8_40",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5081201195716858
+    },
+    {
+      "id": "Mercury_183033",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.3470279574394226
+    },
+    {
+      "id": "Mercury_402364",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.7745051383972168
+    },
+    {
+      "id": "Mercury_7263183",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5809468626976013
+    },
+    {
+      "id": "Mercury_7222530",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.4234254062175751
+    },
+    {
+      "id": "OHAT_2009_8_36",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.728625476360321
+    },
+    {
+      "id": "Mercury_7141750",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9728144407272339
+    },
+    {
+      "id": "TIMSS_2011_4_pg45",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9174332618713379
+    },
+    {
+      "id": "MCAS_2014_5_5",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9113625288009644
+    },
+    {
+      "id": "Mercury_SC_409241",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.4064099192619324
+    },
+    {
+      "id": "Mercury_SC_401147",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9946562051773071
+    },
+    {
+      "id": "Mercury_SC_LBS10273",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9538438320159912
+    },
+    {
+      "id": "Mercury_401523",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8839431405067444
+    },
+    {
+      "id": "Mercury_401865",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.3682801127433777
+    },
+    {
+      "id": "MCAS_2013_8_29435",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6034666895866394
+    },
+    {
+      "id": "Mercury_SC_406720",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9992214441299438
+    },
+    {
+      "id": "NYSEDREGENTS_2013_8_34",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9937977194786072
+    },
+    {
+      "id": "Mercury_7038833",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9701316356658936
+    },
+    {
+      "id": "Mercury_175560",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.986156702041626
+    },
+    {
+      "id": "Mercury_7005005",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9715122580528259
+    },
+    {
+      "id": "Mercury_183890",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9993770718574524
+    },
+    {
+      "id": "Mercury_7270358",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9068652391433716
+    },
+    {
+      "id": "MCAS_2013_5_29411",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8684032559394836
+    },
+    {
+      "id": "ACTAAP_2007_7_31",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.4303086996078491
+    },
+    {
+      "id": "Mercury_7082023",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.328098326921463
+    },
+    {
+      "id": "MCAS_2003_8_21",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6130425333976746
+    },
+    {
+      "id": "NYSEDREGENTS_2015_8_9",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7699806690216064
+    },
+    {
+      "id": "Mercury_7064750",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4816940724849701
+    },
+    {
+      "id": "TIMSS_2007_8_pg113",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.6819137930870056
+    },
+    {
+      "id": "Mercury_7173583",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8836463093757629
+    },
+    {
+      "id": "Mercury_403930",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.962905764579773
+    },
+    {
+      "id": "Mercury_417118",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7068194150924683
+    },
+    {
+      "id": "Mercury_7143010",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9848837852478027
+    },
+    {
+      "id": "Mercury_SC_401801",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9834929704666138
+    },
+    {
+      "id": "Mercury_410334",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.41019517183303833
+    },
+    {
+      "id": "NAEP_2000_4_S12+3",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.47147342562675476
+    },
+    {
+      "id": "Mercury_7218015",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.989844799041748
+    },
+    {
+      "id": "Mercury_7109603",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.955005407333374
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_42",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7283411026000977
+    },
+    {
+      "id": "NAEP_2000_8_S11+11",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5070014595985413
+    },
+    {
+      "id": "Mercury_7271670",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.37439173460006714
+    },
+    {
+      "id": "ACTAAP_2009_5_8",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.3956247866153717
+    },
+    {
+      "id": "NYSEDREGENTS_2012_4_1",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.48953619599342346
+    },
+    {
+      "id": "Mercury_SC_409030",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.995559811592102
+    },
+    {
+      "id": "MEA_2013_8_8",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4075467586517334
+    },
+    {
+      "id": "Mercury_7140333",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6423381567001343
+    },
+    {
+      "id": "Mercury_SC_LBS10664",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3181084394454956
+    },
+    {
+      "id": "Mercury_7171430",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9069141745567322
+    },
+    {
+      "id": "Mercury_SC_407572",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5490774512290955
+    },
+    {
+      "id": "VASoL_2009_3_2",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8045123815536499
+    },
+    {
+      "id": "Mercury_SC_407383",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8244818449020386
+    },
+    {
+      "id": "Mercury_7218400",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9803668260574341
+    },
+    {
+      "id": "Mercury_184818",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.36268824338912964
+    },
+    {
+      "id": "Mercury_SC_405931",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9964573979377747
+    },
+    {
+      "id": "Mercury_SC_416177",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.48091500997543335
+    },
+    {
+      "id": "Mercury_SC_406625",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9986310601234436
+    },
+    {
+      "id": "MCAS_2014_8_16",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5659159421920776
+    },
+    {
+      "id": "Mercury_7138460",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6640098094940186
+    },
+    {
+      "id": "Mercury_7129640",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6191229820251465
+    },
+    {
+      "id": "Mercury_7024290",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.4087112843990326
+    },
+    {
+      "id": "NYSEDREGENTS_2008_4_28",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5292688012123108
+    },
+    {
+      "id": "Mercury_SC_414339",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8473798632621765
+    },
+    {
+      "id": "LEAP_2000_8_2",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.38454779982566833
+    },
+    {
+      "id": "Mercury_7172270",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9528928399085999
+    },
+    {
+      "id": "Mercury_184205",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9948659539222717
+    },
+    {
+      "id": "Mercury_SC_400683",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9741911292076111
+    },
+    {
+      "id": "Mercury_7182210",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9043418169021606
+    },
+    {
+      "id": "Mercury_7238945",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.3790355622768402
+    },
+    {
+      "id": "Mercury_SC_408748",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9877386093139648
+    },
+    {
+      "id": "MEA_2016_5_4",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6705856323242188
+    },
+    {
+      "id": "Mercury_7271513",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.43076902627944946
+    },
+    {
+      "id": "Mercury_7189000",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8929620385169983
+    },
+    {
+      "id": "Mercury_SC_401585",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.46322503685951233
+    },
+    {
+      "id": "Mercury_188528",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.677763044834137
+    },
+    {
+      "id": "Mercury_SC_415719",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7030072212219238
+    },
+    {
+      "id": "Mercury_SC_407072",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.8196418285369873
+    },
+    {
+      "id": "Mercury_7091823",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.674332320690155
+    },
+    {
+      "id": "Mercury_7040985",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5136566758155823
+    },
+    {
+      "id": "Mercury_SC_409383",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.7492505311965942
+    },
+    {
+      "id": "Mercury_SC_407080",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5055867433547974
+    },
+    {
+      "id": "MCAS_2000_4_34",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.38915324211120605
+    },
+    {
+      "id": "Mercury_7032498",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.4383212625980377
+    },
+    {
+      "id": "TAKS_2009_5_30",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3959406912326813
+    },
+    {
+      "id": "Mercury_SC_415761",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.9628066420555115
+    },
+    {
+      "id": "ACTAAP_2008_5_10",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9869369864463806
+    },
+    {
+      "id": "Mercury_416671",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5049439668655396
+    },
+    {
+      "id": "Mercury_400803",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.7248085737228394
+    },
+    {
+      "id": "Mercury_7005880",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5409700870513916
+    },
+    {
+      "id": "Mercury_7210508",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8115872740745544
+    },
+    {
+      "id": "NYSEDREGENTS_2013_4_1",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9799531698226929
+    },
+    {
+      "id": "NYSEDREGENTS_2008_4_12",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9986825585365295
+    },
+    {
+      "id": "Mercury_400091",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.6082333922386169
+    },
+    {
+      "id": "Mercury_SC_402257",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6592471599578857
+    },
+    {
+      "id": "Mercury_7227815",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5581795573234558
+    },
+    {
+      "id": "ACTAAP_2010_7_3",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5924359560012817
+    },
+    {
+      "id": "Mercury_SC_410905",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.8628906011581421
+    },
+    {
+      "id": "OHAT_2010_5_18",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4443957507610321
+    },
+    {
+      "id": "NAEP_2000_8_S11+10",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.3765771687030792
+    },
+    {
+      "id": "MCAS_2003_8_29",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9818759560585022
+    },
+    {
+      "id": "Mercury_401433",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5123105049133301
+    },
+    {
+      "id": "TIMSS_1995_8_N4",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8124186992645264
+    },
+    {
+      "id": "Mercury_SC_405885",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.975957453250885
+    },
+    {
+      "id": "Mercury_7263638",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9684603810310364
+    },
+    {
+      "id": "Mercury_401428",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.37702375650405884
+    },
+    {
+      "id": "Mercury_SC_402121",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9306886792182922
+    },
+    {
+      "id": "NYSEDREGENTS_2015_4_7",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7550901770591736
+    },
+    {
+      "id": "MCAS_2012_5_23614",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9603129029273987
+    },
+    {
+      "id": "Mercury_407262",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6536771655082703
+    },
+    {
+      "id": "MCAS_2014_8_6",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8699604272842407
+    },
+    {
+      "id": "Mercury_7032515",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.8375887274742126
+    },
+    {
+      "id": "Mercury_7270165",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.510860025882721
+    },
+    {
+      "id": "Mercury_7017045",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3760227560997009
+    },
+    {
+      "id": "Mercury_SC_400386",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9972743391990662
+    },
+    {
+      "id": "Mercury_400750",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.7636772394180298
+    },
+    {
+      "id": "MCAS_2006_9_28-v1",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9968487620353699
+    },
+    {
+      "id": "Mercury_416376",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.4537535309791565
+    },
+    {
+      "id": "Mercury_7086520",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9011805653572083
+    },
+    {
+      "id": "Mercury_7014333",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.7243102788925171
+    },
+    {
+      "id": "Mercury_SC_406623",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9689868092536926
+    },
+    {
+      "id": "Mercury_7042648",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6765131950378418
+    },
+    {
+      "id": "MCAS_2004_8_23",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.4122292399406433
+    },
+    {
+      "id": "MCAS_2013_8_29425",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.6594513654708862
+    },
+    {
+      "id": "MEAP_2005_5_15",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.690245509147644
+    },
+    {
+      "id": "Mercury_7016258",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9987276196479797
+    },
+    {
+      "id": "NCEOGA_2013_8_5",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5523131489753723
+    },
+    {
+      "id": "Mercury_7015540",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5360380411148071
+    },
+    {
+      "id": "Mercury_SC_414001",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.4869755804538727
+    },
+    {
+      "id": "Mercury_7017973",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5118233561515808
+    },
+    {
+      "id": "Mercury_407097",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.940298855304718
+    },
+    {
+      "id": "Mercury_SC_406794",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.85319983959198
+    },
+    {
+      "id": "Mercury_7227710",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.4444960653781891
+    },
+    {
+      "id": "Mercury_SC_406710",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.45265212655067444
+    },
+    {
+      "id": "Mercury_401926",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6346477270126343
+    },
+    {
+      "id": "MCAS_2014_5_15",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6498982906341553
+    },
+    {
+      "id": "Mercury_LBS10151",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.43510740995407104
+    },
+    {
+      "id": "ACTAAP_2013_5_8",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5401779413223267
+    },
+    {
+      "id": "Mercury_SC_407592",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9590767621994019
+    },
+    {
+      "id": "TIMSS_1995_8_L6",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6250192523002625
+    },
+    {
+      "id": "Mercury_7233398",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9446468949317932
+    },
+    {
+      "id": "Mercury_407664",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5566626191139221
+    },
+    {
+      "id": "Mercury_SC_408657",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.5517199635505676
+    },
+    {
+      "id": "Mercury_7142800",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9001604914665222
+    },
+    {
+      "id": "Mercury_SC_410837",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.8509713411331177
+    },
+    {
+      "id": "Mercury_7154315",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5434437394142151
+    },
+    {
+      "id": "Mercury_7239628",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6155349612236023
+    },
+    {
+      "id": "Mercury_401241",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9918799996376038
+    },
+    {
+      "id": "Mercury_SC_408251",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7646878957748413
+    },
+    {
+      "id": "Mercury_7175893",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8564956784248352
+    },
+    {
+      "id": "Mercury_7202843",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.48838192224502563
+    },
+    {
+      "id": "Mercury_7159023",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.806600034236908
+    },
+    {
+      "id": "MDSA_2008_8_3",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.7445845007896423
+    },
+    {
+      "id": "Mercury_7218348",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9885092377662659
+    },
+    {
+      "id": "Mercury_SC_406458",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9157425165176392
+    },
+    {
+      "id": "LEAP_2007_4_10280",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6217714548110962
+    },
+    {
+      "id": "Mercury_7216965",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5700067281723022
+    },
+    {
+      "id": "NYSEDREGENTS_2010_8_42",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.2760056257247925
+    },
+    {
+      "id": "LEAP__7_10351",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.8915956616401672
+    },
+    {
+      "id": "Mercury_SC_400590",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.6094967722892761
+    },
+    {
+      "id": "Mercury_7086608",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.954174816608429
+    },
+    {
+      "id": "Mercury_7187863",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9243295788764954
+    },
+    {
+      "id": "Mercury_7120873",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.6519715785980225
+    },
+    {
+      "id": "Mercury_184730",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.3270280957221985
+    },
+    {
+      "id": "Mercury_SC_401265",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.9550958871841431
+    },
+    {
+      "id": "OHAT_2009_8_34",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5304049849510193
+    },
+    {
+      "id": "Mercury_406639",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9841042757034302
+    },
+    {
+      "id": "Mercury_7008610",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9945551156997681
+    },
+    {
+      "id": "MCAS_2009_8_12",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.46683838963508606
+    },
+    {
+      "id": "MCAS_2005_8_12",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9059543013572693
+    },
+    {
+      "id": "ACTAAP_2008_7_4",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9646794199943542
+    },
+    {
+      "id": "NYSEDREGENTS_2008_4_3",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9134773015975952
+    },
+    {
+      "id": "Mercury_SC_416181",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5070328116416931
+    },
+    {
+      "id": "NYSEDREGENTS_2010_4_30",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5246769785881042
+    },
+    {
+      "id": "Mercury_7025060",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.62502521276474
+    },
+    {
+      "id": "Mercury_SC_402103",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5633294582366943
+    },
+    {
+      "id": "VASoL_2009_5_37",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9891148805618286
+    },
+    {
+      "id": "Mercury_SC_402981",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.47941750288009644
+    },
+    {
+      "id": "NYSEDREGENTS_2008_8_5",
+      "label": 1,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.858184278011322
+    },
+    {
+      "id": "MCAS_1998_4_13",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.4300698935985565
+    },
+    {
+      "id": "MDSA_2008_8_20",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6230046153068542
+    },
+    {
+      "id": "Mercury_SC_400134",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.7888336777687073
+    },
+    {
+      "id": "Mercury_SC_LBS10265",
+      "label": 2,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.37530404329299927
+    },
+    {
+      "id": "Mercury_7188580",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6299059987068176
+    },
+    {
+      "id": "Mercury_402348",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3966699540615082
+    },
+    {
+      "id": "Mercury_7030555",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.6912450790405273
+    },
+    {
+      "id": "Mercury_SC_415453",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.99831223487854
+    },
+    {
+      "id": "Mercury_7074848",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9935677647590637
+    },
+    {
+      "id": "Mercury_SC_400582",
+      "label": 0,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.6774836778640747
+    },
+    {
+      "id": "Mercury_SC_401168",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9974791407585144
+    },
+    {
+      "id": "Mercury_180828",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9797298908233643
+    },
+    {
+      "id": "FCAT_2008_5_1",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5482197999954224
+    },
+    {
+      "id": "TAKS_2009_5_25",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.7164092063903809
+    },
+    {
+      "id": "Mercury_SC_LBS10392",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.5925958752632141
+    },
+    {
+      "id": "Mercury_7212905",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.4574185907840729
+    },
+    {
+      "id": "Mercury_7212888",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.3910464942455292
+    },
+    {
+      "id": "MDSA_2007_8_42",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.4823532998561859
+    },
+    {
+      "id": "Mercury_SC_415534",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.949070155620575
+    },
+    {
+      "id": "Mercury_7213413",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5271840691566467
+    },
+    {
+      "id": "Mercury_7068635",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8446057438850403
+    },
+    {
+      "id": "Mercury_417137",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.5950742363929749
+    },
+    {
+      "id": "Mercury_7268258",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9516578316688538
+    },
+    {
+      "id": "NAEP_2005_4_S13+14",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.4811772406101227
+    },
+    {
+      "id": "Mercury_SC_406089",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9994035959243774
+    },
+    {
+      "id": "Mercury_SC_400700",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.48400309681892395
+    },
+    {
+      "id": "Mercury_7223493",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9059085249900818
+    },
+    {
+      "id": "Mercury_SC_405928",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9986483454704285
+    },
+    {
+      "id": "MCAS_2009_5_6518",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.5343080163002014
+    },
+    {
+      "id": "MCAS_2006_9_1",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.4049660563468933
+    },
+    {
+      "id": "Mercury_7239383",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.5588901042938232
+    },
+    {
+      "id": "Mercury_SC_400130",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.9354967474937439
+    },
+    {
+      "id": "Mercury_401426",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.44274038076400757
+    },
+    {
+      "id": "MCAS_2010_8_12016",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.5249319672584534
+    },
+    {
+      "id": "Mercury_SC_400324",
+      "label": 1,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.39358416199684143
+    },
+    {
+      "id": "Mercury_SC_LBS10662",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9471914768218994
+    },
+    {
+      "id": "VASoL_2009_3_8",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.861467182636261
+    },
+    {
+      "id": "Mercury_SC_401185",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.8365439772605896
+    },
+    {
+      "id": "NYSEDREGENTS_2015_8_29",
+      "label": 2,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.5353617072105408
+    },
+    {
+      "id": "Mercury_7234378",
+      "label": 3,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.7284163236618042
+    },
+    {
+      "id": "ACTAAP_2014_7_3",
+      "label": 3,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.8163372278213501
+    },
+    {
+      "id": "MDSA_2008_8_27",
+      "label": 3,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5720078945159912
+    },
+    {
+      "id": "Mercury_7004725",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9856489896774292
+    },
+    {
+      "id": "Mercury_405143",
+      "label": 2,
+      "pred": 0,
+      "correct": false,
+      "confidence": 0.45246124267578125
+    },
+    {
+      "id": "MCAS_2003_8_7",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9901588559150696
+    },
+    {
+      "id": "Mercury_SC_405341",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.9031881093978882
+    },
+    {
+      "id": "Mercury_7283833",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.5573169589042664
+    },
+    {
+      "id": "Mercury_7159303",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9974430799484253
+    },
+    {
+      "id": "Mercury_406427",
+      "label": 2,
+      "pred": 2,
+      "correct": true,
+      "confidence": 0.9878151416778564
+    },
+    {
+      "id": "Mercury_SC_414129",
+      "label": 1,
+      "pred": 2,
+      "correct": false,
+      "confidence": 0.3121681809425354
+    },
+    {
+      "id": "Mercury_7108990",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.8281496167182922
+    },
+    {
+      "id": "Mercury_SC_407315",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.7074728012084961
+    },
+    {
+      "id": "Mercury_SC_408663",
+      "label": 1,
+      "pred": 1,
+      "correct": true,
+      "confidence": 0.9084556698799133
+    },
+    {
+      "id": "MEA_2013_8_18",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.927811861038208
+    },
+    {
+      "id": "Mercury_7111125",
+      "label": 0,
+      "pred": 0,
+      "correct": true,
+      "confidence": 0.9918049573898315
+    },
+    {
+      "id": "LEAP_2009_8_10430",
+      "label": 0,
+      "pred": 3,
+      "correct": false,
+      "confidence": 0.3976321220397949
+    },
+    {
+      "id": "Mercury_7165218",
+      "label": 3,
+      "pred": 3,
+      "correct": true,
+      "confidence": 0.9920544624328613
+    },
+    {
+      "id": "MEA_2013_8_15",
+      "label": 0,
+      "pred": 1,
+      "correct": false,
+      "confidence": 0.6011748313903809
+    }
+  ]
+}
