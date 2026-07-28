@@ -5,4 +5,5 @@ accelerate>=0.30
 numpy
 pandas
 matplotlib
+tabulate
 scikit-learn

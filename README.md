@@ -106,8 +106,15 @@ python src/analyze.py     # reads results/ recursively -> results/analysis/
 ```
 
 Classifies every JSON under `results/` by content (folder names don't matter),
-then writes the paper's Table 1 (with 95% CIs, in md/tex/csv), hyperparameter
-heatmaps, champion training-dynamics figures, a full run leaderboard, an
-efficiency table, and an auto-generated `analysis.md` report with significance
-tests and caveats. Re-run any time new results (final seeds, test evals) land.
-See `ANALYSIS_PLAN.md` for the full specification.
+then writes the paper's Table 1 (validation **and** test, with 95% CIs, in
+md/tex/csv), hyperparameter heatmaps, champion training-dynamics figures, a full
+run leaderboard, an efficiency table, and an auto-generated `analysis.md` report
+with significance tests and caveats. Re-run any time new results (final seeds,
+test evals) land. See `ANALYSIS_PLAN.md` for the full specification.
+
+Error analysis activates automatically once an eval JSON carries prediction
+records (`evaluate.py --save_predictions`): confidence calibration and
+answer-position bias always, plus per-question-category accuracy whenever the
+ARC text is reachable (it reuses `load_arc`, and degrades to the first two if the
+dataset can't be loaded). Test cells in Table 1 are traced to the checkpoint that
+produced them under "Provenance" in the report.
