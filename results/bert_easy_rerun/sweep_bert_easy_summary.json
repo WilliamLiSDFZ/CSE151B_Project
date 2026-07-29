@@ -4,7 +4,7 @@
     "sweep_name": "sweep_bert_easy",
     "model_name": "bert-base-uncased",
     "subset": "combined",
-    "seed": 77,
+    "seed": 42,
     "grid": {
       "lr": [
         2e-05,
@@ -30,95 +30,91 @@
   },
   "n_runs": 12,
   "champion": {
-    "run_name": "sweep_bert_easy_lr3e-05_epochs5",
-    "best_val_acc": 0.4856156501726122,
-    "checkpoint": "/home/wil018/private/CSE151B_Project/checkpoints/sweep_bert_easy_lr3e-05_epochs5_20260728_055651/best"
+    "run_name": "sweep_bert_easy_lr7e-05_epochs5",
+    "best_val_acc": 0.4982738780207135,
+    "checkpoint": "/home/wil018/private/CSE151B_Project/checkpoints/sweep_bert_easy_lr7e-05_epochs5_20260728_064338/best"
   },
   "runs": [
     {
-      "run_name": "sweep_bert_easy_lr3e-05_epochs5",
-      "lr": 3e-05,
+      "run_name": "sweep_bert_easy_lr7e-05_epochs5",
+      "lr": 7e-05,
       "epochs": 5,
-      "best_val_acc": 0.4856156501726122,
+      "best_val_acc": 0.4982738780207135,
       "status": "ok"
     },
     {
       "run_name": "sweep_bert_easy_lr5e-05_epochs4",
       "lr": 5e-05,
       "epochs": 4,
-      "best_val_acc": 0.48216340621403914,
+      "best_val_acc": 0.49597238204833144,
       "status": "ok"
     },
     {
       "run_name": "sweep_bert_easy_lr5e-05_epochs5",
       "lr": 5e-05,
       "epochs": 5,
-      "best_val_acc": 0.47871116225546606,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr5e-05_epochs3",
-      "lr": 5e-05,
-      "epochs": 3,
-      "best_val_acc": 0.47295742232451093,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr3e-05_epochs4",
-      "lr": 3e-05,
-      "epochs": 4,
-      "best_val_acc": 0.4706559263521289,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr2e-05_epochs5",
-      "lr": 2e-05,
-      "epochs": 5,
-      "best_val_acc": 0.4660529344073648,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr7e-05_epochs3",
-      "lr": 7e-05,
-      "epochs": 3,
-      "best_val_acc": 0.4626006904487917,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr2e-05_epochs4",
-      "lr": 2e-05,
-      "epochs": 4,
-      "best_val_acc": 0.4614499424626007,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr3e-05_epochs3",
-      "lr": 3e-05,
-      "epochs": 3,
-      "best_val_acc": 0.45454545454545453,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr7e-05_epochs5",
-      "lr": 7e-05,
-      "epochs": 5,
-      "best_val_acc": 0.4372842347525892,
+      "best_val_acc": 0.49252013808975836,
       "status": "ok"
     },
     {
       "run_name": "sweep_bert_easy_lr7e-05_epochs4",
       "lr": 7e-05,
       "epochs": 4,
-      "best_val_acc": 0.42117376294591485,
+      "best_val_acc": 0.49136939010356734,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr5e-05_epochs3",
+      "lr": 5e-05,
+      "epochs": 3,
+      "best_val_acc": 0.4902186421173763,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr7e-05_epochs3",
+      "lr": 7e-05,
+      "epochs": 3,
+      "best_val_acc": 0.4902186421173763,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr3e-05_epochs5",
+      "lr": 3e-05,
+      "epochs": 5,
+      "best_val_acc": 0.48216340621403914,
       "status": "ok"
     },
     {
       "run_name": "sweep_bert_easy_lr2e-05_epochs3",
       "lr": 2e-05,
       "epochs": 3,
-      "best_val_acc": 0.3924050632911392,
+      "best_val_acc": 0.4533947065592635,
       "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr2e-05_epochs4",
+      "lr": 2e-05,
+      "epochs": 4,
+      "status": "failed"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr2e-05_epochs5",
+      "lr": 2e-05,
+      "epochs": 5,
+      "status": "failed"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr3e-05_epochs3",
+      "lr": 3e-05,
+      "epochs": 3,
+      "status": "failed"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr3e-05_epochs4",
+      "lr": 3e-05,
+      "epochs": 4,
+      "status": "failed"
     }
   ],
-  "wall_time_s": 1424.6
+  "wall_time_s": 1190.2
 }
