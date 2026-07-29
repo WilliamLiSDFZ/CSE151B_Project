@@ -1,0 +1,124 @@
+{
+  "sweep_name": "sweep_bert_combined",
+  "config": {
+    "sweep_name": "sweep_bert_combined",
+    "model_name": "bert-base-uncased",
+    "subset": "combined",
+    "seed": 77,
+    "grid": {
+      "lr": [
+        2e-05,
+        3e-05,
+        5e-05,
+        7e-05
+      ],
+      "epochs": [
+        3,
+        4,
+        5
+      ]
+    },
+    "fixed": {
+      "batch_size": 8,
+      "grad_accum": 2,
+      "max_length": 128,
+      "weight_decay": 0.01,
+      "warmup_ratio": 0.1
+    },
+    "keep_champion_last_pt": true,
+    "keep_all_checkpoints": false
+  },
+  "n_runs": 12,
+  "champion": {
+    "run_name": "sweep_bert_combined_lr5e-05_epochs4",
+    "best_val_acc": 0.5017261219792866,
+    "checkpoint": "/home/wil018/private/CSE151B_Project/checkpoints/sweep_bert_combined_lr5e-05_epochs4_20260729_022020/best"
+  },
+  "runs": [
+    {
+      "run_name": "sweep_bert_combined_lr5e-05_epochs4",
+      "lr": 5e-05,
+      "epochs": 4,
+      "best_val_acc": 0.5017261219792866,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr5e-05_epochs3",
+      "lr": 5e-05,
+      "epochs": 3,
+      "best_val_acc": 0.4936708860759494,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr5e-05_epochs5",
+      "lr": 5e-05,
+      "epochs": 5,
+      "best_val_acc": 0.4902186421173763,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr3e-05_epochs4",
+      "lr": 3e-05,
+      "epochs": 4,
+      "best_val_acc": 0.48676639815880324,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr3e-05_epochs5",
+      "lr": 3e-05,
+      "epochs": 5,
+      "best_val_acc": 0.48676639815880324,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr7e-05_epochs5",
+      "lr": 7e-05,
+      "epochs": 5,
+      "best_val_acc": 0.4810126582278481,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr3e-05_epochs3",
+      "lr": 3e-05,
+      "epochs": 3,
+      "best_val_acc": 0.47756041426927504,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr2e-05_epochs4",
+      "lr": 2e-05,
+      "epochs": 4,
+      "best_val_acc": 0.475258918296893,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr2e-05_epochs5",
+      "lr": 2e-05,
+      "epochs": 5,
+      "best_val_acc": 0.4579976985040276,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr7e-05_epochs3",
+      "lr": 7e-05,
+      "epochs": 3,
+      "best_val_acc": 0.44994246260069043,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr7e-05_epochs4",
+      "lr": 7e-05,
+      "epochs": 4,
+      "best_val_acc": 0.4372842347525892,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_combined_lr2e-05_epochs3",
+      "lr": 2e-05,
+      "epochs": 3,
+      "best_val_acc": 0.4142692750287687,
+      "status": "ok"
+    }
+  ],
+  "wall_time_s": 1409.0
+}
