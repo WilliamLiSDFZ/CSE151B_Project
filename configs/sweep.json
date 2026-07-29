@@ -1,7 +1,7 @@
 {
   "sweep_name": "sweep_bert_easy",
   "model_name": "bert-base-uncased",
-  "subset": "combined",
+  "subset": "easy",
   "seed": 42,
   "grid": {
     "lr": [2e-5, 3e-5, 5e-5, 7e-5],
