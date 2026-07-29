@@ -3,7 +3,7 @@
   "config": {
     "sweep_name": "sweep_bert_easy",
     "model_name": "bert-base-uncased",
-    "subset": "combined",
+    "subset": "easy",
     "seed": 42,
     "grid": {
       "lr": [
@@ -30,91 +30,95 @@
   },
   "n_runs": 12,
   "champion": {
-    "run_name": "sweep_bert_easy_lr7e-05_epochs5",
-    "best_val_acc": 0.4982738780207135,
-    "checkpoint": "/home/wil018/private/CSE151B_Project/checkpoints/sweep_bert_easy_lr7e-05_epochs5_20260728_064338/best"
+    "run_name": "sweep_bert_easy_lr7e-05_epochs4",
+    "best_val_acc": 0.5807017543859649,
+    "checkpoint": "/home/wil018/private/CSE151B_Project/checkpoints/sweep_bert_easy_lr7e-05_epochs4_20260729_012115/best"
   },
   "runs": [
-    {
-      "run_name": "sweep_bert_easy_lr7e-05_epochs5",
-      "lr": 7e-05,
-      "epochs": 5,
-      "best_val_acc": 0.4982738780207135,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr5e-05_epochs4",
-      "lr": 5e-05,
-      "epochs": 4,
-      "best_val_acc": 0.49597238204833144,
-      "status": "ok"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr5e-05_epochs5",
-      "lr": 5e-05,
-      "epochs": 5,
-      "best_val_acc": 0.49252013808975836,
-      "status": "ok"
-    },
     {
       "run_name": "sweep_bert_easy_lr7e-05_epochs4",
       "lr": 7e-05,
       "epochs": 4,
-      "best_val_acc": 0.49136939010356734,
+      "best_val_acc": 0.5807017543859649,
       "status": "ok"
     },
     {
       "run_name": "sweep_bert_easy_lr5e-05_epochs3",
       "lr": 5e-05,
       "epochs": 3,
-      "best_val_acc": 0.4902186421173763,
+      "best_val_acc": 0.5789473684210527,
       "status": "ok"
     },
     {
       "run_name": "sweep_bert_easy_lr7e-05_epochs3",
       "lr": 7e-05,
       "epochs": 3,
-      "best_val_acc": 0.4902186421173763,
+      "best_val_acc": 0.5789473684210527,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr7e-05_epochs5",
+      "lr": 7e-05,
+      "epochs": 5,
+      "best_val_acc": 0.5789473684210527,
       "status": "ok"
     },
     {
       "run_name": "sweep_bert_easy_lr3e-05_epochs5",
       "lr": 3e-05,
       "epochs": 5,
-      "best_val_acc": 0.48216340621403914,
+      "best_val_acc": 0.5719298245614035,
       "status": "ok"
     },
     {
-      "run_name": "sweep_bert_easy_lr2e-05_epochs3",
-      "lr": 2e-05,
+      "run_name": "sweep_bert_easy_lr3e-05_epochs4",
+      "lr": 3e-05,
+      "epochs": 4,
+      "best_val_acc": 0.5701754385964912,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr5e-05_epochs4",
+      "lr": 5e-05,
+      "epochs": 4,
+      "best_val_acc": 0.5701754385964912,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr5e-05_epochs5",
+      "lr": 5e-05,
+      "epochs": 5,
+      "best_val_acc": 0.5684210526315789,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr3e-05_epochs3",
+      "lr": 3e-05,
       "epochs": 3,
-      "best_val_acc": 0.4533947065592635,
+      "best_val_acc": 0.5631578947368421,
+      "status": "ok"
+    },
+    {
+      "run_name": "sweep_bert_easy_lr2e-05_epochs5",
+      "lr": 2e-05,
+      "epochs": 5,
+      "best_val_acc": 0.5561403508771929,
       "status": "ok"
     },
     {
       "run_name": "sweep_bert_easy_lr2e-05_epochs4",
       "lr": 2e-05,
       "epochs": 4,
-      "status": "failed"
+      "best_val_acc": 0.543859649122807,
+      "status": "ok"
     },
     {
-      "run_name": "sweep_bert_easy_lr2e-05_epochs5",
+      "run_name": "sweep_bert_easy_lr2e-05_epochs3",
       "lr": 2e-05,
-      "epochs": 5,
-      "status": "failed"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr3e-05_epochs3",
-      "lr": 3e-05,
       "epochs": 3,
-      "status": "failed"
-    },
-    {
-      "run_name": "sweep_bert_easy_lr3e-05_epochs4",
-      "lr": 3e-05,
-      "epochs": 4,
-      "status": "failed"
+      "best_val_acc": 0.5385964912280702,
+      "status": "ok"
     }
   ],
-  "wall_time_s": 1190.2
+  "wall_time_s": 1068.6
 }
