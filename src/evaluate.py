@@ -40,7 +40,7 @@ def evaluate_model(model, loader, device) -> tuple[float, list[dict]]:
         labels = batch.pop("labels")
         mask = batch.pop("choice_mask").to(device)
         batch = {k: v.to(device) for k, v in batch.items()}
-        logits = model(**batch).logits            # (B, C)
+        logits = model(**batch).logits  # (B, C)
         logits = masked_choice_logits(logits, mask)
         probs = logits.float().softmax(dim=-1)
         conf, preds = probs.max(dim=-1)

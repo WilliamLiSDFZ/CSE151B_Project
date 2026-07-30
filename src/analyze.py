@@ -219,6 +219,45 @@ def build_t1(champs: pd.DataFrame, baselines: dict, eval_index: dict,
     return t1
 
 
+def grid_boundary_notes(champs: pd.DataFrame, completed: pd.DataFrame) -> list[str]:
+    """Flag champions sitting on the edge of their own search grid.
+
+    A champion at the min/max of a swept axis means the grid may not bracket the
+    real optimum — so "model X's optimum is at lr Y" is really "the best value we
+    tried was Y". Also reports each model's searched lr range, because comparing
+    optima across models is only meaningful over a shared range.
+    """
+    notes, lr_edge, ep_edge = [], [], []
+    for _, c in champs.iterrows():
+        sub = completed[(completed["model"] == c["model"])
+                        & (completed["subset"] == c["subset"])]
+        label = f"{c['model']}/{c['subset']}"
+        lrs, eps = sorted(set(sub["lr"])), sorted(set(sub["epochs"]))
+        if len(lrs) > 1 and c["lr"] in (lrs[0], lrs[-1]):
+            lr_edge.append(f"{label} (lr {c['lr']:g}, "
+                           f"{'lowest' if c['lr'] == lrs[0] else 'highest'} tried)")
+        if len(eps) > 1 and c["epochs"] in (eps[0], eps[-1]):
+            ep_edge.append(f"{label} (epochs {c['epochs']}, "
+                           f"{'fewest' if c['epochs'] == eps[0] else 'most'} tried)")
+    if lr_edge:
+        notes.append("- **Champion on the lr grid boundary** — the optimum may lie "
+                     "outside the searched range: " + "; ".join(lr_edge) + ".")
+    if ep_edge:
+        notes.append("- **Champion on the epochs grid boundary** — longer/shorter "
+                     "training may still help: " + "; ".join(ep_edge) + ".")
+    ranges = []
+    for model, g in completed.groupby("model"):
+        lrs = sorted(set(g["lr"]))
+        ranges.append(f"{model} {{{', '.join(f'{v:g}' for v in lrs)}}}")
+    if len(ranges) > 1:
+        shared = set.intersection(*[set(g["lr"]) for _, g in completed.groupby("model")])
+        notes.append(f"- **Searched lr ranges differ per model**: {' vs '.join(ranges)}. "
+                     f"Shared points: {sorted(shared) if shared else 'none'} — comparing "
+                     f"*where* each model's optimum sits is confounded by the ranges "
+                     f"chosen, not just by the models.")
+    return notes
+
+
 # ---- error analysis ----------------------------------------------------------
 
 def cue_category(question: str) -> str:
@@ -437,6 +476,100 @@ def ordered_subsets(available) -> list[str]:
     return [s for s in SUBSETS if s in set(available)]
 
 
+SHORT_CATEGORY = {"negation / except": "negation", "which-question": "which"}
+
+
+def short_category(name: str) -> str:
+    """Tick-label form: drop the numeric sort prefix and the repeated unit.
+
+    "1. <=2 words" -> "<=2"; the unit belongs in the group caption, and the
+    prefix is only there to order the bands. Tables keep the full names.
+    """
+    if name in SHORT_CATEGORY:
+        return SHORT_CATEGORY[name]
+    return re.sub(r"^\d+\.\s*", "", name).replace(" words", "")
+
+
+def category_order(dimension: str, present) -> list[str]:
+    """Stable order so the per-subset charts stay comparable side by side."""
+    present = list(present)
+    if dimension == "lexical cue":
+        wanted = [name for name, _ in CUE_PATTERNS] + ["other"]
+        return [c for c in wanted if c in present]
+    return sorted(present)          # "1." .. "4." prefixes are the sort key
+
+
+def fig_error_bars(cats: pd.DataFrame, overalls: dict, out: Path) -> list[str]:
+    """One accuracy bar chart per subset, covering every dimension and category.
+
+    Single colour: all of this is one checkpoint, i.e. one series, so a legend
+    would restate the title and colouring bars by value would double-encode bar
+    height as hue. Value labels only where p < 0.05 — the y-axis carries the rest.
+    """
+    if cats.empty:
+        return []
+    cats = cats[cats["Split"] == _preferred_split(cats)]
+    written = []
+    for subset in ordered_subsets(cats["Subset"]):
+        sub = cats[cats["Subset"] == subset]
+        dims = [d for d in ("lexical cue", "answer-option length", "question length")
+                if d in set(sub["Dimension"])]
+        if not dims:
+            continue
+
+        xs, heights, ticks, spans, pos = [], [], [], [], 0.0
+        for dim in dims:
+            g = sub[sub["Dimension"] == dim].set_index("Category")
+            order = category_order(dim, g.index)
+            start = pos
+            for cat in order:
+                r = g.loc[cat]
+                xs.append(pos)
+                heights.append(float(r["Accuracy %"]))
+                ticks.append(f"{short_category(cat)}\nn={int(r['n'])}")
+                pos += 1
+            spans.append((dim, start, pos - 1))
+            pos += 0.8                              # gap between dimension groups
+
+        fig, ax = plt.subplots(figsize=(max(7.5, 0.75 * len(xs) + 1.5), 3.9))
+        ax.grid(axis="x", visible=False)
+        # narrow bars: more air than ink, and the slot is never filled
+        ax.bar(xs, heights, width=0.55, color=C_DEBERTA, zorder=3)
+
+        overall = 100 * overalls[subset] if subset in overalls else None
+        if overall is not None:
+            ax.axhline(overall, color=AXIS, lw=1, zorder=2)
+            ax.text(1.005, overall, f"subset overall {overall:.1f}%",
+                    transform=ax.get_yaxis_transform(), color=INK2, va="center",
+                    fontsize=7)
+        ax.axhline(25, color=MUTED, lw=1, ls=(0, (2, 2)), zorder=2)
+        ax.text(1.005, 25, "random", transform=ax.get_yaxis_transform(),
+                color=MUTED, va="center", fontsize=7)
+
+        # every bar carries its value: with 20-point gridlines the axis cannot
+        # resolve 58.1 from 59.6, and a bare bar would read as missing data
+        for x, h in zip(xs, heights):
+            ax.text(x, h + 1.5, f"{h:.1f}", ha="center", va="bottom",
+                    fontsize=6.5, color=INK2)
+
+        ax.set_xticks(xs, ticks, fontsize=6.5)
+        ax.set_xlim(-0.8, pos - 1.0)
+        ax.set_ylim(0, 100)
+        ax.set_ylabel("test accuracy (%)")
+        ax.set_title(f"ARC-{subset.capitalize()} test accuracy by question category",
+                     color=INK2)
+        for dim, lo, hi in spans:                   # dimension caption under its group
+            ax.annotate(dim, xy=((lo + hi) / 2, -0.20), xycoords=("data", "axes fraction"),
+                        ha="center", va="top", fontsize=8, color=INK)
+
+        fig.tight_layout()
+        name = f"fig_error_bars_{subset}.png"
+        fig.savefig(out / name, bbox_inches="tight")
+        plt.close(fig)
+        written.append(name)
+    return written
+
+
 def fig_errors(calib: pd.DataFrame, cats: pd.DataFrame, out: Path) -> None:
     """Calibration + weakest question types for the evaluated champion.
 
@@ -565,6 +698,9 @@ def main() -> None:
     fig_heatmaps(completed, out)
     fig_dynamics(champs, out)
     fig_errors(calib, cats, out)
+    # exact overalls from the eval files, not back-derived from the rounded table
+    overalls = {e["subset"]: e["accuracy"] for e in evals if e["split"] == "test"}
+    bar_figs = fig_error_bars(cats, overalls, out)
 
     # derived analyses
     lines = []
@@ -656,11 +792,14 @@ def main() -> None:
                "- `fig_training_dynamics.png` — champions' val-accuracy and loss curves"]
     if not calib.empty:
         report += ["- `fig_error_analysis.png` — calibration and weakest question types"]
+    report += [f"- `{f}` — accuracy by question category, all dimensions"
+               for f in bar_figs]
     report += ["", "## Efficiency", "", t3.to_markdown(index=False), ""]
     if provenance:
         report += ["## Provenance — evaluated checkpoints", "", *provenance, ""]
     report += ["## Coverage & caveats", "",
-               "- Sweep coverage (12 = full grid):", *caveats, ""]
+               "- Sweep coverage (12 = full grid):", *caveats,
+               *grid_boundary_notes(champs, completed), ""]
     if todo:
         report += ["## Still outstanding", "", *todo, ""]
     (out / "analysis.md").write_text("\n".join(report))

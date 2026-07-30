@@ -30,10 +30,25 @@ automatically once `eval_*_test.json` files exist. Emitted as `.md`, `.tex`
 (booktabs), and `.csv`.
 
 **F1 — Hyperparameter heatmaps** (2 models × 3 subsets grid).
-lr × epochs → best_val_acc per cell, champion cell marked. This is the figure that
-shows the paper's cleanest secondary finding: BERT's optimum sits at high lr
-(5–7e-5) while DeBERTa's sits at 1.5–3e-5 — optimal fine-tuning hyperparameters do
-not transfer across pretrained models. Missing cells (failed runs) rendered gray.
+lr × epochs → best_val_acc per cell, champion cell marked. Missing cells (failed
+runs) rendered gray.
+
+This figure supports a *sensitivity* claim, not a transfer claim. Both models vary
+substantially with lr alone (BERT spans 33.8–38.2% on challenge, averaged over
+epochs), and the usable range differs by roughly 2× between them. It does **not**
+support "optimal hyperparameters do not transfer across pretrained models", for two
+reasons the script now flags automatically:
+
+- The grids barely overlap — BERT swept {2, 3, 5, 7}e-5, DeBERTa {1, 1.5, 2, 3}e-5,
+  sharing only 2e-5 and 3e-5. "The optima differ" largely restates "the ranges
+  differed."
+- DeBERTa's champion sits on its lr ceiling (3e-5) on both easy and challenge, so
+  its optimum is probably *outside* the searched range; the 1.5–3e-5 band is an
+  artifact of where the grid stopped. 4 of 6 champions also sit at the epoch
+  ceiling.
+
+Bracketing DeBERTa's optimum with a wider grid would settle it, and is the obvious
+follow-up experiment.
 
 **F2 — Training dynamics** for the 6 champions: per-epoch val accuracy (left) and
 training-loss curve (right). Documents the overfitting pattern (train loss → ~0

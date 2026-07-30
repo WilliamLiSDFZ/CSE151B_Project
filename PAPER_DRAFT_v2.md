@@ -2,9 +2,9 @@
 
 **Yuze Li** — CSE 151B, Summer 2026, Model-Building Track
 
-*Version 2 — expanded, no word limit. Related Work + Methods + Results: 6,839 words
-(1,390 + 2,532 + 2,917), tables excluded; whole paper 9,959 words. The 1,992-word version is
-retained separately as `PAPER_DRAFT_v1.md`.*
+*Version 2 — expanded, no word limit. Related Work + Methods + Results: 9,348 words
+(1,390 + 3,472 + 4,486), tables excluded; whole paper 13,096 words. The 1,992-word version is
+retained separately as `PAPER_DRAFT_v1.md`. All numbers reflect the complete 72-run sweep.*
 
 ---
 
@@ -13,19 +13,19 @@ retained separately as `PAPER_DRAFT_v1.md`.*
 We fine-tune two pretrained encoders, BERT-base and DeBERTa-v3-base, on the AI2 Reasoning
 Challenge (ARC), a dataset of grade-school science exam questions. We use no retrieval and
 no external corpus, so the model must answer using only the knowledge it acquired during
-pretraining plus whatever the fine-tuning set teaches it. We ran 63 training runs across a
+pretraining plus whatever the fine-tuning set teaches it. We ran 72 training runs across a
 grid of learning rates, epoch counts, and training regimes, holding the classification head,
 the preprocessing pipeline, the optimiser, the schedule, and the evaluation protocol fixed
 so that the pretrained checkpoint is the only variable that changes between the two model
 families. Our selected model — the DeBERTa-v3-base champion trained on the combined
 Easy + Challenge training set — reaches 75.0% accuracy on the ARC-Easy test set and 56.1%
-on the ARC-Challenge test set, using 184M parameters and 103 GPU-minutes for the entire
-study. On validation, DeBERTa-v3-base beats BERT-base by 17.9, 9.4, and 19.6 points on Easy,
+on the ARC-Challenge test set, using 184M parameters and 110 GPU-minutes for the entire
+study. On validation, DeBERTa-v3-base beats BERT-base by 18.1, 9.4, and 19.8 points on Easy,
 Challenge, and combined respectively, all significant at the 0.05 level under a
 two-proportion test. Three secondary findings follow. First, the optimal learning rate does
-not transfer between the two backbones: BERT peaks at the top of its recommended range
-(7 × 10⁻⁵) while DeBERTa peaks at the top of a range that is already two to three times lower
-in absolute terms. Second, the most damaging surface property we can measure is a negation
+not transfer between the two backbones: BERT peaks at 5 × 10⁻⁵ on Easy and combined and at
+3 × 10⁻⁵ on Challenge, while DeBERTa peaks at 3 × 10⁻⁵ or 2 × 10⁻⁵ — the top of a range that
+is already two to three times lower in absolute terms. Second, the most damaging surface property we can measure is a negation
 word such as "not" or "except", which costs up to 24.4 accuracy points; we stress throughout
 that these categories are a lexical proxy, not a reasoning taxonomy. Third, the model is
 badly calibrated exactly where it is weakest: on Challenge its most confident predictions
@@ -66,10 +66,11 @@ rate". Our contributions are:
    Section 3 rather than claiming a cleaner control than we have. This lets us attribute
    most of the observed gap to pretraining rather than to any downstream choice, and to argue
    that it is not simply a parameter-count effect.
-2. **A 63-run hyperparameter study.** We show that the best fine-tuning settings for one
-   backbone are not the best settings for the other, quantify how flat or peaked each
-   backbone's grid is, and show that within a single sweep the champion is never
-   significantly better than its runner-up — which is itself a result worth stating, because
+2. **A complete 72-run hyperparameter study.** We show that the best fine-tuning settings for
+   one backbone are not the best settings for the other, measure how much accuracy actually
+   moves across each backbone's grid — on five of six model-by-subset grids, no more than the
+   sampling noise on that validation split — and show that within a single sweep the champion is never
+   significantly better than its runner-up, which is itself a result worth stating, because
    it bounds how much of any headline number is selection noise.
 3. **An error and calibration analysis.** We break test accuracy down by lexical cue,
    question length, and answer-option length, and we relate confidence to accuracy bin by
@@ -294,34 +295,94 @@ competing explanation for the long-question result in Section 4.5, rather than d
 
 ### 3.3 Models
 
-`bert-base-uncased` (Devlin et al., 2019) has 12 layers, a hidden size of 768, 12 attention
-heads, and 110M parameters in total, with a 30,000-token WordPiece vocabulary. It was
-pretrained with masked language modelling plus next-sentence prediction on BooksCorpus
-(800M words) and English Wikipedia (2,500M words), which Liu et al. (2019) quantify as about
-16GB of uncompressed text.
+`bert-base-uncased` (Devlin et al., 2019) and `microsoft/deberta-v3-base` (He et al., 2023)
+are deliberately matched in the one dimension that is easiest to confound and separated in
+almost every other. Both are 12-layer encoders with a hidden size of 768 and 12 attention
+heads; both are the "base"-scale general-purpose checkpoint of their family, meant to be
+fine-tuned rather than prompted; both consume a token sequence and expose a per-token hidden
+state that our head reads at position zero. Layer for layer they are the same object. What
+differs is where their parameters sit, how they encode position, how they were pretrained,
+and how they segment text — and because DeBERTa-v3 changes all four at once relative to BERT,
+these are worth separating before Section 4.3 reports what the change is worth.
 
-`microsoft/deberta-v3-base` (He et al., 2023) has 184M parameters in total, but only about
-86M of those sit in the transformer stack; the remaining 98M are embedding parameters,
-because the model uses a 128,000-token SentencePiece vocabulary. Architecturally it uses
-disentangled attention, in which content and relative-position information are represented
-by separate vectors and interact through separate attention terms, rather than adding a
-position embedding to the token embedding at the input. It is pretrained with ELECTRA-style
-replaced-token detection using gradient-disentangled embedding sharing, on approximately
-160GB of text.
+*Where the parameters sit.* BERT-base has 110M parameters against DeBERTa-v3-base's 184M, a
+ratio of 1.7 that would ordinarily make a comparison unfair. It is much less unfair than it
+looks, because the two models put their parameters in different places. BERT's 30,522-token
+WordPiece vocabulary occupies about 23.8M parameters (30,522 × 768 for the word embeddings,
+plus 512 learned absolute position vectors, the two-entry token-type table, and a LayerNorm);
+DeBERTa-v3's 128,100-token SentencePiece vocabulary occupies about 98.4M (128,100 × 768).
+Subtract the embedding tables from both and the transformer stacks are within a couple of
+percent of each other — roughly 85M against 86M. Embeddings are lookups rather than matrix
+multiplications, so in the forward pass those 74M extra parameters cost memory and disk but
+almost no arithmetic per token. Training is less forgiving than that sentence alone suggests:
+the backward pass through an embedding layer materialises a dense gradient the size of the
+entire table, and AdamW touches every parameter and both of its moment buffers on every step,
+so a four-times-larger vocabulary does cost real time and memory once gradients are involved.
+Even so, the two models are much closer in computation than in parameter count — Section 4.6
+puts DeBERTa between 48% and 79% above BERT per training example, a range that straddles the 67% the
+parameter counts would imply. This is part of the basis for our claim in Section 4.3 that the
+backbone gap is not a size effect; the parameter accounting above is the rest of it.
 
-The parameter-count comparison is 184M against 110M, a factor of 1.7 — but as noted, most of
-the difference is vocabulary embedding, and embedding parameters are lookups rather than
-computation. The two models therefore differ far less in FLOPs per token than the headline
-parameter counts suggest, which is corroborated by the timing measurements in Section 4.6.
+*How position is encoded.* BERT adds a learned absolute position embedding to the token
+embedding at the input, so from the first layer onward a single vector carries both "which
+word" and "which slot", and every attention score is computed from vectors in which the two
+are already mixed. DeBERTa keeps them apart. Each token is represented by a content vector
+and a relative-position vector, and the attention score between two tokens is a sum of
+separate content-to-content, content-to-position and position-to-content terms, computed over
+the *relative* offset between the pair rather than their absolute indices. The practical
+consequence is that the model can learn that a modifier attaches to the noun three tokens to
+its left without having to learn that fact separately for every absolute position at which
+the pattern occurs. Whether this buys anything on ARC specifically we cannot say from our
+design: our inputs are short — one question and one option, under 128 word pieces — and short
+inputs are where absolute position embeddings are least strained.
+
+*How they were pretrained.* BERT was trained with masked language modelling plus
+next-sentence prediction on BooksCorpus (800M words) and English Wikipedia (2,500M words),
+about 16GB of uncompressed text by Liu et al.'s (2019) accounting. Two of those three
+choices were later revised by the field: Liu et al. found next-sentence prediction to be of
+little or negative value, and 16GB became small. DeBERTa-v3 is trained instead with
+ELECTRA-style replaced-token detection — a small generator model proposes substitute tokens
+and the main model classifies *every* position as original or replaced — on roughly 160GB.
+The difference in signal density is the part worth noting: masked language modelling produces
+a learning signal at the 15% of positions that were masked, while replaced-token detection
+produces one at 100% of them, so a token of text does more work. DeBERTa-v3's specific
+contribution over plain ELECTRA is gradient-disentangled embedding sharing, which stops the
+generator's and the discriminator's gradients from pulling the shared embedding table in
+opposite directions. Between the objective and the tenfold data increase, DeBERTa-v3 has seen
+far more supervision per parameter than BERT before either of them sees a single ARC question.
+
+*How they segment text.* The tokeniser is not a free choice — it ships with the checkpoint —
+but it is a real difference between the models rather than an artefact of our setup, and it
+plausibly matters on this dataset. ARC is grade-school science, so its vocabulary is dense in
+terms like *photosynthesis*, *condensation*, *precipitation* and *thermometer*. A 128k
+SentencePiece vocabulary is likelier to hold such a word, or a long piece of it, as a single
+unit, where a 30k lowercased WordPiece vocabulary is likelier to shatter it into three or four
+fragments whose embeddings must be composed by the encoder. We did not measure fertility
+(pieces per word) on ARC and so cannot quantify this; we flag it as a plausible contributor
+to the gap in Section 4.3 rather than a demonstrated one.
+
+These four differences arrive as a bundle, and our experiment measures only their sum. When
+Section 4.3 reports that swapping BERT for DeBERTa-v3 is worth 9.4 to 19.8 validation points,
+that number is the joint effect of disentangled attention, a better pretraining objective, ten
+times the pretraining data, and a four-times-larger vocabulary — we cannot apportion it among
+them. Doing so would need at minimum a DeBERTa-v1 run to hold the architecture fixed while
+reverting the objective, and a BERT-large run to separate scale from method; both were outside
+our compute budget. We note this because the honest claim ("the checkpoint you start from
+dominates the hyperparameters you tune") is weaker and more useful than the claim our data
+cannot support ("disentangled attention is what makes the difference").
+
+Against those intrinsic differences, our own setup adds as little as we could manage.
 Preprocessing, collation, masking, optimiser, schedule, precision policy, checkpoint
 selection, and evaluation run through the same code path for both models: the only thing our
 code changes is the string passed to `from_pretrained`. Three consequences of that string
 are nevertheless not identical, and we name them rather than claim a cleaner control than we
-have. The tokeniser is tied to the checkpoint, so BERT uses 30k WordPiece and DeBERTa 128k
-SentencePiece. The multiple-choice class resolved by `AutoModelForMultipleChoice` differs, so
-DeBERTa gets one extra randomly initialised projection (Section 3.1). And the learning-rate
-grid is deliberately family-specific (Section 3.5), because the two families' usable ranges
-do not coincide. Everything else is shared.
+have. The tokeniser is tied to the checkpoint, as just discussed. The multiple-choice class
+resolved by `AutoModelForMultipleChoice` differs, so DeBERTa gets one extra randomly
+initialised projection (Section 3.1) — the class is named `DebertaV2ForMultipleChoice`, but
+"V2" here identifies the shared architecture implementation, not the weights, since DeBERTa-v3
+reuses v2's computation graph and changes only the pretraining recipe and vocabulary. And the
+learning-rate grid is deliberately family-specific (Section 3.5), because the two families'
+usable ranges do not coincide. Everything else is shared.
 
 ### 3.4 Training procedure
 
@@ -387,19 +448,25 @@ the two grids are deliberately *not* the same set of values, because using BERT'
 DeBERTa would test only the divergent tail of DeBERTa's usable range. Epochs are 3, 4, or 5.
 The training regime is Easy only, Challenge only, or combined, always evaluated on the
 matching validation split. That is 4 × 3 × 3 = 36 configurations per model and 72 in total,
-of which 63 completed; the nine missing runs are all in the BERT / Easy cell, which completed
-only 3 of its 12 configurations before the server hit a disk quota. Three further BERT / Easy
-runs were started and killed mid-training and are recorded as incomplete; they contribute no
-results.
+all of which completed. An earlier attempt at the BERT / Easy cell was lost to a server disk
+quota after 3 of its 12 configurations; that cell was re-run in full, and every number in this
+paper comes from the complete grid.
 
-*What is held fixed.* Across all 63 runs we fix the batch size (8), gradient accumulation
+*What is held fixed.* Across all 72 runs we fix the batch size (8), gradient accumulation
 (2), effective batch (16), maximum sequence length (128), weight decay (0.01), warmup ratio
 (0.1), scheduler shape (linear warmup, linear decay), gradient clipping (1.0), precision
 policy (fp16 autocast with fp32 masters), optimiser (AdamW), checkpoint-selection rule (best
-validation epoch), and the classification head. The random seed is fixed *within* each sweep
-but is not the same across all sweeps: five of the six sweeps use seed 77 and the BERT /
-combined sweep uses seed 42. We report this rather than paper over it; it means the BERT /
-combined column is not seed-matched to the others.
+validation epoch), and the classification head. The random seed is 77 in all six sweeps, so
+every cell in the study is seed-matched to every other. One caveat we can put a number on,
+because the accident of the disk failure let us measure it: all three configurations that had
+completed before the failure returned different accuracies when re-run at the same nominal
+seed. The cleanest instance is the configuration that had won the truncated sweep, 7 × 10⁻⁵
+for 5 epochs, which scored 58.25 the first time and 57.37 the second — a drift of 0.88 points
+with nothing changed but the wall clock. Seeding fixes the data order, the shuffling and the
+head initialisation, but it does not make the run bit-reproducible; non-deterministic GPU
+kernel selection and fp16 reduction order are the likely causes, and on this split they move a
+validation accuracy by roughly a point. That figure is worth carrying into every comparison
+below, and Section 6 returns to it.
 
 *Metric and inference.* The metric is accuracy, defined as exact agreement between the
 argmax over masked option logits and the gold option index. We report 95% Wilson score
@@ -427,7 +494,7 @@ distribution confirms this from the other direction — on Challenge test it pre
 points.
 
 On validation, the per-subset DeBERTa champions score 76.1 / 52.2 / 70.0 and the per-subset
-BERT champions 58.2 / 42.8 / 50.4 (Easy / Challenge / combined). On Easy and combined,
+BERT champions 58.1 / 42.8 / 50.2 (Easy / Challenge / combined). On Easy and combined,
 DeBERTa's test accuracy is about one point below its validation accuracy (75.0 against 76.1,
 68.8 against 70.0), which suggests the 12-configuration sweep did not badly overfit the
 validation split — the selection penalty is smaller than the width of the validation
@@ -448,7 +515,7 @@ the three subsets, and the validation and test columns are not paired.
 |:---|:---|:---|:---|:---|:---|:---|
 | Random guess | 25.0 [21.6, 28.7] | 25.0 [23.3, 26.8] | 25.1 [20.5, 30.3] | 25.0 [22.6, 27.6] | 25.0 [22.3, 28.0] | 25.0 [23.6, 26.5] |
 | Majority position | 26.7 [23.2, 30.4] | 24.6 [22.9, 26.4] | 24.4 [19.9, 29.6] | 26.5 [24.1, 29.1] | 25.9 [23.1, 28.9] | 25.3 [23.9, 26.7] |
-| BERT-base | 58.2 [54.2, 62.2] | — | 42.8 [37.3, 48.5] | — | 50.4 [47.1, 53.7] | — |
+| BERT-base | 58.1 [54.0, 62.1] | — | 42.8 [37.3, 48.5] | — | 50.2 [46.9, 53.5] | — |
 | DeBERTa-v3-base | **76.1** [72.5, 79.5] | **75.0** [73.3, 76.7] | **52.2** [46.5, 57.8] | **56.1** [53.2, 58.9] | **70.0** [66.8, 72.9] | **68.8** [67.2, 70.3] |
 
 ### 4.2 Comparison with previous work
@@ -467,7 +534,7 @@ Against the closed-book fine-tuned encoders of Huang et al. (2022) — the famil
 actually belongs to — our model is ahead of every entry in their table on both subsets. Their
 strongest encoder baseline, RoBERTa-large, reaches 62.40 / 35.97, and their own GenMC with a
 T5-large backbone reaches 69.01 / 47.41, against our 75.0 / 56.1. On Challenge in particular,
-our margin over RoBERTa-large is 20.1 points and over GenMC (T5-large) is 8.7. Three
+our margin over RoBERTa-large is 20.1 points and over GenMC (T5-large) is 8.6. Three
 qualifications belong with that comparison and we would not report it without them. First,
 their systems are trained per-subset while ours is trained on the combined set, which gives
 our Challenge-test model 3,370 training questions instead of 1,119 — that is a genuine
@@ -481,8 +548,8 @@ Against retrieval-augmented and very large systems we remain behind, as expected
 reaches 86.99 / 64.33, putting us 12.0 points behind on Easy and 8.3 behind on Challenge;
 UnifiedQA at 11B reaches 86.4 / 75.0 closed-book and 92.0 / 78.5 with retrieval. Neither is
 like-for-like: Aristo is a retrieval-augmented ensemble built around a RoBERTa-large reader,
-UnifiedQA is roughly sixty times our parameter count, and our entire 63-run study consumed
-103 GPU-minutes. The comparison we find most striking is with GPT-3 175B, which scores 68.8 /
+UnifiedQA is roughly sixty times our parameter count, and our entire 72-run study consumed
+110 GPU-minutes. The comparison we find most striking is with GPT-3 175B, which scores 68.8 /
 51.4 zero-shot and 71.2 / 53.2 one-shot: our 184M fine-tuned encoder is ahead of it on
 Challenge by between 2.9 and 4.7 points. We do not read that as evidence that our model knows
 more science than GPT-3. We read it, following Section 2, as evidence that task-specific
@@ -492,13 +559,15 @@ across the option set, which a zero-shot scored model is not.
 
 ### 4.3 BERT compared with DeBERTa
 
-On validation, DeBERTa-v3-base beats BERT-base by 17.9 points on Easy (76.1 against 58.2,
-*p* < 0.0001), 9.4 points on Challenge (52.2 against 42.8, *p* = 0.0219), and 19.6 points on
-combined (70.0 against 50.4, *p* < 0.0001). All three are significant at the 0.05 level under
+On validation, DeBERTa-v3-base beats BERT-base by 18.1 points on Easy (76.1 against 58.1,
+*p* < 0.0001), 9.4 points on Challenge (52.2 against 42.8, *p* = 0.0219), and 19.8 points on
+combined (70.0 against 50.2, *p* < 0.0001). All three are significant at the 0.05 level under
 a two-proportion test, and the Easy and combined intervals in Table 1 do not come close to
-overlapping. We have no BERT test numbers, because the BERT champion checkpoint was deleted
-under the storage policy described in Section 6 before test evaluation was run, so **every
-BERT-versus-DeBERTa comparison in this paper is a validation comparison.**
+overlapping. We have no BERT test numbers — not because the weights are gone, but because the
+test evaluation was never run against them (Section 6) — so **every BERT-versus-DeBERTa
+comparison in this paper is a validation comparison.** All three gaps are an order of
+magnitude larger than the roughly one-point run-to-run variation measured in Section 3.4, so
+none of them is at risk from non-determinism.
 
 Because head design, preprocessing, optimiser, schedule, precision, checkpoint rule, and
 sweep protocol were shared — with the three checkpoint-linked exceptions listed in
@@ -507,12 +576,16 @@ it is primarily a size effect. The parameter ratio is 1.7×, but roughly 98M of 
 are vocabulary embeddings, leaving transformer stacks of about 86M against BERT's roughly
 86M non-embedding parameters — that is, the two models have similar amounts of *computation*
 and differ mainly in vocabulary, pretraining objective, position encoding, and pretraining
-data volume (about 160GB against about 16GB). The timing results in Section 4.6 support this
-reading: DeBERTa costs only 20% more wall-clock time per epoch, which is what one expects if
-the extra parameters are lookups rather than matmuls.
+data volume (about 160GB against about 16GB). We rest this argument on the parameter
+accounting alone and not on the clock. The timings in Section 4.6 do not adjudicate it either
+way: DeBERTa costs between 48% and 79% more per training example depending on the subset, a
+range that straddles the 67% a naive reading of the parameter counts would predict rather than
+falling clearly short of it, and those measurements are in any case too noisy to carry a
+claim. Nothing in the throughput data contradicts the reading above; it simply does not
+support it.
 
 The structure of the gap is itself informative. The Challenge gap (9.4) is roughly half the
-Easy gap (17.9) and is the least statistically secure of the three. That is what Section 2
+Easy gap (18.1) and is the least statistically secure of the three. That is what Section 2
 predicts. A stronger backbone brings better lexical and factual competence, and Challenge is
 the partition constructed by removing the questions where lexical competence suffices. The
 subset where a better encoder helps least is the subset defined by excluding what a better
@@ -522,41 +595,116 @@ encoder is best at.
 
 Figure 1 shows best validation accuracy across the learning-rate × epochs grid for each
 backbone and regime. The clearest finding is that the optimal learning rate does not transfer
-between backbones. BERT peaks at 7 × 10⁻⁵ on Easy and combined and at 3 × 10⁻⁵ on Challenge;
+between backbones. BERT peaks at 5 × 10⁻⁵ on Easy and combined and at 3 × 10⁻⁵ on Challenge;
 DeBERTa peaks at 3 × 10⁻⁵ on Easy and Challenge and at 2 × 10⁻⁵ on combined. BERT wants the
-*top* of its recommended range while DeBERTa wants the middle-to-top of a range that is
-already two to three times lower in absolute terms. Copying a learning rate from a
-BERT fine-tuning tutorial to DeBERTa would have cost real accuracy: at 3 × 10⁻⁵ — BERT's best
-Challenge setting — DeBERTa's combined-set accuracy is 69.7 against its own best of 70.0,
-which is fine, but the reverse transfer is worse, since BERT at 2 × 10⁻⁵ reaches only 48.8 on
-combined against its own best of 50.4.
+middle of its recommended range while DeBERTa wants the top of a range that is already two to
+three times lower in absolute terms; the two grids overlap in only two values, 2 × 10⁻⁵ and
+3 × 10⁻⁵. We should be careful about how much this buys, since the paragraphs below show that
+most of the movement across a grid is inside sampling noise. Two transfers we can actually
+check are small: DeBERTa at 3 × 10⁻⁵, BERT's best Challenge setting, reaches 69.7 on combined
+against its own best of 70.0, and BERT at 2 × 10⁻⁵, DeBERTa's best combined setting, reaches
+47.5 against its own best of 50.2. Neither gap is significant on its own. The one place where
+the learning rate demonstrably matters is BERT on Challenge, where moving inside BERT's own
+grid from 3 × 10⁻⁵ to 7 × 10⁻⁵ costs 7.4 points; even moving to 5 × 10⁻⁵, which is exactly
+where the same backbone peaks on the other two subsets, costs 3.0. The practical lesson is
+therefore about ranges rather than about single values: the two families want different
+neighbourhoods, and the cost of being in the wrong neighbourhood is visible on the hardest
+subset.
 
-DeBERTa's grid is also flatter where flatness matters. Taking the best result at each learning
-rate and measuring the spread, DeBERTa's Challenge accuracy varies by 3.0 points across its
-four learning rates (49.2 to 52.2) against BERT's 7.4 points (35.5 to 42.8). On the combined
-regime the spreads are 1.9 (DeBERTa) and 1.6 (BERT), and on Easy DeBERTa spans 3.0 points;
-we cannot compute BERT's Easy spread, since only 3 of its 12 configurations completed. So on
-the subset where tuning matters most, DeBERTa is both better and less sensitive — a
-practically useful combination, because it means less of the compute budget has to be spent
-on the search.
+A tempting second claim is that DeBERTa's grid is also flatter — that it is not merely better
+but less sensitive to the learning rate, and therefore cheaper to tune. The raw numbers seem
+to support it, and now that both grids are complete they support it in the same direction on
+all three subsets. Taking the best result at each learning rate and measuring the spread from
+the worst of those four to the best, DeBERTa moves 3.0 points on Easy, 3.0 on Challenge and
+1.8 on combined, against BERT's 4.2, 7.4 and 2.6. DeBERTa's grid is the flatter one every
+time, and on Challenge it is flatter by more than a factor of two. We report the spreads but
+decline the inference, for three reasons.
+
+The first is that the two backbones were not swept over the same grid. BERT was searched over
+{2, 3, 5, 7} × 10⁻⁵ and DeBERTa over {1, 1.5, 2, 3} × 10⁻⁵, chosen separately because each
+family's usable range is different, so the two spreads are not measurements of the same
+quantity: each is one model's behaviour over its own range, not two models on a common axis.
+This is the weakest of the three objections, because in *ratio* terms the grids are close —
+BERT's spans 3.5× from bottom to top and DeBERTa's 3.0× — so we are at least comparing
+movement over comparable multiplicative widths. It still means the comparison is a
+convenience, not a controlled one.
+
+The second is that part of the effect is arithmetic rather than behavioural. A spread measured
+in accuracy points is not scale-free: the sampling standard deviation of an accuracy is
+√(p(1−p)/n), which is largest at p = 0.5 and falls away on either side of it. So even if the
+two backbones were equally indifferent to the learning rate — even if every cell in both grids
+were a draw from one fixed accuracy with no learning-rate effect at all — the model sitting
+further from 50% would produce the tighter set of four draws. On Easy that favours DeBERTa
+substantially, since 76.1% is much further from the midpoint than 58.1%: its expected spread
+is 14% smaller than BERT's before any behavioural difference enters, and on combined 8%
+smaller. We flag this rather than lean on it, because it does not explain the case that looks
+most impressive. On Challenge the accuracies are 52.2% and 42.8%, and it is *DeBERTa* that
+sits nearer 50%, so the arithmetic runs the other way: DeBERTa's expected spread there is 1%
+*larger* than BERT's, while its observed spread is less than half. Whatever is happening on
+Challenge, this objection does not account for it. What it does establish is that a flatness
+comparison stated in raw accuracy points is not independent of the accuracy gap it is supposed
+to be controlling for, and cannot be read as a clean statement about tuning behaviour.
+
+The third is decisive, and it is the one that disposes of Challenge as well. Almost none of
+these spreads exceeds what sampling noise on a validation set of this size would produce on
+its own. Four independent draws from a binomial have an expected range of about 2.06σ;
+evaluating that at each model's
+own accuracy level and each split's size gives noise floors of 4.3 / 5.9 / 3.5 points for BERT
+on Easy, Challenge and combined, and 3.7 / 6.0 / 3.2 for DeBERTa. Dividing the observed spreads
+through by those floors gives 0.99, 1.25 and 0.76 for BERT and 0.81, 0.51 and 0.58 for
+DeBERTa. Five of the six sit at or below their own floor. The only spread that clears its
+noise floor is BERT's 7.4 on Challenge, and it clears it by 1.5 points on the smallest
+validation split we have. Once the numbers are put in units that account for the accuracy
+level, the flatness comparison stops having anything to compare: on five of six grids we
+cannot establish that the learning rate does anything at all, and a difference between two
+quantities that are both indistinguishable from zero is not a finding.
+
+Two caveats cut in opposite directions here. The first makes the floors too high: the
+configurations share a validation set and a seed, so their errors are positively correlated
+and the true floor is somewhat below the independent-draw figure. We use the independent
+version because it is the same conservative assumption behind the two-proportion tests in the
+next paragraph, and because even the conservative version leaves only one spread standing. The
+second makes them too low: Section 3.4 showed that re-running the same configuration at the
+same seed moves validation accuracy by roughly a point, so run-to-run non-determinism sits
+underneath the binomial floor as a second, independent source of movement. Both combined
+spreads (2.6 and 1.8) are only two or three times that figure.
+
+One asymmetry belongs with this, and it has reversed since the BERT / Easy cell was re-run.
+BERT's grid now brackets its optimum on both sides on all three subsets — 5 × 10⁻⁵ on Easy and
+combined and 3 × 10⁻⁵ on Challenge are all interior points — so BERT's spreads measure the
+width of a basin. DeBERTa's do not: its champion sits at 3 × 10⁻⁵, the top value searched, on
+both Easy and Challenge, so on two of three subsets its spread measures one flank of a curve
+whose peak may lie outside the grid. If anything this cuts against the flatness claim, since
+the truncated grid is the one that looks flatter, and extending it upward could only widen
+DeBERTa's spread or reveal a decline. We did not run those configurations.
+
+What survives is narrower and, we think, more useful than the flatness claim: on five of the
+six model-by-subset grids, moving the learning rate anywhere within the family's usable range
+changes validation accuracy by no more than the noise on that split. The exception is BERT on
+Challenge, where the choice does appear to matter. That is a statement about how much tuning
+buys, not about which backbone is easier to tune.
 
 We also want to state a negative result clearly, because it bounds how much of the headline
 numbers is selection noise: **within every sweep, the champion is not significantly better
-than its runner-up.** Four of the six champion-to-runner-up gaps are 0.6 points or less:
-DeBERTa combined 69.97 against 69.74 (0.23), DeBERTa Easy 76.14 against 75.61 (0.53), DeBERTa
-Challenge 52.17 against 51.84 (0.33), and BERT combined 50.40 against 50.06 (0.34). The two
-larger ones are BERT on Challenge, 42.81 against 39.80 (3.01 points on n = 299), and BERT on
-Easy, 58.25 against 55.09 (3.16 points on n = 570, and resting on only three completed runs).
-Neither of those is significant either: a two-proportion test gives *p* ≈ 0.45 and *p* ≈ 0.28
-respectively, and 3.0 points on n = 299 sits well inside the ±5.6-point half-width of that
+than its runner-up.** With both grids now complete, five of the six champion-to-runner-up gaps
+are under a point: DeBERTa combined 69.97 against 69.74 (0.23), DeBERTa Challenge 52.17
+against 51.84 (0.33), DeBERTa Easy 76.14 against 75.61 (0.53), BERT Easy 58.07 against 57.37
+(0.70), and BERT combined 50.17 against 49.37 (0.81). Every one of those five is smaller than
+the roughly one-point run-to-run variation we measured in Section 3.4, which means we could
+not reproduce the ranking by rerunning the two configurations, let alone defend it
+statistically; the two-proportion *p*-values run from 0.74 to 0.93. The one larger gap is BERT
+on Challenge, 42.81 against 39.80 (3.01 points on n = 299), and it is not significant either
+(*p* ≈ 0.45) — 3.0 points on n = 299 sits well inside the ±5.6-point half-width of that
 split's confidence interval. Naming a champion is therefore a practical necessity for choosing
-one checkpoint to evaluate, not a claim that the winning configuration is genuinely best.
+one checkpoint to evaluate, not a claim that the winning configuration is genuinely best. This
+is worth stating plainly because it bounds the whole hyperparameter exercise: the sweep buys
+us a defensible way to pick one model out of twelve, and almost nothing else.
 
 Our second ablation is the training regime. Weighting each backbone's two per-subset
 champions by validation set size (570 Easy : 299 Challenge) gives the combined-validation
 accuracy we would expect from routing each question to a specialist. For DeBERTa that
 predicts 67.9% against an actual combined-trained 70.0%, a gain of 2.1 points; for BERT it
-predicts 52.9% against an actual 50.4%, a loss of 2.5 points. The two backbones respond in
+predicts 52.8% against an actual 50.2%, a loss of 2.6 points. The two backbones respond in
 opposite directions to the same extra data. The stronger backbone converts additional
 out-of-distribution examples into a gain — 2,251 Easy questions help it on Challenge — while
 the weaker one is hurt by them, which is consistent with BERT having less capacity to spare
@@ -663,11 +811,41 @@ The practical form of this is the confidently-wrong count. On Challenge test, 87
 is least accurate it is also least able to signal that it is about to be wrong — which is the
 worst combination for any downstream use that would want to abstain or escalate.
 
-On cost, BERT averaged 17.3 seconds per epoch and DeBERTa 20.8, so DeBERTa is only about 20%
-slower per epoch despite having 1.7× the parameters — consistent with the argument in
-Section 3.3 that the extra parameters are embedding lookups rather than computation. The 27
-completed BERT runs used 38.1 GPU-minutes and the 36 completed DeBERTa runs 64.9, for
-**103.0 GPU-minutes** across the entire study. The full per-run leaderboard is in Appendix B.
+On cost, the aggregate figures are 15.1 seconds per epoch for BERT against 20.8 for DeBERTa;
+the 36 BERT runs used 45.4 GPU-minutes and the 36 DeBERTa runs 64.9, for **110.3 GPU-minutes**
+across the entire study. Now that both models have run the same 36 configurations, the two
+aggregate means finally average over the same workload mix, which removes the largest
+objection to comparing them. We still report the per-epoch comparison with more caution than a
+single ratio would carry, because it is not a controlled benchmark.
+
+Normalising by training-set size, using the per-epoch train and eval times each run stores in
+its JSON, DeBERTa costs 1.79× BERT per training example on Easy, 1.48× on Challenge and 1.52×
+on combined — a range of 48% to 79%, straddling rather than undercutting the 1.67× the
+parameter counts would suggest. We draw no conclusion from that agreement, because the second
+problem is unfixed and disqualifying: the six sweeps ran on three different days on a shared
+campus GPU, and the corresponding *evaluation*-time ratios come out at 1.35, 0.41 and 0.38,
+which would have DeBERTa performing inference more than twice as fast as BERT on two subsets
+out of three. That cannot be a property of the models. Worse, DeBERTa's own per-example
+evaluation cost varies from 2.35 ms on combined to 8.15 ms on Easy — a 3.5× swing on the same
+model doing the same operation — which is larger than any between-model difference we are
+trying to measure. Some part of the between-sweep variation is therefore contention on a
+shared device rather than anything we set, and it is large enough to swamp the signal.
+
+What survives is only the qualitative claim: DeBERTa is more expensive per step than BERT.
+The measured margin — 48% to 79% depending on the subset — brackets the 67% its 1.7×
+parameter ratio would suggest, so on this data we cannot say whether it costs more or less
+than parameter counting predicts, and we do not use the timings to argue either way in
+Section 4.3. Two mechanisms would account for a cost above the parameter ratio if one exists. Its disentangled
+attention computes three score terms per layer — content-to-content, content-to-position and
+position-to-content — instead of one, together with a projection of the relative-position
+table and a gather at every layer; and in the version of `transformers` we use, `BertModel`
+declares support for PyTorch's fused scaled-dot-product attention while the DeBERTa-v2
+implementation does not, so BERT's attention dispatches to a fused kernel and DeBERTa's runs
+as ordinary eager operations that materialise the full attention matrix. The larger embedding
+table contributes as well, not through the forward pass but through the optimiser: the
+backward pass materialises a dense gradient the size of the whole table, and AdamW updates
+184M parameters and their two moment buffers every step against BERT's 110M. The full per-run
+leaderboard is in Appendix B.
 
 ## 5. Discussion
 
@@ -676,21 +854,25 @@ validation accuracy and training loss for all six sweep champions. The pattern i
 every case: validation accuracy rises steeply for two to three epochs, flattens, and then
 drifts down, while training loss continues falling. Every run starts at a training loss of
 about 1.39, which is ln 4 to three decimals — confirming that the randomly initialised head
-begins genuinely uninformative on a near-uniformly four-option dataset — and four of the six
-champions end below 0.17, with DeBERTa on combined reaching 0.131 and BERT on Easy 0.057. The
-two exceptions are instructive: BERT on Challenge only reaches 0.848 and DeBERTa on Challenge
-0.545, so on the adversarial partition even the training set is not fit, which is a different
-failure from the overfitting seen elsewhere.
+begins genuinely uninformative on a near-uniformly four-option dataset — and three of the six
+champions end below 0.14, with BERT on Easy reaching 0.049 and DeBERTa on combined 0.131. The
+other three are instructive. BERT on Challenge only reaches 0.848 and DeBERTa on Challenge
+0.545, so on the adversarial partition even the *training* set is not fit, which is a different
+failure from the overfitting seen elsewhere. BERT on combined lands between the two regimes at
+0.311, which is what one would expect from the weaker backbone on a training set that is a
+third Challenge questions: it fits the Easy portion and drags the Challenge portion behind it.
 
-Concretely, five of the six champions peak *before* their final epoch. Had we taken
-final-epoch weights instead of best-epoch weights, we would have lost 0.9 points on BERT/Easy,
-4.0 on BERT/Challenge, 0.9 on BERT/combined, 1.0 on DeBERTa/Challenge, and 1.2 on
-DeBERTa/combined — a mean of 1.3 points across all six, and enough on its own to change which
-configuration won a sweep. Training longer did not help any model; in the sweeps, 5-epoch
-runs beat 3-epoch runs mainly by giving the best epoch more chances to occur, not by being
-better at epoch 5.
+Concretely, four of the six champions peak *before* their final epoch. Had we taken
+final-epoch weights instead of best-epoch weights, we would have lost 1.8 points on BERT/Easy,
+4.0 on BERT/Challenge, 1.0 on DeBERTa/Challenge and 1.2 on DeBERTa/combined, with BERT/combined
+and DeBERTa/Easy peaking exactly at their last epoch and losing nothing — a mean of 1.3 points
+across all six, and enough on its own to change which configuration won a sweep. Training longer mostly did not help: in the sweeps, 5-epoch runs
+beat 3-epoch runs mainly by giving the best epoch more chances to occur, not by being better
+at epoch 5. The two champions that peak at their last epoch are the mild counter-example, and
+they are also the reason we cannot rule out that a 6- or 7-epoch run would have done better on
+those two cells; the grid stops at 5 and we did not test past it.
 
-**The evaluation format.** Our Easy–Challenge gap on test is 18.9 points. Borchmann (2025),
+**The evaluation format.** Our Easy–Challenge gap on test is 19.0 points. Borchmann (2025),
 discussed in Section 2, argues that a large part of a gap of this magnitude can be an artefact
 of scoring each option in isolation rather than presenting the full option set at once. Our
 architecture does exactly the isolated kind of representation-building, and our option-length
@@ -705,7 +887,7 @@ piece of indirect evidence, not a measurement.
 
 The obvious next experiment, which we did not have time to run, is to make the comparison
 direct: keep this model as a first stage, then add a second stage that receives the question
-and *all* options in a single sequence and reranks them, and measure how much of the 18.9-point
+and *all* options in a single sequence and reranks them, and measure how much of the 19.0-point
 gap closes. A cheaper partial version would be to re-run our own evaluation with the options
 concatenated into one context and a per-option marker, which requires no retraining of the
 first stage and would isolate the representation-building effect from the loss.
@@ -727,23 +909,58 @@ this paper comes from CUDA.
 
 ## 6. Limitations
 
-*Single seed.* Every cell in every sweep used one random seed, so differences of roughly two
-points within a sweep should be treated as noise; Section 4.4 makes this concrete by showing
-that no champion is significantly better than its runner-up. The seed is also not consistent
-across sweeps — five sweeps used seed 77 and BERT/combined used seed 42 — so the BERT/combined
-column is not seed-matched to the rest. A three-seed configuration exists in the repository
-(`configs/final.json`) and has not been run.
+*Single seed, and not even a reproducible one.* Every cell in every sweep used one random
+seed. All six sweeps now use seed 77, so the study is at least internally seed-matched, which
+an earlier version of this work could not claim. But the re-run of the BERT/Easy cell gave us
+an accidental measurement of what a fixed seed actually guarantees, and the answer is: less
+than we assumed. All three configurations that had completed before the disk failure moved
+when run again at the same nominal seed, in both directions; the one we can pin down exactly
+is the truncated sweep's champion at 7 × 10⁻⁵ for 5 epochs, which fell from 58.25 to 57.37.
+Fixing the seed fixes the shuffling and the initialisation, but fp16 accumulation order and
+non-deterministic CUDA kernel selection leave roughly a point of slack on a 570-example
+split. Every within-sweep
+difference in this paper smaller than about a point should therefore be read as unmeasured
+rather than small, and Section 4.4 shows that five of six champion-to-runner-up gaps fall in
+exactly that band. A three-seed configuration exists in the repository (`configs/final.json`)
+and has not been run; running it is the single cheapest improvement available to this study,
+at roughly six GPU-minutes.
 
-*Incomplete BERT sweep.* The BERT/Easy sweep completed 3 of its 12 configurations before the
-server exhausted its disk quota, so BERT's Easy champion is selected from a quarter of the
-intended grid and is very likely an underestimate of what BERT/Easy can do. All comparisons
-involving that cell should be read accordingly.
+*Timings are not a controlled benchmark.* The seconds-per-epoch figures come from six sweeps
+run on three different days on a shared campus GPU, with no attempt to pin the device, fix the
+clock, or repeat a configuration under matched load. Within a sweep the numbers are tight —
+mean and median per-example costs agree to three decimal places — but across sweeps they are
+not comparable: the evaluation-time ratios between the two models come out at 1.35, 0.41 and
+0.38, which would make DeBERTa faster than BERT at inference on two of three subsets, and
+that is not possible. A cleaner symptom of the same problem is that DeBERTa's own per-example
+evaluation cost varies by 3.5× across the three sweeps while the model and the operation are
+identical. We therefore treat the throughput comparison in Section 4.6 as indicative of a
+direction and not as a measurement, and we do not use it to support any quantitative claim —
+in particular we do not use the fact that the training-time ratios now land near the parameter
+ratio as evidence for anything, since a measurement this unstable would have agreed with
+whatever we expected.
 
-*No BERT test numbers.* Because the project ran under a storage policy that keeps only the
-best run's checkpoints and deletes each run's directory as soon as it is beaten, the BERT
-champion weights no longer exist and were never evaluated on test. Reproducing them requires
-retraining a single configuration (combined, 7 × 10⁻⁵, 4 epochs, about two minutes of GPU
-time). Until that is done, every BERT-versus-DeBERTa statement here is validation-only.
+*The two learning-rate grids are not the same grid.* BERT was swept over {2, 3, 5, 7} × 10⁻⁵
+and DeBERTa over {1, 1.5, 2, 3} × 10⁻⁵, overlapping in only two values. The grids were chosen
+separately, before the sweeps, from each family's commonly reported range, which is the right
+thing to do if the goal is to give each backbone its best shot but the wrong thing to do if
+the goal is to compare their sensitivity to the learning rate. DeBERTa's grid is additionally
+truncated at the high end: its champion sits at 3 × 10⁻⁵, the top value searched, on both Easy
+and Challenge, so on those two subsets its optimum is not bracketed on both sides and its
+spread measures one flank of a curve rather than the width of a basin. BERT's grid does
+bracket its optimum on all three subsets. Section 4.4 reports the resulting spreads and
+explains why we do not read a flatness comparison out of them; a clean version of that
+comparison would need both models swept over a common grid wide enough to bracket both peaks,
+which we did not run.
+
+*No BERT test numbers.* This is a gap in the experiment, not in the artefacts. Every sweep ran
+with `keep_champion_last_pt: true`, so each cell's champion weights were retained and BERT's
+three champion checkpoints should still exist on the training server; what was never run is
+the evaluation pass against the test split. Producing the missing row of Table 1 is therefore a
+matter of minutes of inference rather than of retraining, and we simply did not do it before
+the deadline. Until it is done, every BERT-versus-DeBERTa statement here is validation-only,
+and the reader should note that this is the single largest hole in the paper: the headline
+backbone comparison rests entirely on 869 validation questions that were also used to select
+both models.
 
 *One checkpoint behind three test cells.* All three test numbers in Table 1 come from the
 same combined DeBERTa champion, while the three validation numbers come from three different
@@ -771,11 +988,11 @@ A single 184M-parameter encoder with no retrieval and no external corpus reaches
 ARC-Easy and 56.1% on ARC-Challenge — about 29 points above the best baseline reported in the
 original ARC paper on Challenge, ahead of every published closed-book encoder baseline we
 could find, and ahead of GPT-3 175B scored zero-shot on Challenge, while remaining well below
-retrieval-augmented ensembles and 11B-scale fine-tuned models. The whole study cost 103
-GPU-minutes.
+retrieval-augmented ensembles and 11B-scale fine-tuned models. The whole study cost 110
+GPU-minutes across 72 completed runs.
 
 Three things determined that result more than anything we tuned. Which pretrained backbone we
-started from was worth 9.4 to 19.6 validation points, far more than any hyperparameter in the
+started from was worth 9.4 to 19.8 validation points, far more than any hyperparameter in the
 grid, and it was not a parameter-count effect. The best hyperparameters do not carry over
 between backbones, and the ranges do not even overlap in their optima. And the remaining
 errors are structured rather than random, at least along the surface dimensions our regex and
@@ -828,11 +1045,11 @@ Journal of the American Statistical Association, 22(158), 209–212.
 
 - **Figure 1** — `results/analysis/fig_hparam_heatmaps.png`. Best validation accuracy over the
   learning-rate × epochs grid, as a 2 × 3 array of heatmaps (two backbones × three training
-  regimes). The champion cell in each panel is marked. Each panel's axes are built from the
-  learning rates that actually produced completed runs, so the BERT / Easy panel is a 2 × 3
-  grid covering only 2 × 10⁻⁵ and 7 × 10⁻⁵, with three grey cells for the configurations that
-  were started and lost to the disk-quota failure; the 3 × 10⁻⁵ and 5 × 10⁻⁵ rows never ran
-  and do not appear at all.
+  regimes). The champion cell in each panel is marked. All six panels are full 4 × 3 grids
+  with no missing cells; note that the two backbones' rows are labelled with different learning
+  rates ({2, 3, 5, 7} × 10⁻⁵ for BERT, {1, 1.5, 2, 3} × 10⁻⁵ for DeBERTa), so the panels are
+  not directly stackable along the vertical axis, and each panel's colour scale is set within
+  the panel.
 - **Figure 2** — `results/analysis/fig_error_analysis.png`. Left: accuracy against mean
   confidence within each confidence bin, for Easy and Challenge test, with the
   perfect-calibration diagonal shown. Right: accuracy by question category, plotted as a
@@ -846,7 +1063,7 @@ Journal of the American Statistical Association, 22(158), 209–212.
 
 - **Appendix A** — full 26-row question-category table
   (`results/analysis/t5_error_categories.md`).
-- **Appendix B** — all 63 completed runs with model, subset, learning rate, epochs, seed, best
+- **Appendix B** — all 72 completed runs with model, subset, learning rate, epochs, seed, best
   validation accuracy, epochs completed, mean seconds per epoch, and wall time
   (`results/analysis/t2_all_runs.md`); throughput summary (`t3_efficiency.md`); full
   five-bin calibration table for both subsets (`t4_calibration.md`).
@@ -861,10 +1078,13 @@ Journal of the American Statistical Association, 22(158), 209–212.
   combined sweep (`sweep_deberta_combined`, seed 77, lr ∈ {1, 1.5, 2, 3} × 10⁻⁵,
   epochs ∈ {3, 4, 5}), so the other five grids are recoverable only from
   `results/analysis/t2_all_runs.md`, which records every completed run's model, subset,
-  learning rate, epoch count and seed. The second file, `final.json`, is the three-seed
-  replication of the BERT / combined champion (`lr` 3 × 10⁻⁵, 3 epochs, seeds 42/43/44,
+  learning rate, epoch count and seed. The second file, `final.json`, is a three-seed
+  replication harness (`lr` 3 × 10⁻⁵, 3 epochs, seeds 42/43/44,
   `keep_all_checkpoints: true`) described in Section 6; it is committed but was never run, so
-  no result in this paper depends on it. The training entry point is `src/train.py` driven by
+  no result in this paper depends on it. We note that its hyperparameters were written before
+  the final sweeps and no longer match any champion — the BERT / combined champion is now
+  5 × 10⁻⁵ for 4 epochs — so anyone running it as checked in would be replicating a
+  configuration this paper does not report. The training entry point is `src/train.py` driven by
   `main.py`, evaluation is `src/evaluate.py --save_predictions`, baselines are
   `src/baselines.py`, and every table and figure in this paper is regenerated by
   `python src/analyze.py`. Note that the sweep runner deletes each run's checkpoint directory
@@ -879,9 +1099,9 @@ best-validation epoch. Training loss is reported for the first and last epoch of
 
 | Model | Subset | lr | Ep. | Seed | Validation accuracy by epoch (%) | Train loss (first → last) | s/epoch | Wall (s) |
 |:---|:---|:---|---:|---:|:---|:---|---:|---:|
-| BERT-base | Easy | 7 × 10⁻⁵ | 5 | 77 | 51.40 / 57.19 / 57.89 / **58.25** / 57.37 | 1.391 → 0.057 | 17.5 | 107.3 |
+| BERT-base | Easy | 5 × 10⁻⁵ | 5 | 77 | 52.63 / 54.39 / 56.49 / **58.07** / 56.32 | 1.395 → 0.049 | 14.7 | 94.2 |
 | BERT-base | Challenge | 3 × 10⁻⁵ | 5 | 77 | 26.09 / 35.79 / **42.81** / 38.46 / 38.80 | 1.398 → 0.848 | 8.0 | 58.1 |
-| BERT-base | Combined | 7 × 10⁻⁵ | 4 | 42 | 45.80 / 47.76 / **50.40** / 49.48 | 1.403 → 0.167 | 26.3 | 120.6 |
+| BERT-base | Combined | 5 × 10⁻⁵ | 4 | 77 | 45.11 / 48.56 / 49.14 / **50.17** | 1.379 → 0.311 | 22.4 | 105.3 |
 | DeBERTa-v3-base | Easy | 3 × 10⁻⁵ | 5 | 77 | 71.05 / 75.26 / 74.56 / 75.44 / **76.14** | 1.391 → 0.083 | 24.6 | 154.2 |
 | DeBERTa-v3-base | Challenge | 3 × 10⁻⁵ | 4 | 77 | 42.81 / 51.17 / **52.17** / 51.17 | 1.387 → 0.545 | 9.9 | 63.9 |
 | DeBERTa-v3-base | Combined | 2 × 10⁻⁵ | 5 | 77 | 63.52 / 67.43 / **69.97** / 69.39 / 68.82 | 1.386 → 0.131 | 27.8 | 168.1 |

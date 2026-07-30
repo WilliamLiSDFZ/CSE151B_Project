@@ -60,6 +60,7 @@ def linear_warmup_schedule(optimizer, warmup_steps: int, total_steps: int) -> La
         if step < warmup_steps:
             return step / max(1, warmup_steps)
         return max(0.0, (total_steps - step) / max(1, total_steps - warmup_steps))
+
     return LambdaLR(optimizer, lr_lambda)
 
 
